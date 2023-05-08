@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/signin.css' %}">
+    <title>sign in</title>
+</head>
+<body>
+    <div class="login">
+        <form class="form" action="{% url 'signin' %}" method="post">
+        {% csrf_token %}
+            {% if login_failure %}
+            <h2>Log in</h2>
+            <h2><em>Invalid Credentials</em></h2>
+            {% else %}
+            <h2>Log In</h2>
+            {% endif %}
+            <div class="form-element">
+                <label for="username"> Username </label>
+                <input type="text" id="username" name ="username" placeholder="Username">
+            </div>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" id="password" name ="password" placeholder="password">
+            </div>
+            <div class="form-element">
+                <button type="submit">Sign In</button>
+            </div>
+            <div class="form-element">
+                <p>don't have an account? <a href="{% url 'signup' %}">sign up </a></p>
+                <p><a href="{% url 'index' %}"> back to home</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
