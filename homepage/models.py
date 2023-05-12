@@ -12,20 +12,7 @@ class meetings(models.Model):
 
 class verifed_user(models.Model):
     verified_email=models.EmailField()
+    video_number=models.IntegerField()
 
     def __str__(self):
         return self.verified_email
-
-# class recepients(models.Model):
-#     email=models.EmailField()
-
-#     def __str__(self):
-#         return self.email
-
-# class message(models.Model):
-
-#     subject=models.TextField()
-#     information=models.TextField()
-
-#     def __str__(self):
-#         return f"{self.subject}: {self.information}"
