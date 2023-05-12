@@ -46,7 +46,7 @@
           </li>
           <li class="nav-item mx-3">
             <a href="{% url 'contact' %}" class="nav-link h5 ">
-              联系
+              博客
             </a>
           </li>
           <li class="nav-item dropdown mx-3">
@@ -65,6 +65,11 @@
             </ul>
           </li>
           {% if user.is_authenticated %}
+          <li class="nav-item mx-3">
+            <a href="{% url 'videos' %}" class="nav-link h5 ">
+              视频
+            </a>
+          </li>
           <li class="nav-item mx-3">
             <a href="{% url 'signout' %}" class="nav-link h5 ">
               登出
@@ -204,6 +209,9 @@
         </div>
       </div>
     </div>
+
+    <p>{{email}}</p>    
+    
   </section>
 
 

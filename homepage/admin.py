@@ -5,3 +5,4 @@ from .models import  *
 
 admin.site.register(meetings)
 admin.site.register(verifed_user)
+admin.site.register(video)

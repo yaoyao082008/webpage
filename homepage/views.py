@@ -7,12 +7,41 @@ from django.contrib.auth import authenticate,login,logout
 from .models import *
 
 # Create your views here.
+"""
+        how to implement video system:
 
+        first check if the user is authenticated 
+        if they are get their email
+        filter their email in their verifed user 
+        verified user will have an video number on them
+        then call video.objects.all[:verified_user.objects.filter(email=email).video_number]
+"""
+
+
+"""
+        get current user email:
+
+        if request.user.is_authenticated:
+                identification=request.user.id
+                user=User.objects.get(id=identification)
+                email=user.email
+        else:
+                email='not logged in'
+"""
 def index(request):
-        return render(request,'page/index.html',{'meeting': meetings.objects.all()})
+        context={'meeting': meetings.objects.all()}
+        return render(request,'page/index.html',context)
 
 def contact(request):
         return render(request,'page/contact.html')
+
+def videos(request):
+        identification=request.user.id
+        user=User.objects.get(id=identification)
+        email=user.email
+        vid_number=verifed_user.objects.get(verified_email=email).video_number
+        videos=video.objects.all()[:vid_number]
+        return render(request,'page/videos.html',{'videos':videos})
         
 def signout(request):
         logout(request)
