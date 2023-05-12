@@ -30,3 +30,4 @@ urlpatterns = [
     path('contact/',views.contact,name='contact'),
     path('videos/',video_views.video,name='video'),
 ]
+
