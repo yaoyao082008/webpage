@@ -12,7 +12,15 @@ class meetings(models.Model):
 
 class verifed_user(models.Model):
     verified_email=models.EmailField()
-    video_number=models.IntegerField()
+    
+    tax_video_number=models.IntegerField()
+    long_term_care_video_number=models.IntegerField()
+    retirement_video_number=models.IntegerField()
+    savings_video_number=models.IntegerField()
+    life_insurance_video_number=models.IntegerField()
+    investment_video_number=models.IntegerField()
+    estate_planning_video_number=models.IntegerField()
+    medicare_video_number=models.IntegerField()
 
     def __str__(self):
         return self.verified_email

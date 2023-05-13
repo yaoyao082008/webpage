@@ -12,6 +12,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="{% static 'vid.css' %}">
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -89,10 +90,97 @@
         </div>
       </div>
     </nav>
-    {% for vid in videos %}
-    <p class="text-center h3 text-muted lead m-5">
-      <a href="{{vid.link}}"> {{vid}} </a>
-    </p>
-    {% endfor %}
+    
+    <section>
+      <div class="container-lg bg-light">
+        <div class="row justify-content-center">
+
+          <div class="col-md-3 col-12 text-center m-5">
+            <h4 class="border-2 border-bottom">
+              TAX VIDEOS
+            </h4>
+            <ul>
+              {% for vid in tax %}
+              <li><a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="col-md-3 col-12 text-center m-5">
+            <h4 class="border-2 border-bottom">
+              LONG TERM CARE VIDEOS
+            </h4>
+            <ul>
+              {% for vid in long_term_care %}
+              <li><a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="col-md-3 col-12 text-center m-5">
+            <h4 class="border-2 border-bottom">
+              RETIREMENT VIDEOS
+            </h4>
+            <ul>
+              {% for vid in retirement %}
+              <li><a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-3 col-12 text-center m-5">
+            <h4 class="border-2 border-bottom">
+              SAVINGS VIDEOS
+            </h4>
+            <ul>
+              {% for vid in savings %}
+              <li><a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="col-md-3 col-12 text-center m-5">
+            <h4 class="border-2 border-bottom">
+              LIFE INSURANCE VIDEOS
+            </h4>
+            <ul>
+              {% for vid in life_insurance %}
+              <li><a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="col-md-3 col-12 text-center m-5">
+            <h4 class="border-2 border-bottom">
+              INVESTMENT VIDEOS
+            </h4>
+            <ul>
+              {% for vid in investment %}
+              <li><a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-3 col-12 text-center m-5">
+            <h4 class="border-2 border-bottom">
+              ESTATE PLANNING VIDEOS
+            </h4>
+            <ul>
+              {% for vid in estate_planning %}
+              <li><a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="col-md-3 col-12 text-center m-5">
+            <h4 class="border-2 border-bottom">
+              MEDICARE VIDEOS
+            </h4>
+            <ul>
+              {% for vid in medicare %}
+              <li><a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
