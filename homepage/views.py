@@ -11,8 +11,6 @@ from .models import *
 def index(request):
         return render(request,'page/index.html',{'meeting': meetings.objects.all()})
 
-def contact(request):
-        return render(request,'page/contact.html')
         
 def signout(request):
         logout(request)

@@ -57,7 +57,7 @@
               <a href="#About" class="nav-link h5"> 关于我们 </a>
             </li>
             <li class="nav-item mx-3">
-              <a href="{% url 'contact' %}" class="nav-link h5"> 联系 </a>
+              <a href="mailto: befinancialed@gmail.com" class="nav-link h5"> 联系 </a>
             </li>
             <li class="nav-item dropdown mx-3">
               <a
@@ -68,7 +68,7 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                更多
+                金融教育
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#">税</a></li>
@@ -80,6 +80,10 @@
                 <li><a class="dropdown-item" href="#">长期护理</a></li>
                 <li><a class="dropdown-item" href="#">医疗保险</a></li>
               </ul>
+            </li>
+
+            <li class="nav-item mx-3">
+              <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item mx-3">
@@ -229,25 +233,10 @@
             <p class="h4 text-center font-weight-bold mb-10">
               订阅我们的时事通讯以接收新闻和更新。
             </p>
-
-            <form class="text-center my-5" action="/" method="post">
-              {% csrf_token %}
-              <div class="form-group">
-                <label for="Email">电子邮件地址</label>
-                <input
-                  type="email"
-                  name="email"
-                  class="form-control"
-                  id="email"
-                  aria-describedby="emailHelp"
-                  placeholder="输入电子邮件"
-                />
-                <small id="emailHelp" class="form-text text-muted"
-                  >我们绝不会与其他任何人分享您的电子邮件。</small
-                >
-              </div>
-              <button type="submit" class="btn btn-dark">提交</button>
-            </form>
+            <div class="text-center my-5">
+              <a href="https://www.befinancialeducation.com/#comp-lgo6bkok2" class="btn btn-dark">加入</a>
+            </div>
+            
           </div>
         </div>
       </div>
