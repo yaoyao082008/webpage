@@ -16,6 +16,34 @@ def signout(request):
         logout(request)
         return redirect('/')
 
+def join_us(request):
+        return render(request,'page/join_us.html',{})
+
+def tax(request):
+        return render(request,'education/tax.html')
+
+def savings(request):
+        return render(request,'education/savings.html')
+
+def retirement(request):
+        return render(request,'education/retirement.html')
+
+def life_insurance(request):
+        return render(request,'education/insurance.html')
+
+def investment(request):
+        return render(request,'education/investment.html')
+
+def estate_planning(request):
+        return render(request,'education/estate_planning.html')
+
+def long_term_care(request):
+        return render(request,'education/long_term_care.html')
+
+def medicare(request):
+        return render(request,'education/medicare.html')
+
+
 
 def signin(request):
         context={'login_failure':False}

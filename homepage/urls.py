@@ -22,4 +22,13 @@ urlpatterns = [
     path('signin/',views.signin,name='signin'),
     path('signup/',views.signup,name='signup'),
     path('signout/',views.signout,name='signout'),
+    path('joinus/',views.join_us,name='join_us'),
+    path('tax/',views.tax,name='tax'),
+    path('savings/',views.savings,name='savings'),
+    path('retirement/',views.retirement,name='retirement'),
+    path('lifeinsurance/',views.life_insurance,name='life_insurance'),
+    path('investment/',views.investment,name='investment'),
+    path('estateplanning/',views.estate_planning,name='estate_planning'),
+    path('longtermcare/',views.long_term_care,name='long_term_care'),
+    path('medicare/',views.medicare,name='medicare')
 ]

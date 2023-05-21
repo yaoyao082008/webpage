@@ -61,17 +61,21 @@
                 金融教育
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">税</a></li>
-                <li><a class="dropdown-item" href="#">学院/大学储蓄计划</a></li>
-                <li><a class="dropdown-item" href="#">退休计划</a></li>
-                <li><a class="dropdown-item" href="#">人寿保险</a></li>
-                <li><a class="dropdown-item" href="#">投资</a></li>
-                <li><a class="dropdown-item" href="#">遗产规划</a></li>
-                <li><a class="dropdown-item" href="#">长期护理</a></li>
-                <li><a class="dropdown-item" href="#">医疗保险</a></li>
+                <li><a class="dropdown-item" href="{% url 'tax' %}">税</a></li>
+                <li><a class="dropdown-item" href="{% url 'savings' %}">学院/大学储蓄计划</a></li>
+                <li><a class="dropdown-item" href="{% url 'retirement' %}">退休计划</a></li>
+                <li><a class="dropdown-item" href="{% url 'life_insurance' %}">人寿保险</a></li>
+                <li><a class="dropdown-item" href="{% url 'investment' %}">投资</a></li>
+                <li><a class="dropdown-item" href="{% url 'estate_planning' %}">遗产规划</a></li>
+                <li><a class="dropdown-item" href="{% url 'long_term_care' %}">长期护理</a></li>
+                <li><a class="dropdown-item" href="{% url 'medicare' %}">医疗保险</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" target="_blank"href="https://www.befinancialeducation.com/book-online">安排会议</a></li>
               </ul>
             </li>
-
+            <li class="nav-item mx-3">
+              <a href="{% url 'join_us' %}" class="nav-link h5"> 加入我们 </a>
+            </li>
             <li class="nav-item mx-3">
               <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
             </li>
