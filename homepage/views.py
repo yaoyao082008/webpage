@@ -11,7 +11,8 @@ from .models import *
 def index(request):
         return render(request,'page/index.html',{'meeting': meetings.objects.all()})
 
-        
+def overview(request):
+        return render(request,'education/overview.html')
 def signout(request):
         logout(request)
         return redirect('/')
