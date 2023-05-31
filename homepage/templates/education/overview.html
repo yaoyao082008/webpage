@@ -11,11 +11,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <title>Overview</title>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <body style="padding-top: 105px;">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
       <div class="container-xxl">
         <a href="{% url 'index' %}" class="navbar-brand">
           <img
@@ -144,10 +143,10 @@
         <div class="text-center p-3">
           <h1 class="text-muted">概述, 挑战</h1>
           <small class="text-muted border-bottom"
-            >美国人正面临严峻的财务挑战</small
+            >美国人正面临严峻的财务挑战 :</small
           >
         </div>
-        <div class="d-flexjustify-content-center p-3">
+        <div class="p-3">
           <ul class="border-bottom p-2" style="list-style: none">
             <li class="text-muted text-center">79% 的美国人感到经济压力</li>
             <li class="text-muted text-center">超过一半的美国人靠薪水过活</li>
@@ -158,6 +157,72 @@
           <p class="text-muted text-center">
             我们大多数人都不想成为统计数据。这些问题无处不在，它们发生在我们自己的家人和朋友的家人身上.
           </p>
+
+          <p class="h1 fw-bold text-center">
+            我们生活在世界上最富有的国家之一，但我们总是遇到金钱问题。
+          </p>
+        </div>
+        <div class="p-3 border-bottom">
+          <h1 class="text-start text-center p-2">1.收入差距正在扩大</h1>
+          <p class="h5 text-center">按百分位数分组的财富 (1991-2023 年)</p>
+
+          <div class="text-center p-2">
+            <img
+              class="img-fluid text-center"
+              src="{% static 'images/chart.webp' %}"
+              alt="wealth distribution since 1989"
+            />
+          </div>
+
+          <p class="h1 fw-bold text-center p-2">如何让富人更富，穷人更穷？</p>
+        </div>
+        <div class="p-3 border-bottom">
+          <h1 class="fw-bold text-center p-2">你能成为百万富翁吗?</h1>
+          <p class="text-center h5 text-muted">根据瑞士信贷，您可以！</p>
+
+          <div class="text-center p-2">
+            <img
+              src="{% static 'images/wealth.webp' %}"
+              alt="global wealth report 2021"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <div class="p-3 border-bottom">
+          <h1 class="text-center fw-bold p-2">隔壁的百万富翁</h1>
+          <p class="h3 text-center p-2">
+            他们中的许多人不是名人或有名望的人, <br />
+            也没有继承遗产.
+          </p>
+          <p class="h3 text-center p-2">
+            他们是普通的普通人，他们通过知识规划和长期一致的实践来建立自己的财务未来.
+          </p>
+          <p class="h3 text-center p-2 fw-bold text-success">
+            富人知道什么而穷人不知道？
+          </p>
+
+          <div class="text-center">
+            <ul style="list-style: none">
+              <li class="fw-bold text-success h4 p-3">- 他们预算</li>
+              <li class="fw-bold text-success h4 p-3">
+                - 他们有退休、大学、医疗等方面的财务目标.
+              </li>
+              <li class="fw-bold text-success h4 p-3">- 他们没有昂贵的品味</li>
+              <li class="fw-bold text-success h4 p-3">
+                - 他们没有背负债务和负债并保持低利率
+              </li>
+              <li class="fw-bold text-success h4 p-3">
+                - 他们为紧急情况做准备
+              </li>
+              <li class="fw-bold text-success h4 p-3">- 他们有自己的事业</li>
+              <li class="fw-bold text-success h4 p-3">
+                - 他们精通财务知识并且乐于学习
+              </li>
+            </ul>
+          </div>
+          <div class="text-center">
+            <p class="h1 fst-italic fw-bold">未来在你手中 .</p>
+          </div>
         </div>
       </div>
     </section>

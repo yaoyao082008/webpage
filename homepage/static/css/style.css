@@ -13,14 +13,9 @@ margin:auto;
     */ 
 
 body{
-    
     padding-top: 80px;
 }
 
 .f-services{
     list-style-type: none;
-}
-
-em{
-    font-weight: bold;
 }
