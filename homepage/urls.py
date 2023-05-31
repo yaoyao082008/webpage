@@ -31,5 +31,5 @@ urlpatterns = [
     path('estateplanning/',views.estate_planning,name='estate_planning'),
     path('longtermcare/',views.long_term_care,name='long_term_care'),
     path('medicare/',views.medicare,name='medicare'),
-    path('overview/',views.overview,name='overview')
+    path('overview/',views.overview,name='overview'),
 ]
