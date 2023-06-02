@@ -57,7 +57,9 @@
               <a href="#About" class="nav-link h5"> 关于我们 </a>
             </li>
             <li class="nav-item mx-3">
-              <a href="mailto: befinancialed@gmail.com" class="nav-link h5"> 联系 </a>
+              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
+                联系
+              </a>
             </li>
             <li class="nav-item dropdown mx-3">
               <a
@@ -71,16 +73,54 @@
                 金融教育
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
+                </li>
                 <li><a class="dropdown-item" href="{% url 'tax' %}">税</a></li>
-                <li><a class="dropdown-item" href="{% url 'savings' %}">学院/大学储蓄计划</a></li>
-                <li><a class="dropdown-item" href="{% url 'retirement' %}">退休计划</a></li>
-                <li><a class="dropdown-item" href="{% url 'life_insurance' %}">人寿保险</a></li>
-                <li><a class="dropdown-item" href="{% url 'investment' %}">投资</a></li>
-                <li><a class="dropdown-item" href="{% url 'estate_planning' %}">遗产规划</a></li>
-                <li><a class="dropdown-item" href="{% url 'long_term_care' %}">长期护理</a></li>
-                <li><a class="dropdown-item" href="{% url 'medicare' %}">医疗保险</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" target="_blank"href="https://www.befinancialeducation.com/book-online">安排会议</a></li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'savings' %}"
+                    >学院/大学储蓄计划</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'retirement' %}"
+                    >退休计划</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
+                    >人寿保险</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'investment' %}"
+                    >投资</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'estate_planning' %}"
+                    >遗产规划</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'long_term_care' %}"
+                    >长期护理</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'medicare' %}"
+                    >医疗保险</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    target="_blank"
+                    href="https://www.befinancialeducation.com/book-online"
+                    >安排会议</a
+                  >
+                </li>
               </ul>
             </li>
 
@@ -218,8 +258,9 @@
             </p>
 
             <p class="text-center lead text-muted">
-              <em>你能创造财富吗？</em> 我们的金融平台通过 World System Builder
-              已服务 2,113,500 个家庭获得 金融教育，改善他们的财务状况。
+              <em class="fw-bold">你能创造财富吗？</em> 我们的金融平台通过 World
+              System Builder 已服务 2,113,500 个家庭获得
+              金融教育，改善他们的财务状况。
             </p>
           </div>
         </div>
@@ -239,9 +280,13 @@
               订阅我们的时事通讯以接收新闻和更新。
             </p>
             <div class="text-center my-5">
-              <a href="https://www.befinancialeducation.com/#comp-lgo6bkok2" target="_blank" class="btn btn-dark">加入</a>
+              <a
+                href="https://www.befinancialeducation.com/#comp-lgo6bkok2"
+                target="_blank"
+                class="btn btn-dark"
+                >加入</a
+              >
             </div>
-            
           </div>
         </div>
       </div>
