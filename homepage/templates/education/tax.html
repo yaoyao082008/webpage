@@ -14,7 +14,7 @@
     <title>Tax</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light ">
       <div class="container-xxl">
         <a href="{% url 'index' %}" class="navbar-brand">
           <img
@@ -141,7 +141,7 @@
     <section>
       <div class="container-lg bg-light text-center">
         <div class="row m-5">
-          <div class="col-md-4 text-center">
+          <div class="col-md-4 align-self-center">
             <img
               class="img-fluid"
               src="{% static 'images/working.webp' %}"
@@ -152,16 +152,25 @@
           <div class="col-md-2"></div>
 
           <div class="col-md-6 text-start align-self-center">
-            <h1 class="my-3">Capitial Gains Tax</h1>
+            <h1 class="my-3 fw-bold">会计</h1>
             <p class="h6">
-              Everything you own and use for personal, or investment purposes is
-              a capital asset, like your house, stocks, and bonds. When you sell
-              capital assets, the difference between the amount you sold it for
-              and your basis, which is usually what you paid for it, is a
-              capital gain or capital loss. Capital Gains on assets held for
-              less than one year is a short-term gains and usually taxed at
-              ordinary income tax rates.
+              拥有会计师并不意味着拥有有效的税务规划.
+              为什么？您的会计师不负责您的税务规划. 
+              让我们明确三个重要事实:
             </p>
+            <ul class="text-start" style="list-style: none;">
+              <li class="p-3">事实 1: 您的会计师只负责在税表上填写正确的数字。你付钱给她/他是为了提交申请，而不是为了计划。
+                税务只是您会计师工作量的一小部分，
+                他们需要花费大量时间在簿记、归档、审计等方面。</li>
+
+              <li class="p-3"> 事实 2:您的会计师在这一年中很少与您联系。她不太可能知道您的日常业务运作。
+                在报税时间,会计师会询问您的号码,将其输入他们的计算机,然后按“Enter”。
+                结果可能遗漏了您有权享受的大笔税收减免!</li>
+
+              <li class="p-3">事实 3: 您保留税务记录。你花钱。您决定将哪些记录提交给您的会计师。
+                事实上,如果您不了解税务,
+                您很可能不会将关键信息提交给您的会计师。</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -169,54 +178,44 @@
       <div class="text-center container-lg bg-light">
         <div class="row justify-content-center">
           <div class="col-md-6 text-md-start text-sm-center">
-            <h1 class="my-3">Tax Now</h1>
+            <h1 class="my-3 fw-bold">现在征税</h1>
             <p class="h6">
-              Tax now means that any earnings from these accounts must pay tax
-              for that year. For example, you must report and pay tax on
-              earnings from savings accounts, Certificates of Deposit(CDs),
-              dividends from stocks, mutual funds, and money market funds.
+              现在征税意味着这些账户的任何收入都必须在当年纳税。例如，您必须就储蓄账户
+              、存款证 (CD)、股票、互惠基金和货币市场基金的股息收入进行申报和纳税。
             </p>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6 text-md-start text-sm-center">
-            <h1 class="my-3">Tax Later</h1>
+            <h1 class="my-3 fw-bold">稍后纳税</h1>
             <p class="h6">
-              Tax later which means the money you put in is pre-tax. Pre-tax
-              money deposited in an account is money that you have not yet paid
-              income tax on, but you'll be paying tax later when you withdraw
-              it. These accounts are also called tax deferral account. In the
-              U.S., tax deferral accounts commonly take the form of IRAs,401ks,
-              and 403(b)s. In the U.S., when you begin to take your money out
-              after 59.5 years old, you'll be taxed as ordinary income tax
-              rates, but if you take money out before 59.5 years old, you'll get
-              a 10% penalty in addition to taxes. Also, you can't keep money
-              there forever. You must start withdrawing it when you reach 73
-              to75 years old or pay a 50% penalty. However, some tax later
-              accounts are tax deferred but not tax deductible.
+              稍后纳税这意味着你投入的钱是税前的。存入账户的税前资金是您尚未缴纳所得税的资金
+              ，但您稍后提取时将缴纳税款。这些账户也称为延税账户。在美国，延税账户通常采用 IRA
+              、401ks 和 403(b)s 的形式。在美国,59.5岁以后开始取钱,按普通所得税税率征税,59.5岁之前取钱,
+              除了10%的罚款税收。另外，你不能永远把钱放在那里。您必须在您达到
+               73 至 75 岁时开始提取或支付 50% 的罚款。但是，一些税后账户可以延税但不能免税。
             </p>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6 text-md-start text-sm-center">
-            <h1 class="my-3">Tax-Advantaged Access</h1>
+            <h1 class="my-3 fw-bold">税收优惠准入</h1>
             <p class="h6">
-              Tax-advantaged access means you won't pay tax when you access
-              money from your account. Some Roth IRAs,529 College Savings plans,
-              and Life Insurance are popular investments vehicles that get
-              tax-exempt distributions.
+              税收优惠访问意味着当您从您的帐户中取款时，您无需缴税。
+              一些罗斯 IRA、529 大学储蓄计划和人寿保险是获得免税分配的流行投资工具。
             </p>
           </div>
         </div>
         <div class="row justify-content-center mb-4">
           <div class="col-md-6 text-md-start text-sm-center mb-3">
-            <h1 class="my-3">Before Or After?</h1>
+            <h1 class="my-3 fw-bold">之前还是之后?</h1>
             <p class="h6">
-              Would you prefer paying taxes now and defer them until later when
-              you get old? Or should you pay now and worry about taxes in the
-              future? In other words, would you prefer you pay tax on the seed
-              or the harvest? Contact us, learn more.
+              你愿意现在缴税然后推迟到以后缴税吗
+              你变老了吗？或者您应该现在付款并担心美国的税收
+              未来？换句话说，你愿意为种子纳税吗？
+              还是收获？联系我们，了解更多 .
             </p>
+            <a href="https://www.befinancialeducation.com/book-online" class="text-center">安排会议</a>
           </div>
         </div>
       </div>

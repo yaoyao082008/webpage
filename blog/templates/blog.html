@@ -147,8 +147,7 @@
         <div class="container border border-3 border-secondary my-3">
           <li style="list-style: none">
             <a href="{% url 'article' post.pk %}">{{post.title}}</a> |
-            {{post.first_name}} {{post.last_name}} | {{ post.body|slice:":255"
-            }} ........
+            {{post.first_name}} {{post.last_name}} | {{ post.body | slice:":255" }} ........
           </li>
         </div>
 
