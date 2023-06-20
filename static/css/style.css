@@ -1,0 +1,21 @@
+/* 
+
+to align right
+
+margin-left: auto; 
+margin-right:10%; 
+
+to align center
+
+margin:auto;
+
+
+    */ 
+
+body{
+    padding-top: 80px;
+}
+
+.f-services{
+    list-style-type: none;
+}
