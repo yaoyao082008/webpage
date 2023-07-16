@@ -15,41 +15,41 @@
     <div class="login">
         <form class="form" action="{% url 'signup' %}" method="post">
         {% csrf_token %}
-            <h2>Sign Up</h2>
+            <h2>报名</h2>
             <div class="form-element">
                 {% if username_taken %}
-                <label for="username">Username <em>Username In Use</em></label>
+                <label for="username">用户名 <em>用户名正在使用</em></label>
                 {% else %}
-                <label for="username">Username</label>
+                <label for="username">用户名</label>
                 {% endif %}
-                <input type="text" id="username" name ="username" placeholder="Username">
+                <input type="text" id="username" name ="username" placeholder="用户名">
             </div>
             <div class="form-element">
                 {% if email_failure %}
-                <label for="email"> Email <em>Your Email Is Not Verifed!!!</em></label>
+                <label for="email"> 电子邮件 <em>您的电子邮件未经过验证!!!</em></label>
                 {% elif email_taken %}
-                <label for="email"> Email <em>Email Already In Use</em></label>
+                <label for="email"> 电子邮件 <em>电子邮件已在使用中</em></label>
                 {% else %}
-                <label for="email"> Email</label>
+                <label for="email"> 电子邮件</label>
                 {% endif %}
-                <input type="text" id="email" name ="email" placeholder="enter email here..">
+                <input type="text" id="email" name ="email" placeholder="在这里输入电子邮件 ..">
             </div>
             <div class="form-element">
-                <label for="password">Password</label>
-                <input type="password" id="password" name ="password" placeholder="password">
+                <label for="password">密码</label>
+                <input type="password" id="password" name ="password" placeholder="密码">
             </div>
             <div class="form-element">
                 {% if password_failure %}
-                <label for="password"> Password(Again) <em>Passwords do not match!!</em></label>
+                <label for="password"> 密码（再次） <em>密码不匹配!!</em></label>
                 {% else %}
-                <label for="password"> Password</label>
+                <label for="password"> 密码</label>
                 {% endif %}
-                <input type="password" id="password" name ="password(again)" placeholder="password(again)">
+                <input type="password" id="password" name ="password(again)" placeholder="密码 (再次)">
             </div>
             <div class="form-element">
-                <button type="submit">Sign Up</button>
+                <button type="submit">报名</button>
             </div>
-            <p><a href="{% url 'index' %}"> back to home</a></p>
+            <p><a href="{% url 'index' %}">返回首页</a></p>
         </form>
     </div>
 </body>
