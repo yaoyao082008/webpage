@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="keywords"
-      content="Finance, money management , Beyond Exponential Financial"
+      content="Finance, money management , Beyond Exponential Financial, BeyondFiancialEd"
     />
     <meta
       name="description"
@@ -54,33 +54,31 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item mx-3">
-              <a href="#About" class="nav-link h5"> 关于我们 </a>
+              <a href="#About" class="nav-link h6"> 关于我们 </a>
             </li>
             <li class="nav-item mx-3">
-              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
+              <a href="mailto: befinancialed@gmail.com" class="nav-link h6">
                 联系
               </a>
             </li>
             <li class="nav-item dropdown mx-3">
               <a
-                class="nav-link dropdown-toggle h5"
+                class="nav-link dropdown-toggle h6"
                 href="#"
                 id="navbarDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                金融教育
+                金融教育与服务
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
                   <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
                 </li>
-                <li><a class="dropdown-item" href="{% url 'tax' %}">税</a></li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'savings' %}"
-                    >学院/大学储蓄计划</a
-                  >
+                  <a class="dropdown-item" href="{% url 'tax' %}">
+                    税务规划</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="{% url 'retirement' %}"
@@ -88,18 +86,13 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
-                    >人寿保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'investment' %}"
-                    >投资</a
-                  >
-                </li>
-                <li>
                   <a class="dropdown-item" href="{% url 'estate_planning' %}"
                     >遗产规划</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
+                    >人寿保险</a
                   >
                 </li>
                 <li>
@@ -110,6 +103,16 @@
                 <li>
                   <a class="dropdown-item" href="{% url 'medicare' %}"
                     >医疗保险</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'investment' %}"
+                    >投资风险控制</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'savings' %}"
+                    >大学助学金申请</a
                   >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
@@ -125,24 +128,24 @@
             </li>
 
             <li class="nav-item mx-3">
-              <a href="{% url 'join_us' %}" class="nav-link h5"> 加入我们 </a>
+              <a href="{% url 'join_us' %}" class="nav-link h6"> 加入我们 </a>
             </li>
             <li class="nav-item mx-3">
-              <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
+              <a href="{% url 'blogs' %}" class="nav-link h6"> 博客 </a>
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item mx-3">
-              <a href="{% url 'video' %}" class="nav-link h5"> 视频 </a>
+              <a href="{% url 'video' %}" class="nav-link h6"> 视频 </a>
             </li>
             <li class="nav-item mx-3">
-              <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
+              <a href="{% url 'signout' %}" class="nav-link h6"> 登出 </a>
             </li>
             {% else %}
             <li class="nav-item mx-3">
-              <a href="{% url 'signup' %}" class="nav-link h5"> 报名 </a>
+              <a href="{% url 'signup' %}" class="nav-link h6"> 报名 </a>
             </li>
             <li class="nav-item mx-3">
-              <a href="{% url 'signin' %}" class="nav-link h5"> 登录 </a>
+              <a href="{% url 'signin' %}" class="nav-link h6"> 登录 </a>
             </li>
             {% endif %}
           </ul>
@@ -161,17 +164,14 @@
               alt="image of the newyork skyline"
             />
           </div>
-          <div class="col-md-5 text-center text-md-start" id="About">
+          <div class="col-md-6 text-center text-md-start" id="About">
             <h1>
-              <div class="display-6 text-center">通往你的路</div>
-              <div class="display-4 text-muted text-center">
-                成功的财务未来.
-              </div>
+              <div class="display-6 text-center">通往未来财务的成功之路</div>
             </h1>
             <p class="lead my-4 text-muted text-center">
               BE (Beyond-Exponential)
-              金融教育集团致力普及金融教育。我们的金融经纪人提供金融教育，
-              金融服务和财富积累战略 帮助您建立财务安全.
+              金融教育集团致力于普及税务财务法务相关的金融知识。</br>我们团队集金融教育，
+              金融服务和财富积累战略为一体，帮助您建立完善安全的财务系统。
             </p>
           </div>
         </div>
@@ -188,11 +188,17 @@
               />
             </div>
             <div>
-              <h4>理财教育</h4>
+              <h4>财商教育</h4>
               <p class="text-center lead my-4 text-muted">
-                通过为我们的客户提供评估的知识和工具 财务状况并减少
-                投资风险，我们帮助我们的客户 做出更明智的决定。
+                我们提供以下财商教育服务：
               </p>
+              <div class="justify-content-center">
+                <ul class="text-center" style="list-style-position: inside;">
+                  <li class="h5 text-muted">周末公益讲座（对外开放）</li>
+                  <li class="h5 text-muted">内部会员讲座（对内开放）</li>
+                  <li class="h5 text-muted">会员个体辅导（对内开放）</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="col-md-4 text-center">
@@ -206,14 +212,19 @@
             <div>
               <h4>金融服务</h4>
               <p class="text-center lead my-4 text-muted">
-                我们提供财务咨询 服务，以帮助我们的客户追求 财务安全，包括：
+                我们提供以下财务咨询服务，包括：
               </p>
               <div class="justify-content-center">
-                <ul class="text-center f-services">
-                  <li>退休策略</li>
-                  <li>人寿保险</li>
-                  <li>大学资助计划</li>
-                  <li>遗产规划</li>
+                <ul class="text-center" style="list-style-position: inside;">
+                  <li class="h5 text-muted">税务规划</li>
+                  <li class="h5 text-muted">退休规划</li>
+                  <li class="h5 text-muted">遗产规划</li>
+                  <li class="h5 text-muted">资产保护</li>
+                  <li class="h5 text-muted">保险年金</li>
+                  <li class="h5 text-muted">长期护理</li>
+                  <li class="h5 text-muted">医疗保险</li>
+                  <li class="h5 text-muted">投资风险控制</li>
+                  <li class="h5 text-muted">大学助学金申请</li>
                 </ul>
               </div>
             </div>
@@ -227,11 +238,17 @@
               />
             </div>
             <div>
-              <h4>企业家</h4>
-              <p class="text-center lead my-4 text-muted">
-                我们的业务平台有助于促进您作为代理人的成功
-                通过我们经过验证的系统建立成功的金融服务组织
+              <h4>企业家平台</h4>
+              <p class="text-start lead my-4 text-muted" style="text-indent: 30px;">
+                我们有情怀有担当，我们不仅独善其身，我们更希望兼济天下！
+                我们为辛勤的中产阶级完美财务而奋斗！我们招贤纳士，我们广聚英才，
+                我们帮助他人同时成就自己。  
               </p>
+              <p class="text-start lead my-4 text-muted" style="text-indent: 30px;">
+                如果您对金融服务业感兴趣，如果您遭遇中年危机职业瓶颈，
+                如果您有经天纬地之才，不甘心平庸一生，请加入我们的平台，让我们一起来创业！ 
+              </p>
+              
             </div>
           </div>
         </div>

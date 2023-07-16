@@ -139,30 +139,30 @@
     </nav>
 
     <section>
-      <div class="container-lg bg-light">
+      <div class="container-lg">
         <div class="text-center p-3">
-          <h1 class="text-muted">概述, 挑战</h1>
-          <p class="text-muted border-bottom h6 p-2"
-            >美国人正面临严峻的财务挑战 :</p
+          <h1 class="p-2 fw-bold"
+            >我们为什么需要财商教育</h1
           >
+          <div class="p-3">
+            <ul class="p-2" style="list-style: none">
+              <li class="text-muted text-center h4 p-3">79% 的美国人感到经济压力</li>
+              <li class="text-muted text-center h4 p-3">超过一半的美国人靠薪水过活</li>
+              <li class="text-muted text-center h4 p-3">
+                62% 的美国人背负信用卡债务,27% 的人没有按时支付账单
+              </li>
+            </ul>
+            <p class="text-muted text-center">
+              我们大多数人都不想成为统计数据。这些问题无处不在，它们发生在我们自己的家人和朋友的家人身上.
+            </p>
+  
+            <p class="h1 fw-bold text-center">
+              我们生活在世界上最富有的国家之一，但我们总是遇到金钱问题。
+            </p>
+          </div>
         </div>
-        <div class="p-3">
-          <ul class="border-bottom p-2" style="list-style: none">
-            <li class="text-muted text-center h4 p-3">79% 的美国人感到经济压力</li>
-            <li class="text-muted text-center h4 p-3">超过一半的美国人靠薪水过活</li>
-            <li class="text-muted text-center h4 p-3">
-              62% 的美国人背负信用卡债务,27% 的人没有按时支付账单
-            </li>
-          </ul>
-          <p class="text-muted text-center">
-            我们大多数人都不想成为统计数据。这些问题无处不在，它们发生在我们自己的家人和朋友的家人身上.
-          </p>
-
-          <p class="h1 fw-bold text-center">
-            我们生活在世界上最富有的国家之一，但我们总是遇到金钱问题。
-          </p>
-        </div>
-        <div class="p-3 border-bottom">
+        
+        <div class="p-3 bg-light">
           <h1 class="text-start text-center p-2">1.收入差距正在扩大</h1>
           <p class="h5 text-center">按百分位数分组的财富 (1991-2023 年)</p>
 
@@ -174,21 +174,25 @@
             />
           </div>
 
-          <p class="h1 fw-bold text-center p-2">如何让富人更富，穷人更穷？</p>
+          <p class="h1 fw-bold text-center p-2">为什么富人更富，穷人更穷？</p>
+          <p class="h3 text-center p-2">富人有富人的思维方式，穷人有穷人的思维习惯</p>
+          <p class="h3 text-center p-2">富人热爱学习，总在寻找自身的不足，人生不设限，总寻求突破自己的思维上线。</p>
+          <p class="h3 text-center p-2">穷人固步自封，自我设限，多虑多疑，疏于学习，怠于思考。</p>
         </div>
-        <div class="p-3 border-bottom">
-          <h1 class="fw-bold text-center p-2">你能成为百万富翁吗?</h1>
-          <p class="text-center h5 text-muted">根据瑞士信贷，您可以！</p>
+        <div class="p-3">
+          <h1 class="fw-bold text-center p-2">你想成为百万富翁吗?</h1>
 
           <div class="text-center p-2">
+            <p class="h3 text-center p-2">那首先需要了解完备的财务体系，了解经济规律的运行。</p>
             <img
               src="{% static 'images/wealth.webp' %}"
               alt="global wealth report 2021"
               class="img-fluid"
             />
+            
           </div>
         </div>
-        <div class="p-3 border-bottom">
+        <div class="p-3 bg-light">
           <h1 class="text-center fw-bold p-2">隔壁的百万富翁</h1>
           <p class="h3 text-center p-2">
             他们中的许多人不是名人或有名望的人, <br />
@@ -221,7 +225,7 @@
             </ul>
           </div>
         </div>
-        <div class="text-center border-bottom pt-4">
+        <div class="text-center pt-4">
           <p class="h1 fw-bold text-center ">建立强大的财务基础</p>
           <p class="h4 text-muted p-3 text-center">在“建立财务基础”之前，您无法“建立财富”</p>
           <div class="pb-4 text-center">
@@ -235,14 +239,15 @@
         <!--<div class="text-center">
             <p class="h1 fst-italic fw-bold">未来在你手中 .</p>
           </div>-->
-      </div>
-      <div class="text-center border-bottom pt-3">
-        <h1 class="fw-bold text-center">如何从不安全到独立</h1>
-        <p class="h4 text-center pb-3">债务累积</p>
-        <div class="text-center pb-3">
-          <img src="{% static 'images/Debt.webp' %}" alt="debt roll-up" class="img-fluid">
+        <div class="text-center bg-light pt-3">
+          <h1 class="fw-bold text-center">如何从不安全到独立</h1>
+          <p class="h4 text-center pb-3">债务累积</p>
+          <div class="text-center pb-3">
+            <img src="{% static 'images/Debt.webp' %}" alt="debt roll-up" class="img-fluid">
+          </div>
         </div>
       </div>
+      
       <div class="text-center border-bottom pt-3">
         <h1 class="fw-bold text-center">为什么你应该储蓄和投资</h1>
         <p class="h4 text-center pb-3">假设你的收入是 60,000 美元，你从 30 岁开始存入 10% 每月 500 美元</p>
