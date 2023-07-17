@@ -1,43 +1,44 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-body{
-    background: linear-gradient(to right, #3a7bd5,#3a6073);
+body {
+    background: linear-gradient(to right, #0000, #dee2e4);
     font-family: "Ralesway", sans-serif;
     height: 100vh;
 }
 
-.login{
-    position:absolute;
+.login {
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 380px;
     padding: 20px 30px;
-    background:#fff;
+    background: #fff;
     box-shadow: 2px 2px 5px 5px;
-    border-radius:10px;
+    border-radius: 10px;
 }
 
-.login .form h2{
+.login .form h2 {
     text-align: center;
     color: #222;
     margin: 10px 0px 20px;
 }
 
-.form-element{
+.form-element {
     margin: 15px 0px;
 }
 
-.login .form .form-element label{
+.login .form .form-element label {
     font-size: 14px;
     color: #222;
 }
+
 .login .form .form-element input[type="text"],
-.login .form .form-element input[type="password"]{
+.login .form .form-element input[type="password"] {
     margin-top: 5px;
     display: block;
     width: 100%;
@@ -48,7 +49,7 @@ body{
 
 }
 
-.login .form .form-element button{
+.login .form .form-element button {
     width: 100%;
     height: 40px;
     border: none;
@@ -60,6 +61,6 @@ body{
     cursor: pointer;
 }
 
-em{
-    color:red;
+em {
+    color: red;
 }
