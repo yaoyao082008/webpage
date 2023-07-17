@@ -10,6 +10,7 @@ from .models import post
 class blogs(ListView):
     model = post
     template_name='blog.html'
+    ordering=['-id']
 
 class article(DetailView):
     model=post
