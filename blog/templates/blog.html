@@ -147,7 +147,7 @@
         <div class="container my-3">
           <li style="list-style: none">
             {{post.title}} |
-            {{post.first_name}} {{post.last_name}} | {{post.date.date}} | {{ post.body | slice:":255" }} ........
+            {{post.first_name}} {{post.last_name}} | {{post.date.date}} | {{ post.body|safe | slice:":255" }} ........
           </li>
           <a href="{% url 'article' post.pk %} " class="btn btn-secondary m-2">看一看</a> 
         </div>

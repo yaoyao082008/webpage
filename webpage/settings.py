@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'homepage',
     'videos',
     'blog',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
