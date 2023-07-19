@@ -59,17 +59,15 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                金融教育
+                金融教育与服务
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
                   <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
                 </li>
-                <li><a class="dropdown-item" href="{% url 'tax' %}">税</a></li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'savings' %}"
-                    >学院/大学储蓄计划</a
-                  >
+                  <a class="dropdown-item" href="{% url 'tax' %}">
+                    税务规划</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="{% url 'retirement' %}"
@@ -77,18 +75,13 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
-                    >人寿保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'investment' %}"
-                    >投资</a
-                  >
-                </li>
-                <li>
                   <a class="dropdown-item" href="{% url 'estate_planning' %}"
                     >遗产规划</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
+                    >人寿保险</a
                   >
                 </li>
                 <li>
@@ -99,6 +92,16 @@
                 <li>
                   <a class="dropdown-item" href="{% url 'medicare' %}"
                     >医疗保险</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'investment' %}"
+                    >投资风险控制</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'savings' %}"
+                    >大学助学金申请</a
                   >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
@@ -182,7 +185,7 @@
               哪种保险最适合我？我的保单会失效吗？
               保单的生活福利有哪些？如何照顾我的人寿保单？
             </p>
-            <a href="https://www.befinancialeducation.com/book-online" class="text-center">安排会议</a>
+            <a href="https://www.befinancialeducation.com/book-online" class="text-center btn btn-secondary my-4">安排会议</a>
           </div>
         </div>
       </div>
