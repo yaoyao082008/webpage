@@ -144,12 +144,22 @@
       <ul>
         {% for post in object_list %}
 
-        <div class="container my-3">
-          <li style="list-style: none">
-            {{post.title}} |
-            {{post.first_name}} {{post.last_name}} | {{post.date.date}} | {{ post.body|safe | slice:":255" }} ........
-          </li>
-          <a href="{% url 'article' post.pk %} " class="btn btn-secondary m-2">看一看</a> 
+        <div class="row my-3">
+          <div class="col-md-4 align-self-center ">
+            <img
+              class="img-fluid rounded"
+              src={{post.image.url}}
+              alt="image"
+            />
+          </div>
+          <div class="col-md-8">
+            <li style="list-style: none;">
+              {{post.title}} |
+              {{post.first_name}} {{post.last_name}} | {{post.date.date}}
+            </li>
+            <li style="list-style: none;" class="my-3"> {{ post.body|safe | slice:":650" }} ........</li>
+            <a href="{% url 'article' post.pk %} " class="btn btn-secondary m-2">看一看</a> 
+          </div>
         </div>
         <hr>
 
