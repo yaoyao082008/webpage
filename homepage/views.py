@@ -9,7 +9,7 @@ from .models import *
 # Create your views here.
 
 def index(request):
-        return render(request,'page/index.html',{'meeting': meetings.objects.all()})
+        return render(request,'page/index.html')
 
 def overview(request):
         return render(request,'education/overview.html')
