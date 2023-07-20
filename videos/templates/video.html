@@ -150,87 +150,178 @@
           </div>
           <div class="col-md-3 col-12 text-center m-5">
             <h4 class="border-2 border-bottom">税务视频</h4>
-            <ul>
+            <div class="accordion" id="taxvideo">
               {% for vid in tax %}
-              <li>
-                <a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a>
-              </li>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="Arr{{vid.link}}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Arr{{vid.password}}" aria-expanded="false" aria-controls="Arr{{vid.password}}">
+                    {{vid.title}}
+                  </button>
+                </h2>
+                <div id="Arr{{vid.password}}" class="accordion-collapse collapse" aria-labelledby="Arr{{vid.link}}" data-bs-parent="#taxvideo">
+                  <div class="accordion-body">
+                    <p> 作家: {{vid.author}} </p>
+                    <p> 密码: {{vid.password}} </p>
+                    <a href="{{vid.link}}" class="btn btn-primary"> 看一看 </a>
+                  </div>
+                </div>
+              </div>
               {% endfor %}
-            </ul>
+            </div>
           </div>
           <div class="col-md-3 col-12 text-center m-5">
             <h4 class="border-2 border-bottom">长期护理视频</h4>
-            <ul>
+            <div class="accordion" id="long_term_care_video">
               {% for vid in long_term_care %}
-              <li>
-                <a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a>
-              </li>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="Arr{{vid.link}}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Arr{{vid.password}}" aria-expanded="false" aria-controls="Arr{{vid.password}}">
+                    {{vid.title}}
+                  </button>
+                </h2>
+                <div id="Arr{{vid.password}}" class="accordion-collapse collapse" aria-labelledby="Arr{{vid.link}}" data-bs-parent="#long_term_care_video">
+                  <div class="accordion-body">
+                    <p> 作家: {{vid.author}} </p>
+                    <p> 密码: {{vid.password}} </p>
+                    <a href="{{vid.link}}" class="btn btn-primary"> 看一看 </a>
+                  </div>
+                </div>
+              </div>
               {% endfor %}
-            </ul>
+            </div>
           </div>
           <div class="col-md-3 col-12 text-center m-5">
             <h4 class="border-2 border-bottom">退休视频</h4>
-            <ul>
+            <div class="accordion" id="retirementvideo">
               {% for vid in retirement %}
-              <li>
-                <a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a>
-              </li>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="Arr{{vid.link}}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Arr{{vid.password}}" aria-expanded="false" aria-controls="Arr{{vid.password}}">
+                    {{vid.title}}
+                  </button>
+                </h2>
+                <div id="Arr{{vid.password}}" class="accordion-collapse collapse" aria-labelledby="Arr{{vid.link}}" data-bs-parent="#retirementvideo">
+                  <div class="accordion-body">
+                    <p> 作家: {{vid.author}} </p>
+                    <p> 密码: {{vid.password}} </p>
+                    <a href="{{vid.link}}" class="btn btn-primary"> 看一看 </a>
+                  </div>
+                </div>
+              </div>
               {% endfor %}
-            </ul>
+            </div>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-3 col-12 text-center m-5">
             <h4 class="border-2 border-bottom">储蓄视频</h4>
-            <ul>
+            <div class="accordion" id="savingsvideo">
               {% for vid in savings %}
-              <li>
-                <a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a>
-              </li>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="Arr{{vid.link}}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Arr{{vid.password}}" aria-expanded="false" aria-controls="Arr{{vid.password}}">
+                    {{vid.title}}
+                  </button>
+                </h2>
+                <div id="Arr{{vid.password}}" class="accordion-collapse collapse" aria-labelledby="Arr{{vid.link}}" data-bs-parent="#savingsvideo">
+                  <div class="accordion-body">
+                    <p> 作家: {{vid.author}} </p>
+                    <p> 密码: {{vid.password}} </p>
+                    <a href="{{vid.link}}" class="btn btn-primary"> 看一看 </a>
+                  </div>
+                </div>
+              </div>
               {% endfor %}
-            </ul>
+            </div>
           </div>
           <div class="col-md-3 col-12 text-center m-5">
             <h4 class="border-2 border-bottom">人寿保险视频</h4>
-            <ul>
+            <div class="accordion" id="lifevideo">
               {% for vid in life_insurance %}
-              <li>
-                <a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a>
-              </li>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="Arr{{vid.link}}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Arr{{vid.password}}" aria-expanded="false" aria-controls="Arr{{vid.password}}">
+                    {{vid.title}}
+                  </button>
+                </h2>
+                <div id="Arr{{vid.password}}" class="accordion-collapse collapse" aria-labelledby="Arr{{vid.link}}" data-bs-parent="#lifevideo">
+                  <div class="accordion-body">
+                    <p> 作家: {{vid.author}} </p>
+                    <p> 密码: {{vid.password}} </p>
+                    <a href="{{vid.link}}" class="btn btn-primary"> 看一看 </a>
+                  </div>
+                </div>
+              </div>
               {% endfor %}
-            </ul>
+            </div>
           </div>
           <div class="col-md-3 col-12 text-center m-5">
             <h4 class="border-2 border-bottom">投资视频</h4>
-            <ul>
+            <div class="accordion" id="investmentvideo">
               {% for vid in investment %}
-              <li>
-                <a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a>
-              </li>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="Arr{{vid.link}}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Arr{{vid.password}}" aria-expanded="false" aria-controls="Arr{{vid.password}}">
+                    {{vid.title}}
+                  </button>
+                </h2>
+                <div id="Arr{{vid.password}}" class="accordion-collapse collapse" aria-labelledby="Arr{{vid.link}}" data-bs-parent="#investmentvideo">
+                  <div class="accordion-body">
+                    <p> 作家: {{vid.author}} </p>
+                    <p> 密码: {{vid.password}} </p>
+                    <a href="{{vid.link}}" class="btn btn-primary"> 看一看 </a>
+                  </div>
+                </div>
+              </div>
               {% endfor %}
-            </ul>
+            </div>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-3 col-12 text-center m-5">
             <h4 class="border-2 border-bottom">遗产规划视频</h4>
-            <ul>
-              {% for vid in estate_planning %}
-              <li>
-                <a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a>
-              </li>
-              {% endfor %}
+
+            <div class="accordion" id="estatevideo">
+                {% for vid in estate_planning %}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="heading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Arr{{vid.password}}" aria-expanded="false" aria-controls="Arr{{vid.password}}">
+                      {{vid.title}}
+                    </button>
+                  </h2>
+                  <div id="Arr{{vid.password}}" class="accordion-collapse collapse" aria-labelledby="heading" data-bs-parent="#estatevideo">
+                    <div class="accordion-body">
+                      <p> 作家: {{vid.author}} </p>
+                      <p> 密码: {{vid.password}} </p>
+                      <a href="{{vid.link}}" class="btn btn-primary"> 看一看 </a>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+            </div>
+            
             </ul>
           </div>
           <div class="col-md-3 col-12 text-center m-5">
             <h4 class="border-2 border-bottom">医疗保险视频</h4>
-            <ul>
+            <div class="accordion" id="medicarevideo">
               {% for vid in medicare %}
-              <li>
-                <a href="{{vid.link}}" class="lead text-muted"> {{vid}} </a>
-              </li>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="Arr{{vid.link}}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Arr{{vid.password}}" aria-expanded="false" aria-controls="Arr{{vid.password}}">
+                    {{vid.title}}
+                  </button>
+                </h2>
+                <div id="Arr{{vid.password}}" class="accordion-collapse collapse" aria-labelledby="Arr{{vid.link}}" data-bs-parent="#medicarevideo">
+                  <div class="accordion-body">
+                    <p> 作家: {{vid.author}} </p>
+                    <p> 密码: {{vid.password}} </p>
+                    <a href="{{vid.link}}" class="btn btn-primary"> 看一看 </a>
+                  </div>
+                </div>
+              </div>
               {% endfor %}
-            </ul>
+            </div>
           </div>
         </div>
       </div>
