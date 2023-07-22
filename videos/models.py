@@ -100,6 +100,18 @@ class medicare_video(models.Model):
     def __str__(self):
         return f"link: {self.link} password: {self.password}"
 
+class other_video(models.Model):
+
+    
+    link=models.CharField(max_length=1000)
+    password=models.CharField(max_length=40,default='N/A')
+    title=models.CharField(max_length=500,default='Title')
+    author=models.CharField(max_length=200,default='Anonymous')
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+
+    def __str__(self):
+        return f"link: {self.link} password: {self.password}"
+
 
 
 

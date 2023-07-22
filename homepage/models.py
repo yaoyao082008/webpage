@@ -13,6 +13,7 @@ class verifed_user(models.Model):
     investment_video_number=models.IntegerField(default=1)
     estate_planning_video_number=models.IntegerField(default=1)
     medicare_video_number=models.IntegerField(default=1)
+    other_video_number=models.IntegerField(default=1)
 
     def __str__(self):
         return self.verified_email

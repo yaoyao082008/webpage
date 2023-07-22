@@ -143,9 +143,8 @@
       <div class="container-lg bg-light">
         <div class="row justify-content-center">
           <div class="m-3">
-            <p class="h3 text-center text-muted">
-              Watch videos on how to become sucessful financially. Released
-              Weekly.
+            <p class="h3 text-center fw-bold">
+              观看有关如何在财务上取得成功的视频。每周发布。
             </p>
           </div>
           <div class="col-md-3 col-12 text-center m-5">
@@ -313,6 +312,27 @@
                   </button>
                 </h2>
                 <div id="Arr{{vid.id}}" class="accordion-collapse collapse" aria-labelledby="Arr{{vid.link}}" data-bs-parent="#medicarevideo">
+                  <div class="accordion-body">
+                    <p> 作家: {{vid.author}} </p>
+                    <p> 密码: {{vid.password}} </p>
+                    <a href="{{vid.link}}" class="btn btn-primary"> 看一看 </a>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="col-md-3 col-12 text-center m-5">
+            <h4 class="border-2 border-bottom">其他视频</h4>
+            <div class="accordion" id="othervideos">
+              {% for vid in other %}
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="Arr{{vid.link}}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Arr{{vid.id}}" aria-expanded="false" aria-controls="Arr{{vid.id}}">
+                    {{vid.title}}
+                  </button>
+                </h2>
+                <div id="Arr{{vid.id}}" class="accordion-collapse collapse" aria-labelledby="Arr{{vid.link}}" data-bs-parent="#othervideos">
                   <div class="accordion-body">
                     <p> 作家: {{vid.author}} </p>
                     <p> 密码: {{vid.password}} </p>

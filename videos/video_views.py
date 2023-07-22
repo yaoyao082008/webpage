@@ -19,6 +19,7 @@ def video(request):
     investment=  investment_video.objects.all()[:person.investment_video_number]
     estate_planning= estate_planning_video.objects.all()[:person.estate_planning_video_number]
     medicare= medicare_video.objects.all()[:person.medicare_video_number]
+    other = other_video.objects.all()[:person.other_video_number]
 
     context={
         'tax':tax,
@@ -28,7 +29,8 @@ def video(request):
         'life_insurance':life_insurance,
         'investment':investment,
         'estate_planning':estate_planning,
-        'medicare':medicare
+        'medicare':medicare,
+        'other':other,
     }
 
     return render(request,'video.html',context)
