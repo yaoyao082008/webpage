@@ -145,7 +145,7 @@
         {% for post in object_list %}
 
         <div class="row my-3">
-          <div class="col-md-4 align-self-center ">
+          <div class="col-md-4 align-self-start ">
             <img
               class="img-fluid rounded"
               src={{post.image.url}}
@@ -157,7 +157,7 @@
               {{post.title}} |
               {{post.first_name}} {{post.last_name}} | {{post.date.date}}
             </li>
-            <li style="list-style: none;" class="my-3"> {{ post.body|safe | slice:":650" }} ........</li>
+            <li style="list-style: none;" class="my-3"> {{ post.body|safe | slice:":400" }} ........</li>
             <a href="{% url 'article' post.pk %} " class="btn btn-secondary m-2">看一看</a> 
           </div>
         </div>
