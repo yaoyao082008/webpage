@@ -45,11 +45,6 @@
             <li class="nav-item mx-3">
               <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
             </li>
-            <li class="nav-item mx-3">
-              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
-                联系
-              </a>
-            </li>
             <li class="nav-item dropdown mx-3">
               <a
                 class="nav-link dropdown-toggle h5"
@@ -65,9 +60,11 @@
                 <li>
                   <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
                 </li>
+                <li><a class="dropdown-item" href="{% url 'tax' %}">税</a></li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'tax' %}">
-                    税务规划</a>
+                  <a class="dropdown-item" href="{% url 'savings' %}"
+                    >学院/大学储蓄计划</a
+                  >
                 </li>
                 <li>
                   <a class="dropdown-item" href="{% url 'retirement' %}"
@@ -75,13 +72,18 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'estate_planning' %}"
-                    >遗产规划</a
+                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
+                    >人寿保险</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
-                    >人寿保险</a
+                  <a class="dropdown-item" href="{% url 'investment' %}"
+                    >投资</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'estate_planning' %}"
+                    >遗产规划</a
                   >
                 </li>
                 <li>
@@ -92,16 +94,6 @@
                 <li>
                   <a class="dropdown-item" href="{% url 'medicare' %}"
                     >医疗保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'investment' %}"
-                    >投资风险控制</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'savings' %}"
-                    >大学助学金申请</a
                   >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
@@ -124,6 +116,11 @@
             {% if user.is_authenticated %}
             <li class="nav-item mx-3">
               <a href="{% url 'video' %}" class="nav-link h5"> 视频 </a>
+            </li>
+            <li class="nav-item mx-3">
+              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
+                联系
+              </a>
             </li>
             <li class="nav-item mx-3">
               <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
@@ -185,30 +182,16 @@
       <div class="text-center container-lg bg-light">
         <div class="row justify-content-center p-3">
           <div class="col-md-6 text-md-start text-sm-center">
-            <h1 class="my-3 fw-bold">社会保障问题和对 401(k) 的依赖</h1>
-            <p class="h6">
-              更令人震惊的是，根据美国财政部发布的年度受托人报告，
-              约 6700 万美国人赖以为生的社会保障信托基金预计将在
-              2034 年耗尽，比去年预计的时间提前一年。
-              公司养老金很少见，我们主要依靠我们的 401(k) 退休。
-              然而，我们中的许多人最终可能会坐上市场波动的过山车，
-              无法控制我们辛辛苦苦攒下来的钱。
-            </p>
-          </div>
-        </div>
-        <div class="row justify-content-center p-3">
-          <div class="col-md-6 text-md-start text-sm-center">
-            <h1 class="my-3 fw-bold">传统退休计划.</h1>
-            <ul style="list-style: none;" class="text-start">
-              <li class="p-1">1)最大化 401(k)捐款</li>
-              <li class="p-1">2)把钱投入市场以获得良好的回报率。</li>
-              <li class="p-1">3)延迟纳税</li>
-              <li class="p-1">4)投资目标基金，实现退休计划投资的自动驾驶</li>
-              <li class="p-1">5)如果您需要长期护理，请去政府。</li>
+            <h1 class="my-3 fw-bold">退休规划课程大纲样本</h1>
+            <ul style="list-style-type: square;">
+              <li>401(k)真的省税吗？</li>
+              <li>我该存Roth还是Traditional IRA?</li>
+              <li>我的退休账号的投资选择有哪些？</li>
+              <li>我的退休账号的费用有哪些?</li>
+              <li>如何衡量我的退休账号的表现?</li>
+              <li>如何做完备的退休规划</li>
+              <li>我的退休规划会被HIIT吗?</li>
             </ul>
-            <p class="h-5 p-2">所有这些听起来都不错，
-              但是有多少人真的按照这个建议在财务上取得了成功？
-              这些建议对普通美国人的效果如何？您可能已经知道答案了。</p>
           </div>
         </div>
         <div class="row justify-content-center p-3">

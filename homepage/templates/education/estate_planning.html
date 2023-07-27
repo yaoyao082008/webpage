@@ -45,11 +45,7 @@
             <li class="nav-item mx-3">
               <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
             </li>
-            <li class="nav-item mx-3">
-              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
-                联系
-              </a>
-            </li>
+            
             <li class="nav-item dropdown mx-3">
               <a
                 class="nav-link dropdown-toggle h5"
@@ -126,6 +122,11 @@
               <a href="{% url 'video' %}" class="nav-link h5"> 视频 </a>
             </li>
             <li class="nav-item mx-3">
+              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
+                联系
+              </a>
+            </li>
+            <li class="nav-item mx-3">
               <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
             </li>
             {% else %}
@@ -144,7 +145,7 @@
     <section>
       <div class="container-lg bg-light text-center">
         <div class="row m-5">
-          <div class="col-md-4 align-self-center">
+          <div class="col-md-6 align-self-center">
             <img
               class="img-fluid"
               src="{% static 'images/estate_planning.webp' %}"
@@ -152,10 +153,18 @@
             />
           </div>
 
-          <div class="col-md-2"></div>
 
           <div class="col-md-6 text-start align-self-center">
             <h1 class="my-3 fw-bold">遗产规划</h1>
+            <p class="h5 p-2">
+              在美国是一个滥用诉讼的国度，为什么呢？因为为了保证穷人也有申述的权利，
+              不会因为经济原因雇不起律师，因此这些伤害诉讼律师一般都是免费，只有打赢官司，
+              拿到赔款以后才 收钱，这样保证穷人也不会因为没有钱打不起官司。
+              律师接到案子以后会怎么做？他们会首先调查被告人的资产，倘若资产都是未被保护的资产，
+              比如房产，现金，股票账号，律师们非常乐意接手这个案子。倘若发现被告人的钱在保险，
+              年金或者退休金里，即使赢了官司，也不见得能拿走这些钱，律师就不愿意接受这个案子了。
+              我们该如何的防患于未然，将潜在碰瓷者消灭在萌芽状态？我们该如何进行有效的资产保护呢？
+            </p>
             <p class="h4 fw-bold mt-3">如果您不指定您的继承人，法院会</p>
             <p class="h5 p-2">
               玛丽莲·梦露 (Marilyn Monroe) 于 1962 年 8 月 5 日去世，她是美丽、
@@ -170,6 +179,24 @@
       </div>
 
       <div class="text-center container-lg bg-light">
+        <div class="row justify-content-center p-3">
+          <div class="col-md-6 text-md-start text-sm-center">
+            <h1 class="my-3 fw-bold">遗产规划课程大纲样本：</h1>
+            <ul style="list-style-type: square;">
+              <li class="h5">好的遗产规划的要素</li>
+              <li class="h5">可撤销信托和不可撤销信托的区别</li>
+              <li class="h5">Spousal Lifetime Access Trust</li>
+              <li class="h5">Grantor Retained Annuity Trust</li>
+              <li class="h5">Irrevocable Life Insurance Trust</li>
+              <li class="h5">Qualified Domestic Trust</li>
+              <li class="h5">Dynasty Trust</li>
+              <li class="h5">Medicaid Asset Protection Trust</li>
+              <li class="h5">Charitable Remainder Trust</li>
+              <li class="h5">如何避免遗产税</li>
+
+            </ul>
+          </div>
+        </div>
         <div class="row justify-content-center p-3">
           <div class="col-md-6 text-md-start text-sm-center">
             <h1 class="my-3 fw-bold">为什么遗产规划如此重要</h1>

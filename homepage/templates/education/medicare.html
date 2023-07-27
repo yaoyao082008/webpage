@@ -45,11 +45,7 @@
             <li class="nav-item mx-3">
               <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
             </li>
-            <li class="nav-item mx-3">
-              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
-                联系
-              </a>
-            </li>
+            
             <li class="nav-item dropdown mx-3">
               <a
                 class="nav-link dropdown-toggle h5"
@@ -126,6 +122,11 @@
               <a href="{% url 'video' %}" class="nav-link h5"> 视频 </a>
             </li>
             <li class="nav-item mx-3">
+              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
+                联系
+              </a>
+            </li>
+            <li class="nav-item mx-3">
               <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
             </li>
             {% else %}
@@ -140,6 +141,60 @@
         </div>
       </div>
     </nav>
+
+    <section>
+      <div class="container-lg bg-light text-center">
+        <div class="row m-5">
+          <div class="col-md-6 align-self-center">
+            <img
+              class="img-fluid"
+              src="{% static 'images/tax_quote.webp' %}"
+              alt="person doing taxes"
+            />
+          </div>
+
+
+          <div class="col-md-6 text-start align-self-center">
+            <h2 class="my-3 fw-bold">我有会计师，还需要了解税务知识吗？</h2>
+            <p class="h6">
+              拥有会计师并不意味着拥有有效的税务规划.
+              为什么？您的会计师不负责您的税务规划. 
+              让我们明确三个重要事实:
+            </p>
+            <ul class="text-start" style="list-style: none;">
+              <li class="p-3">事实 1: 您的会计师只负责在税表上填写正确的数字。你付钱给她/他是为了提交申请，而不是为了计划。
+                税务只是您会计师工作量的一小部分，
+                他们需要花费大量时间在簿记、归档、审计等方面。</li>
+
+              <li class="p-3"> 事实 2:您的会计师在这一年中很少与您联系。她不太可能知道您的日常业务运作。
+                在报税时间,会计师会询问您的号码,将其输入他们的计算机,然后按“Enter”。
+                结果可能遗漏了您有权享受的大笔税收减免!</li>
+
+              <li class="p-3">事实 3: 您保留税务记录。你花钱。您决定将哪些记录提交给您的会计师。
+                事实上,如果您不了解税务,
+                您很可能不会将关键信息提交给您的会计师。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center container-lg bg-light">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-md-start text-sm-center">
+            <h2 class="my-3 fw-bold">老年医保(Medicare)与长期护理(Long term care)课程大纲</h1>
+
+            <ul style="list-style-type: square;">
+              <li>Medicare的细节与注意事项</li>
+              <li>长期护理与13个州的LTC tax</li>
+              <li>不同公司LTC产品比较</li>
+              <li>Medicaid asset protection trust and LTC</li>
+            </ul>
+
+            <a href="https://www.befinancialeducation.com/book-online" class="text-center btn btn-secondary my-4">安排会议</a>
+          </div>
+        </div> 
+      </div>
+    </section>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

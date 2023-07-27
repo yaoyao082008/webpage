@@ -45,11 +45,6 @@
             <li class="nav-item mx-3">
               <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
             </li>
-            <li class="nav-item mx-3">
-              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
-                联系
-              </a>
-            </li>
             <li class="nav-item dropdown mx-3">
               <a
                 class="nav-link dropdown-toggle h5"
@@ -65,9 +60,11 @@
                 <li>
                   <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
                 </li>
+                <li><a class="dropdown-item" href="{% url 'tax' %}">税</a></li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'tax' %}">
-                    税务规划</a>
+                  <a class="dropdown-item" href="{% url 'savings' %}"
+                    >学院/大学储蓄计划</a
+                  >
                 </li>
                 <li>
                   <a class="dropdown-item" href="{% url 'retirement' %}"
@@ -75,13 +72,18 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'estate_planning' %}"
-                    >遗产规划</a
+                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
+                    >人寿保险</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
-                    >人寿保险</a
+                  <a class="dropdown-item" href="{% url 'investment' %}"
+                    >投资</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'estate_planning' %}"
+                    >遗产规划</a
                   >
                 </li>
                 <li>
@@ -92,16 +94,6 @@
                 <li>
                   <a class="dropdown-item" href="{% url 'medicare' %}"
                     >医疗保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'investment' %}"
-                    >投资风险控制</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'savings' %}"
-                    >大学助学金申请</a
                   >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
@@ -126,6 +118,11 @@
               <a href="{% url 'video' %}" class="nav-link h5"> 视频 </a>
             </li>
             <li class="nav-item mx-3">
+              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
+                联系
+              </a>
+            </li>
+            <li class="nav-item mx-3">
               <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
             </li>
             {% else %}
@@ -140,6 +137,7 @@
         </div>
       </div>
     </nav>
+
     <section>
       <div class="container-lg bg-light text-center">
         <div class="row m-5">
@@ -156,14 +154,40 @@
           <div class="col-md-6 text-start align-self-center">
             <h1 class="my-3 fw-bold">大学财政援助</h1>
             <p class="h5 p-2">
-              孩子出生时你存529吗? 随着时间的流逝,
-              您对自己为孩子们的大学学费所做的计划感到安心和自满。
+              中国家庭是最重视教育的群体, 在孩子很小的时候, 
+              我们便开始为孩子大学教育基金做准备, 有人买房子, 
+              有人存529, 有人投股票基金, 为的是能负担养儿育女中最昂贵的支出—大学学费. 
+              殊不知，我们可能画蛇添足,本可以申请得到的大学助学金却因为我们不合理的 
+              资产配置而化为乌有, 孩子太小, 准备大学助学金申请太早吗? 2) 收入太高, 
+              肯定拿不到助学金吗? 3) 工资很低, 肯定可以拿到助学金吗? 4) 私立大学肯定比公立大学花费高吗? 
+              5) 申请助学金, 会影响大学录取吗? 6) 第一年申请不到, 之后也拿不到吗?
             </p>
           </div>
         </div>
       </div>
 
       <div class="text-center container-lg bg-light">
+
+        <div class="row justify-content-center p-3">
+          <div class="col-md-7 text-md-start text-sm-center">
+            <h1 class="my-3 fw-bold">大学学费规划课程大纲：</h1>
+            <ul style="list-style-type: square;">
+              <li>如何规划大学助学金申请？</li>
+              <li>FAFSA表与CSS表的填写</li>
+              <li>筹备大学学费的方式有哪些？</li>
+              <li>大学助学金申请公式</li>
+              <li>出租房的考量：地产该放公司名下还是个人名下? </li>
+              <li>公司报亏损有助于助学金申请吗？</li>
+              <li>多拿mortgage可以助力助学金吗? </li>
+              <li>第11年级有什么注意事项? </li>
+              <li>CSS学校与FAFSA学校都是如何估算家庭自付额? </li>
+              <li>如何根据自家的情况查询每个学校的家庭自付额？</li>
+              <li>学校与学校之间有什么不同？ </li>
+              <li>如何降低基准年的收入？</li>
+              <li>填写FAFSA表和CSS表的注意事项</li>
+            </ul>
+          </div>
+        </div>
         <div class="row justify-content-center p-3">
           <div class="col-md-7 text-md-start text-sm-center">
             <h1 class="my-3 fw-bold ">529 可能会损害您获得经济援助的机会.</h1>

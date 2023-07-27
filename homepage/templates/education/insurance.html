@@ -45,11 +45,7 @@
             <li class="nav-item mx-3">
               <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
             </li>
-            <li class="nav-item mx-3">
-              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
-                联系
-              </a>
-            </li>
+            
             <li class="nav-item dropdown mx-3">
               <a
                 class="nav-link dropdown-toggle h5"
@@ -126,6 +122,11 @@
               <a href="{% url 'video' %}" class="nav-link h5"> 视频 </a>
             </li>
             <li class="nav-item mx-3">
+              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
+                联系
+              </a>
+            </li>
+            <li class="nav-item mx-3">
               <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
             </li>
             {% else %}
@@ -144,7 +145,7 @@
     <section>
       <div class="container-lg bg-light text-center">
         <div class="row m-5">
-          <div class="col-md-4 align-self-center">
+          <div class="col-md-5 align-self-center">
             <img
               class="img-fluid"
               src="{% static 'images/life_insurance.webp' %}"
@@ -152,16 +153,22 @@
             />
           </div>
 
-          <div class="col-md-2"></div>
+          <div class="col-md-1"></div>
 
           <div class="col-md-6 text-start align-self-center">
-            <h1 class="my-3 fw-bold">为什么要买人寿保险? </h1>
-            <p class="h5 p-2">
-              “您购买人寿保险不是因为您将要死去，而是因为您所爱的人将要活着”。
-              获得保险是我们对家人和亲人的责任。
-              无论我们赚了多少钱或存了多少钱，
-              我们的财务状况都可能因瞬间发生的意外事件而受到损害。
-            </p>
+            <ul style=" list-style-type: square;">
+              <li>保险不是消费，而是提前准备，不做风险管理，就要做危机管理！</li>
+              <li>保险拥有三个作用，分别是化解风险、守护底线、保持尊严！</li>
+              <li>保险不是钱生钱,而是以法律合同的形式,用10%的钱,保护90%的钱！</li>
+              <li>保险不是贵，而是你没给保险留地位！</li>
+              <li>保险，是一种买时不需要，但需要时却买不到的东西。</li>
+              <li>保险是让普通人能看得起病、住得起院、承受得了意外与疾病；</li>
+              <li>保险是钱，是当你最需要钱时，随时随地走到你身边的钱！</li>
+              <li>保险不是没有用，而是暂时没用！</li>
+              <li>保险真的不是你想买就能买到的</li>
+              <li>保险人人都需要！晴带雨伞，饱带饥粮。</li>
+
+            </ul>
           </div>
         </div>
       </div>
@@ -169,12 +176,39 @@
       <div class="text-center container-lg bg-light">
         <div class="row justify-content-center p-3">
           <div class="col-md-6 text-md-start text-sm-center">
-            <h1 class="my-3 fw-bold">人寿保险的种类</h1>
+            <h1 class="my-3 fw-bold">为什么我们需要人寿保险</h1>
             <p class="h6">
-              因此，重要的是购买一份人寿保险，以防范这种可能性很小但具有破坏性的事件。
-              好在人寿保险经历了好几代，
-              从定期寿险，到终身寿险，再到万能寿险，再到可变万能寿险，指数万能寿险。
+              每一个人来到世上，都是向死而生的过程，死亡是生命的一部分，就像一首乐曲的完结符一样，
+              它只是标志着时间上的终结，但我们身后事却不一定因此完结。因此遗产规划是生与死的交汇，
+              是家庭理财的重要组成部分， 是每一个成年人都需要的，它不仅仅争对比尔盖茨和巴菲特。好的遗产规划，
+              不仅可以确保有合适的人员到位，以代表我们做出医疗，财务，育儿和业务决策 
+              （无论是在我们丧失民事行为能力还是在离开之后），更可以保护资产，规划税务，
+              妥善的在多个受益人中进行公平的财产分配，避免后人不必要的纷争。好的遗产规划让我们即便去世，
+              也能运筹帷幄之中，决胜千里之外，在坟墓里也能掌控生前打下的江山。如果不规划或者规划不当，
+              一生辛劳，财富再多，可能到头来还是为他人作嫁衣裳。
             </p>
+          </div>
+        </div>
+        <div class="row justify-content-center p-3">
+          <div class="col-md-6 text-md-start text-sm-center">
+            <h1 class="my-3 fw-bold">人寿保险的种类</h1>
+            <ul style="list-style-type: square;">
+              <li class="h5">Term insurance vs permanent life insurance</li>
+              <li class="h5">储蓄分红型寿险(whole life) vs 固定股指万能险 </li>
+              <li class="h5">(index Universal Life) vs 浮动股指万能险 (variable universal life)</li>
+              <li class="h5">保险的death benefit和living benefit的用途</li>
+              <li class="h5">保费的决定因素</li>
+              <li class="h5">Term insurance,group term insurance, 和返还本金的term insurance有什么异同? </li>
+              <li class="h5">公司提供的Group UL, VUL, term有哪些注意事项? </li>
+              <li class="h5">Whole life 是什么？它是如何运作的？</li>
+              <li class="h5">Index Universal Life(IUL)又是什么? 它的原理是什么? </li>
+              <li class="h5">Whole life 和IUL的回报率如何? 如何解析他们的费用? </li>
+              <li class="h5">如何看待buy term and invest the difference?</li>
+              <li class="h5">如何看待美国人寿保险里面的重疾条款? </li>
+              <li class="h5">如何判断我的保单是否面临失效的风险?</li>
+              <li class="h5">我如何从保险里面取钱出来用?</li>
+              <li class="h5">我的保单该如何维护? </li>
+            </ul>
           </div>
         </div>
         <div class="row justify-content-center p-3">

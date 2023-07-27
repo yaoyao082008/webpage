@@ -14,7 +14,7 @@
     <title>Tax</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light ">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
       <div class="container-xxl">
         <a href="{% url 'index' %}" class="navbar-brand">
           <img
@@ -45,11 +45,7 @@
             <li class="nav-item mx-3">
               <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
             </li>
-            <li class="nav-item mx-3">
-              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
-                联系
-              </a>
-            </li>
+            
             <li class="nav-item dropdown mx-3">
               <a
                 class="nav-link dropdown-toggle h5"
@@ -126,6 +122,11 @@
               <a href="{% url 'video' %}" class="nav-link h5"> 视频 </a>
             </li>
             <li class="nav-item mx-3">
+              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
+                联系
+              </a>
+            </li>
+            <li class="nav-item mx-3">
               <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
             </li>
             {% else %}
@@ -180,46 +181,26 @@
       <div class="text-center container-lg bg-light">
         <div class="row justify-content-center">
           <div class="col-md-6 text-md-start text-sm-center">
-            <h1 class="my-3 fw-bold">现在征税</h1>
-            <p class="h6">
-              现在征税意味着这些账户的任何收入都必须在当年纳税。例如，您必须就储蓄账户
-              、存款证 (CD)、股票、互惠基金和货币市场基金的股息收入进行申报和纳税。
-            </p>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6 text-md-start text-sm-center">
-            <h1 class="my-3 fw-bold">稍后纳税</h1>
-            <p class="h6">
-              稍后纳税这意味着你投入的钱是税前的。存入账户的税前资金是您尚未缴纳所得税的资金
-              ，但您稍后提取时将缴纳税款。这些账户也称为延税账户。在美国，延税账户通常采用 IRA
-              、401ks 和 403(b)s 的形式。在美国,59.5岁以后开始取钱,按普通所得税税率征税,59.5岁之前取钱,
-              除了10%的罚款税收。另外，你不能永远把钱放在那里。您必须在您达到
-               73 至 75 岁时开始提取或支付 50% 的罚款。但是，一些税后账户可以延税但不能免税。
-            </p>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6 text-md-start text-sm-center">
-            <h1 class="my-3 fw-bold">税收优惠准入</h1>
-            <p class="h6">
-              税收优惠访问意味着当您从您的帐户中取款时，您无需缴税。
-              一些罗斯 IRA、529 大学储蓄计划和人寿保险是获得免税分配的流行投资工具。
-            </p>
-          </div>
-        </div>
-        <div class="row justify-content-center mb-4">
-          <div class="col-md-6 text-md-start text-sm-center mb-3">
-            <h1 class="my-3 fw-bold">之前还是之后?</h1>
-            <p class="h6">
-              你愿意现在缴税然后推迟到以后缴税吗
-              你变老了吗？或者您应该现在付款并担心美国的税收
-              未来？换句话说，你愿意为种子纳税吗？
-              还是收获？联系我们，了解更多 .
-            </p>
+            <h2 class="my-3 fw-bold">税务规划课程大纲样本</h1>
+
+            <ul style="list-style-type: square;">
+              <li>如何读懂1040, 1120, 1120s, 1065?</li>
+              <li>Schedule E表的填写</li>
+              <li>schedule C 表的填写</li>
+              <li>常见的10大税务陷井</li>
+              <li>房地产的exit strategy: 赠与子孙还是传承子孙? </li>
+              <li>Depreciation 这淌水: bonus depreciation, 179 expense, MARCS depreciation 的比较</li>
+              <li>自住房，投资房，出租房，度假房的税务处理</li>
+              <li>Stock compensation 的税务处理</li>
+              <li>如何利用公司架构做省税计划</li>
+              <li>报税季节如何检查税表的纰漏</li>
+              <li>如何track公司的basis?</li>
+              <li>海外投资的税务问题</li>
+            </ul>
+
             <a href="https://www.befinancialeducation.com/book-online" class="text-center btn btn-secondary my-4">安排会议</a>
           </div>
-        </div>
+        </div> 
       </div>
     </section>
 

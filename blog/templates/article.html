@@ -15,129 +15,133 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <div class="container-xxl">
-          <a href="{% url 'index' %}" class="navbar-brand">
-            <img
-              class="img-fluid"
-              src="{% static 'images/logo.webp' %}"
-              alt="beyond Expoenential Financial Logo"
-            />
-          </a>
-          <!-- toggle button for mobile nav-->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#main-nav"
-            aria-controls="main-nav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <!--navbar links-->
-          <div
-            class="collapse navbar-collapse justify-content-end align-center"
-            id="main-nav"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item mx-3">
-                <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-xxl">
+      <a href="{% url 'index' %}" class="navbar-brand">
+        <img
+          class="img-fluid"
+          src="{% static 'images/logo.webp' %}"
+          alt="beyond Expoenential Financial Logo"
+        />
+      </a>
+      <!-- toggle button for mobile nav-->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#main-nav"
+        aria-controls="main-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--navbar links-->
+      <div
+        class="collapse navbar-collapse justify-content-end align-center"
+        id="main-nav"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item mx-3">
+            <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
+          </li>
+          
+          <li class="nav-item dropdown mx-3">
+            <a
+              class="nav-link dropdown-toggle h5"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              金融教育与服务
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
               </li>
-              <li class="nav-item mx-3">
-                <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
-                  联系
-                </a>
+              <li>
+                <a class="dropdown-item" href="{% url 'tax' %}">
+                  税务规划</a>
               </li>
-              <li class="nav-item dropdown mx-3">
-                <a
-                  class="nav-link dropdown-toggle h5"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+              <li>
+                <a class="dropdown-item" href="{% url 'retirement' %}"
+                  >退休计划</a
                 >
-                  金融教育与服务
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
-                  </li>
-                  <li><a class="dropdown-item" href="{% url 'tax' %}">税</a></li>
-                  <li>
-                    <a class="dropdown-item" href="{% url 'savings' %}"
-                      >学院/大学储蓄计划</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="{% url 'retirement' %}"
-                      >退休计划</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="{% url 'life_insurance' %}"
-                      >人寿保险</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="{% url 'investment' %}"
-                      >投资</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="{% url 'estate_planning' %}"
-                      >遗产规划</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="{% url 'long_term_care' %}"
-                      >长期护理</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="{% url 'medicare' %}"
-                      >医疗保险</a
-                    >
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      target="_blank"
-                      href="https://www.befinancialeducation.com/book-online"
-                      >安排会议</a
-                    >
-                  </li>
-                </ul>
               </li>
-              <li class="nav-item mx-3">
-                <a href="{% url 'join_us' %}" class="nav-link h5"> 加入我们 </a>
+              <li>
+                <a class="dropdown-item" href="{% url 'estate_planning' %}"
+                  >遗产规划</a
+                >
               </li>
-              <li class="nav-item mx-3">
-                <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
+              <li>
+                <a class="dropdown-item" href="{% url 'life_insurance' %}"
+                  >人寿保险</a
+                >
               </li>
-              {% if user.is_authenticated %}
-              <li class="nav-item mx-3">
-                <a href="{% url 'video' %}" class="nav-link h5"> 视频 </a>
+              <li>
+                <a class="dropdown-item" href="{% url 'long_term_care' %}"
+                  >长期护理</a
+                >
               </li>
-              <li class="nav-item mx-3">
-                <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
+              <li>
+                <a class="dropdown-item" href="{% url 'medicare' %}"
+                  >医疗保险</a
+                >
               </li>
-              {% else %}
-              <li class="nav-item mx-3">
-                <a href="{% url 'signup' %}" class="nav-link h5"> 报名 </a>
+              <li>
+                <a class="dropdown-item" href="{% url 'investment' %}"
+                  >投资风险控制</a
+                >
               </li>
-              <li class="nav-item mx-3">
-                <a href="{% url 'signin' %}" class="nav-link h5"> 登录 </a>
+              <li>
+                <a class="dropdown-item" href="{% url 'savings' %}"
+                  >大学助学金申请</a
+                >
               </li>
-              {% endif %}
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  target="_blank"
+                  href="https://www.befinancialeducation.com/book-online"
+                  >安排会议</a
+                >
+              </li>
             </ul>
-          </div>
-        </div>
-    </nav>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="{% url 'join_us' %}" class="nav-link h5"> 加入我们 </a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
+          </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item mx-3">
+            <a href="{% url 'video' %}" class="nav-link h5"> 视频 </a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
+              联系
+            </a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
+          </li>
+          {% else %}
+          <li class="nav-item mx-3">
+            <a href="{% url 'signup' %}" class="nav-link h5"> 报名 </a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="{% url 'signin' %}" class="nav-link h5"> 登录 </a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
 
     
     <div class="container-lg bg-light">

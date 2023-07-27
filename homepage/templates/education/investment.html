@@ -45,11 +45,7 @@
             <li class="nav-item mx-3">
               <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
             </li>
-            <li class="nav-item mx-3">
-              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
-                联系
-              </a>
-            </li>
+            
             <li class="nav-item dropdown mx-3">
               <a
                 class="nav-link dropdown-toggle h5"
@@ -126,6 +122,11 @@
               <a href="{% url 'video' %}" class="nav-link h5"> 视频 </a>
             </li>
             <li class="nav-item mx-3">
+              <a href="mailto: befinancialed@gmail.com" class="nav-link h5">
+                联系
+              </a>
+            </li>
+            <li class="nav-item mx-3">
               <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
             </li>
             {% else %}
@@ -144,7 +145,7 @@
     <section>
       <div class="container-lg bg-light text-center">
         <div class="row m-5">
-          <div class="col-md-4 align-self-center">
+          <div class="col-md-5 align-self-center">
             <img
               class="img-fluid"
               src="{% static 'images/investment.webp' %}"
@@ -152,11 +153,18 @@
             />
           </div>
 
-          <div class="col-md-2"></div>
+          <div class="col-md-1"></div>
 
-          <div class="col-md-6 text-start align-self-center">
+          <div class="col-md-5 text-start align-self-center">
             <h1 class="my-3 fw-bold">投资风险控制</h1>
             <p class="h5 p-2">
+              “零是英雄”!在熊市中不亏钱就是胜利? 为什么? 因为涨和跌是不对称的,
+              当我跌10%,我们需要11% 回本,但我们跌50%,我们需要涨100% 回本。为了保本,
+              把钱放在CD里就是正确的做法吗? 当然不是, 放在CD里, 我们又可能错失增长的大牛市. 
+              因为我们在投资安全和增长中陷入了进退两难的处境。如何打破safety vs opportunity cost的两难处境?
+              如何在投资安全和增长中找到这个微妙的平衡?
+              <br>
+              <br>
               巴菲特最受欢迎的建议之一如下：“第一条规则：永远不要赔钱。
               第 2 条规则：永远不要忘记第 1 条规则”。
               建议中的残酷事实。请看两张图表。
@@ -168,6 +176,21 @@
       </div>
 
       <div class="text-center container-lg bg-light">
+
+        <div class="row justify-content-center p-3">
+          <div class="col-md-6 text-md-start text-sm-center">
+            <h1 class="my-3 fw-bold">投资风险控制课程大纲：</h1>
+            <ul style="list-style-type: square;">
+              <li class="h5">投资的五大原则</li>
+              <li class="h5">股指基金vs 股指策略</li>
+              <li class="h5">	如何评估基金的风险？</li>
+              <li class="h5">如何降低portfolio的风险? </li>
+              <li class="h5">过路财神vs 保本锁利益</li>
+
+            </ul>
+          </div>
+        </div>
+
         <div class="row justify-content-center p-3">
           <div class="col-md-6 text-md-start text-sm-center">
             <h1 class="my-3 fw-bold">为什么零是英雄</h1>
