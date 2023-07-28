@@ -14,7 +14,7 @@
     <title>Retirement</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
       <div class="container-xxl">
         <a href="{% url 'index' %}" class="navbar-brand">
           <img
@@ -45,6 +45,7 @@
             <li class="nav-item mx-3">
               <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
             </li>
+            
             <li class="nav-item dropdown mx-3">
               <a
                 class="nav-link dropdown-toggle h5"
@@ -60,11 +61,9 @@
                 <li>
                   <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
                 </li>
-                <li><a class="dropdown-item" href="{% url 'tax' %}">税</a></li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'savings' %}"
-                    >学院/大学储蓄计划</a
-                  >
+                  <a class="dropdown-item" href="{% url 'tax' %}">
+                    税务规划</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="{% url 'retirement' %}"
@@ -72,18 +71,13 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
-                    >人寿保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'investment' %}"
-                    >投资</a
-                  >
-                </li>
-                <li>
                   <a class="dropdown-item" href="{% url 'estate_planning' %}"
                     >遗产规划</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
+                    >人寿保险</a
                   >
                 </li>
                 <li>
@@ -94,6 +88,16 @@
                 <li>
                   <a class="dropdown-item" href="{% url 'medicare' %}"
                     >医疗保险</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'investment' %}"
+                    >投资风险控制</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'savings' %}"
+                    >大学助学金申请</a
                   >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
@@ -141,7 +145,7 @@
     <section>
       <div class="container-lg bg-light text-center">
         <div class="row m-5">
-          <div class="col-md-5 align-self-center">
+          <div class="col-md-6 align-self-center">
             <img
               class="img-fluid"
               src="{% static 'images/retirement.webp' %}"
@@ -149,28 +153,20 @@
             />
           </div>
 
-          <div class="col-md-1"></div>
 
           <div class="col-md-6 text-start align-self-center">
-            <h1 class="my-3 fw-bold">退休规划</h1>
             <p class="h5 p-2">
               理想的退休计划围绕 4+1 目标展开，这些目标是：
             </p>
-            <ul style="list-style: none;" class="text-start">
-              <li class="p-1">1)终身收入</li>
-              <li class="p-1">2)弹性收入</li>
-              <li class="p-1">3)节税退休策略</li>
-              <li class="p-1">4)长期护理</li>
-              <li class="p-1">5)留下遗产</li>
-            </ul>
+            <img src="{% static "images/4plus1.png" %} " alt="retirement plan" class="img-fluid">
             <p class="h5 p-2">
-              然而，这五个目标很容易通过 4 个挑战来“HIIT”, 它们是:
+              然而，这五个目标很容易被 4 个挑战“HIIT”, 它们分别是:
             </p>
-            <ul style="list-style: none;" class="text-start">
-              <li class="p-1">1)医疗费用</li>
-              <li class="p-1">2)通货膨胀</li>
-              <li class="p-1">3)投资</li>
-              <li class="p-1">4)税</li>
+            <ul style="list-style-type: square;">
+              <li>H (Health care cost)：包括医疗费用和长期护理费用</li>
+              <li>I (inflation): 通货膨胀影响我们的购买力</li>
+              <li>I (investment): 投资的成败决定退休的质量</li>
+              <li>T (tax): 税务可能降低我们的资产使用的效率</li>
             </ul>
             <p class="h5 p-2">
               我们将这四个挑战缩写为“HIIT”。如果您的退休生活因四大挑战而成为致命的 HIIT 怎么办？
@@ -182,27 +178,27 @@
       <div class="text-center container-lg bg-light">
         <div class="row justify-content-center p-3">
           <div class="col-md-6 text-md-start text-sm-center">
-            <h1 class="my-3 fw-bold">退休规划课程大纲样本</h1>
-            <ul style="list-style-type: square;">
-              <li>401(k)真的省税吗？</li>
-              <li>我该存Roth还是Traditional IRA?</li>
-              <li>我的退休账号的投资选择有哪些？</li>
-              <li>我的退休账号的费用有哪些?</li>
-              <li>如何衡量我的退休账号的表现?</li>
-              <li>如何做完备的退休规划</li>
-              <li>我的退休规划会被HIIT吗?</li>
-            </ul>
+            <img src="{% static "images/retirement_plan.png" %} " alt="retirement plan" class="img-fluid">
+            <p class="h5 mt-2">
+              我如何建立一个安全的退休金计划来实现退休的五个目标吗？
+              对我来说太晚了吗？
+              为了增加我的资产，我是否必须节衣缩食，吃胡萝卜？
+              我需要成为金融高手吗？
+            </p>
           </div>
         </div>
         <div class="row justify-content-center p-3">
           <div class="col-md-6 text-md-start text-sm-center">
-            <h1 class="my-3 fw-bold">策略</h1>
-            <p class="h6">
-              真的可以建立一个安全的退休金计划来实现退休的五个目标吗？
-              对我来说太晚了吗？
-              为了增加我的资产，我是否必须节衣缩食，基本上吃胡萝卜？
-              我需要成为金融高手吗？
-            </p>
+            <h1 class="my-3 fw-bold">退休规划课程大纲样本</h1>
+            <ul style="list-style-type: square;">
+              <li class="h5">401(k)真的省税吗？</li>
+              <li class="h5">我该存Roth还是Traditional IRA?</li>
+              <li class="h5">我的退休账号的投资选择有哪些？</li>
+              <li class="h5">我的退休账号的费用有哪些?</li>
+              <li class="h5">如何衡量我的退休账号的表现?</li>
+              <li class="h5">如何做完备的退休规划</li>
+              <li class="h5">我的退休规划会被HIIT吗?</li>
+            </ul>
             <a href="https://www.befinancialeducation.com/book-online" class="text-center btn btn-secondary my-4">安排会议</a>
           </div>
         </div>
