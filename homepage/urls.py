@@ -32,4 +32,7 @@ urlpatterns = [
     path('longtermcare/',views.long_term_care,name='long_term_care'),
     path('medicare/',views.medicare,name='medicare'),
     path('overview/',views.overview,name='overview'),
+    path('asset-protection/',views.asset_protection,name='asset_protection'),
+    path('company-structure/',views.company_structure,name='company_structure'),
+    path('meetings/',views.meetings,name='meetings'),
 ]

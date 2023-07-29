@@ -11,7 +11,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <title>Savings</title>
+    <title>大学助学金申请</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -45,6 +45,7 @@
             <li class="nav-item mx-3">
               <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
             </li>
+            
             <li class="nav-item dropdown mx-3">
               <a
                 class="nav-link dropdown-toggle h5"
@@ -60,11 +61,9 @@
                 <li>
                   <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
                 </li>
-                <li><a class="dropdown-item" href="{% url 'tax' %}">税</a></li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'savings' %}"
-                    >学院/大学储蓄计划</a
-                  >
+                  <a class="dropdown-item" href="{% url 'tax' %}">
+                    税务规划</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="{% url 'retirement' %}"
@@ -72,18 +71,23 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
-                    >人寿保险</a
+                  <a class="dropdown-item" href="{% url 'asset_protection' %}"
+                    >资产保护</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'investment' %}"
-                    >投资</a
+                  <a class="dropdown-item" href="{% url 'company_structure' %}"
+                    >公司架构</a
                   >
                 </li>
                 <li>
                   <a class="dropdown-item" href="{% url 'estate_planning' %}"
                     >遗产规划</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
+                    >人寿保险</a
                   >
                 </li>
                 <li>
@@ -94,6 +98,16 @@
                 <li>
                   <a class="dropdown-item" href="{% url 'medicare' %}"
                     >医疗保险</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'investment' %}"
+                    >投资风险控制</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'savings' %}"
+                    >大学助学金申请</a
                   >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
@@ -109,6 +123,9 @@
             </li>
             <li class="nav-item mx-3">
               <a href="{% url 'join_us' %}" class="nav-link h5"> 加入我们 </a>
+            </li>
+            <li class="nav-item mx-3">
+              <a href="{% url 'meetings' %}" class="nav-link h5"> 网络研讨会 </a>
             </li>
             <li class="nav-item mx-3">
               <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>

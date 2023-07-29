@@ -71,6 +71,16 @@
                   >
                 </li>
                 <li>
+                  <a class="dropdown-item" href="{% url 'asset_protection' %}"
+                    >资产保护</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'company_structure' %}"
+                    >公司架构</a
+                  >
+                </li>
+                <li>
                   <a class="dropdown-item" href="{% url 'estate_planning' %}"
                     >遗产规划</a
                   >
@@ -115,6 +125,9 @@
               <a href="{% url 'join_us' %}" class="nav-link h5"> 加入我们 </a>
             </li>
             <li class="nav-item mx-3">
+              <a href="{% url 'meetings' %}" class="nav-link h5"> 网络研讨会 </a>
+            </li>
+            <li class="nav-item mx-3">
               <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
             </li>
             {% if user.is_authenticated %}
@@ -156,7 +169,7 @@
 
           <div class="col-md-6 text-start align-self-center">
             <h1 class="my-3 fw-bold">遗产规划</h1>
-            <p class="h6">
+            <p class="h6" style="text-indent: 40px;">
               每一个人来到世上，都是向死而生的过程，死亡是生命的一部分，就像一首乐曲的完结符一样，
               它只是标志着时间上的终结，但我们身后事却不一定因此完结。因此遗产规划是生与死的交汇，
               是家庭理财的重要组成部分， 是每一个成年人都需要的，它不仅仅争对比尔盖茨和巴菲特。好的遗产规划，

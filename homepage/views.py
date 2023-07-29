@@ -8,6 +8,15 @@ from .models import *
 
 # Create your views here.
 
+def meetings(request):
+        return render(request,'page/meetings.html')
+
+def company_structure(request):
+        return render(request,'education/company_structure.html')
+
+def asset_protection(request):
+        return render(request,'education/asset_protection.html')
+
 def index(request):
         return render(request,'page/index.html')
 
