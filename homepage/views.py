@@ -9,7 +9,9 @@ from .models import *
 # Create your views here.
 
 def meetings(request):
-        return render(request,'page/meetings.html')
+        online_meets=webinar.objects.all()
+        context={'meets': online_meets,}
+        return render(request,'page/meetings.html',context)
 
 def company_structure(request):
         return render(request,'education/company_structure.html')

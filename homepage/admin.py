@@ -4,3 +4,4 @@ from .models import  *
 
 
 admin.site.register(verifed_user)
+admin.site.register(webinar)

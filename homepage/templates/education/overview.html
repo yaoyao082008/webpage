@@ -5,13 +5,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+    name="keywords"
+    content="金融教育概貌, money management , Beyond Exponential Financial, BeyondFiancialEd, 金融教育与服务"
+    />
+    <meta
+      name="description"
+      content="金融教育概貌, 金融教育与服务"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <title>概貌</title>
+    <title>金融教育概貌</title>
   </head>
   <body style="padding-top: 105px;">
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
@@ -125,7 +133,7 @@
               <a href="{% url 'join_us' %}" class="nav-link h5"> 加入我们 </a>
             </li>
             <li class="nav-item mx-3">
-              <a href="{% url 'meetings' %}" class="nav-link h5"> 网络研讨会 </a>
+              <a href="{% url 'meetings' %}" class="nav-link h5"> 公开讲座 </a>
             </li>
             <li class="nav-item mx-3">
               <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
@@ -157,126 +165,79 @@
 
     <section>
       <div class="container-lg">
-        <div class="text-center p-3">
+
+
+        <div class="text-center p-3 my-3">
           <h1 class="p-2 fw-bold"
-            >我们为什么需要财商教育</h1
-          >
+            >我们为什么需要财商教育: 
+          </h1>
+          
           <div class="p-3">
-            <ul class="p-2" style="list-style: none">
-              <li class="text-muted text-center h4 p-3">79% 的美国人感到经济压力</li>
-              <li class="text-muted text-center h4 p-3">超过一半的美国人靠薪水过活</li>
-              <li class="text-muted text-center h4 p-3">
-                62% 的美国人背负信用卡债务,27% 的人没有按时支付账单
-              </li>
-            </ul>
-            <p class="text-muted text-center">
-              我们大多数人都不想成为统计数据。这些问题无处不在，它们发生在我们自己的家人和朋友的家人身上.
+
+            <p class="h4 p-2" style="text-indent: 40px;">
+              我们不知道的知识有两种,可以细分两类,
+              一类是known unknow, 你知道这是你不知道的, 这类知识欠缺造成的杀伤力没有那么大, 
+              因为我们可以有的放矢的去google,去请教,很快就会有solution.
             </p>
-  
-            <p class="h1 fw-bold text-center">
-              我们生活在世界上最富有的国家之一，但我们总是遇到金钱问题。
+
+            <p class="h4 p-2" style="text-indent: 40px;">
+              另一种是unkown unkown, 也就是知识盲区, 是指自己视力所应见而不见的知识, 
+              具体说来是指应知须知，与我们生息息相关但我们又不见得知道的知识. 你都不知道这是你不知道的知识, 
+              也就无从下手搜索, 盲区知识常常伤人于无形. 由于盲然无知吃亏了也浑然不觉.
             </p>
+
+            <p class="h4 p-2" style="text-indent: 40px;">
+              在理财领域，不懂这类知识既影响你赚钱，又影响你省钱。有时候赚钱能力不够十分强大，
+              但把赚来的钱用好省好，也是一种能力。这也是我们社会为什么急需要财商教育的原因。
+            </p>
+
           </div>
         </div>
+
         
-        <div class="p-3 bg-light">
-          <h1 class="text-start text-center p-2">1.收入差距正在扩大</h1>
-          <p class="h5 text-center">按百分位数分组的财富 (1991-2023 年)</p>
 
-          <div class="text-center p-2">
-            <img
-              class="img-fluid text-center"
-              src="{% static 'images/chart.webp' %}"
-              alt="wealth distribution since 1989"
-            />
-          </div>
-
+        <div class="p-3 bg-light my-5">
           <p class="h1 fw-bold text-center p-2">为什么富人更富，穷人更穷？</p>
-          <p class="h3 text-center p-2">富人有富人的思维方式，穷人有穷人的思维习惯</p>
-          <p class="h3 text-center p-2">富人热爱学习，总在寻找自身的不足，人生不设限，总寻求突破自己的思维上线。</p>
-          <p class="h3 text-center p-2">穷人固步自封，自我设限，多虑多疑，疏于学习，怠于思考。</p>
+          <p class="h3 text-center p-2">
+            富人有富人的思维方式，穷人有穷人的思维习惯 
+            <br>
+            富人热爱学习，总在寻找自身的不足，人生不设限，总寻求突破自己的思维上线。
+            <br>
+            穷人固步自封，自我设限，多虑多疑，疏于学习，怠于思考。
+          </p>
         </div>
+
         <div class="p-3">
-          <h1 class="fw-bold text-center p-2">你想成为百万富翁吗?</h1>
-
-          <div class="text-center p-2">
-            <p class="h3 text-center p-2">那首先需要了解完备的财务体系，了解经济规律的运行。</p>
-            <img
-              src="{% static 'images/wealth.webp' %}"
-              alt="global wealth report 2021"
-              class="img-fluid"
-            />
-            
-          </div>
+          <p class="h1 fw-bold text-center p-2">我雇有专业人士，为什么还要学习财商知识？</p>
+          <p class="h3 text-center p-2" style="text-indent: 40px;">
+            诚然，专业的事情该交给专业的人士来打理，但试想一下，
+            谁最关心我们自己的财政？一定是自己，如果自己都不关心，怎么指望别人比自己还上心？
+            况且雇专业人士也是有讲究的，你怎么知道你雇的专业人士水平到位？即使她水平到位，你该如何和她打配合？
+            你知道该如何问正确的问题，传达你的精神？而且不同的专业人士有不同的分工，比如会计师报税，
+            律师负责起草信托文件，投资经理负责投资，他们就好像一个交响乐队的不同的乐手，他们如果自顾自的演奏，
+            一定不能成为美妙的交响乐，那么谁又是这场交响乐的总指挥呢？那就是我们自己了。
+          </p>
+          <p class="h3 text-center p-2" style="text-indent: 40px;">
+            我们了解美国这个大系统运作的方方面面，坐镇中军，全盘控局，协调好不同的专业人士，
+            做好家庭理财交响乐的总指挥。凡事亲历亲为太复杂，只指望专业人士当刷手掌柜又未免太简单，
+            只有自己学习，加上专业人士的加持，那便是穿越了复杂的简单。
+          </p>
         </div>
-        <div class="p-3 bg-light">
-          <h1 class="text-center fw-bold p-2">隔壁的百万富翁</h1>
-          <p class="h3 text-center p-2">
-            他们中的许多人不是名人或有名望的人, <br />
-            也没有继承遗产.
-          </p>
-          <p class="h3 text-center p-2">
-            他们是普通的普通人，他们通过知识规划和长期一致的实践来建立自己的财务未来.
-          </p>
-          <p class="h2 text-center p-2 fw-bold">
-            富人知道什么而穷人不知道？
-          </p>
 
-          <div class="text-center">
-            <ul style="list-style: none">
-              <li class="fw-bold text-success h4 p-3">- 他们预算</li>
-              <li class="fw-bold text-success h4 p-3">
-                - 他们有退休、大学、医疗等方面的财务目标.
-              </li>
-              <li class="fw-bold text-success h4 p-3">- 他们没有昂贵的品味</li>
-              <li class="fw-bold text-success h4 p-3">
-                - 他们没有背负债务和负债并保持低利率
-              </li>
-              <li class="fw-bold text-success h4 p-3">
-                - 他们为紧急情况做准备
-              </li>
-              <li class="fw-bold text-success h4 p-3">- 他们有自己的事业</li>
-              <li class="fw-bold text-success h4 p-3">
-                - 他们精通财务知识并且乐于学习
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="text-center pt-4">
-          <p class="h1 fw-bold text-center ">建立强大的财务基础</p>
-          <p class="h4 text-muted p-3 text-center">在“建立财务基础”之前，您无法“建立财富”</p>
-          <div class="pb-4 text-center">
-            <img src="{% static 'images/pyramid.webp' %}" alt="Financial pyrmaid" class="img-fluid">
-          </div>
-          <p class="h2 pb-3 text-center fw-bold fst-italic">就像盖房子一样，你必须从头开始建造它.</p>
-          <div class="pb-4 text-center">
-            <img src="{% static 'images/financial_steps.webp' %}" alt="steps to financial independence" class="img-fluid">
-          </div>
+
+        <div class="p-3  bg-light my-5">
+          <p class="h3 text-center p-2" style="text-indent: 40px;">
+            人生财务自由和人生的哲学追求一样，追求目标：自由，自主，自在。实现一定的财务自由，
+            可以让我们在精神上很大程度的得到解放。我们的财商知识科普教育将助力您建造自由财务的金字塔，
+            助力您寻找属于您的诗和远方: 
+          </p>
+          <img src="{% static 'images/financial_steps.webp' %}" alt="financial_steps" class="img-fluid">
         </div>
         <!--<div class="text-center">
             <p class="h1 fst-italic fw-bold">未来在你手中 .</p>
           </div>-->
-        <div class="text-center bg-light pt-3">
-          <h1 class="fw-bold text-center">如何从不安全到独立</h1>
-          <p class="h4 text-center pb-3">债务累积</p>
-          <div class="text-center pb-3">
-            <img src="{% static 'images/Debt.webp' %}" alt="debt roll-up" class="img-fluid">
-          </div>
-        </div>
       </div>
       
-      <div class="text-center border-bottom pt-3">
-        <h1 class="fw-bold text-center">为什么你应该储蓄和投资</h1>
-        <p class="h4 text-center pb-3">假设你的收入是 60,000 美元，你从 30 岁开始存入 10% 每月 500 美元</p>
-        <p class="h3 p-4 fw-bold fst-italics text-success">30 年后，在 60 岁时，您将拥有：</p>
-        <p class="h4 p3 text-center">@ 8% = 745,179</p>
-        <p class="h4 p3 text-center">@ 10% = 1,130,243</p>
-        <p class="h2 text-center p-3 fw-bold fst-italics text-success">假设您在 60 岁退休并且您的钱不断积累, <br> 你的钱会翻倍: </p>
-        <p class="h4 p3 text-center">@ 8% = 1.5M 9年后 (69)</p>
-        <p class="h4 p3 text-center">@ 10% = 2.3M 7.2年后 (67)</p>
-        <p class="h1 fst-italics fw-bold text-center p-5">你经济独立.</p>
-
-      </div>
     </section>
 
     <script
