@@ -7,6 +7,10 @@ from django.contrib.auth import authenticate,login,logout
 from .models import *
 
 # Create your views here.
+def contact(request):
+        context={'contact_info': agent_contact.objects.all() }
+
+        return render(request,'page/contacts.html',context)
 
 def meetings(request):
         online_meets=webinar.objects.all()

@@ -29,3 +29,13 @@ class webinar(models.Model):
 
     def __str__(self):
         return self.date
+    
+class agent_contact(models.Model):
+
+    wechat_qrcode=models.ImageField(null=True,blank=True,upload_to='contact/pictures/' , default='contact/pictures/default.jpg')
+    name=models.CharField(max_length=200)
+    email=models.TextField()
+    phone_number=models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name

@@ -35,4 +35,5 @@ urlpatterns = [
     path('asset-protection/',views.asset_protection,name='asset_protection'),
     path('company-structure/',views.company_structure,name='company_structure'),
     path('meetings/',views.meetings,name='meetings'),
+    path('contacts/',views.contact,name='contacts'),
 ]
