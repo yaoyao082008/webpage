@@ -170,14 +170,15 @@
 
         {% for contact in contact_info %}
         <div class="row my-3">
-          <div class="col-md-4 align-self-start ">
+          <div class="col-md-4"></div>
+          <div class="col-md-2 text-center ">
             <img
               class="img-fluid rounded"
               src={{contact.wechat_qrcode.url}}
               alt="image of {{contact.name}} wechat qrcode"
             />
           </div>
-          <div class="col-md-8">
+          <div class="col-md-6">
             <p class="h3 fw-bold my-3">
               {{contact.name}}
             </p>
