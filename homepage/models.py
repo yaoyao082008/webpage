@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 # Create your models here.
 
 class verifed_user(models.Model):
@@ -21,14 +21,14 @@ class verifed_user(models.Model):
 class webinar(models.Model):
 
     title=models.CharField(max_length=200)
-    description=models.TextField()
+    description=RichTextField(blank=True,null=True)
     date=models.DateField()
     hour=models.CharField(max_length=200)
     type=models.CharField(max_length=200)
     link=models.TextField(default='https://www.youtube.com')
 
     def __str__(self):
-        return self.date
+        return str(self.date)
     
 class agent_contact(models.Model):
 
