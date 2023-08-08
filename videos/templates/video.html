@@ -168,10 +168,11 @@
       <div class="container-lg bg-light">
         <div class="row justify-content-center">
           <div class="m-3">
-            <p class="h3 text-center fw-bold">
-              观看有关如何在财务上取得成功的视频。每周发布。
+            <p class="h1 text-center fw-bold">
+              学员专区
             </p>
           </div>
+          <hr>
           <div class="col-md-3 col-12 text-center m-5">
             <h4 class="border-2 border-bottom">税务视频</h4>
             <div class="accordion" id="taxvideo">
@@ -368,7 +369,51 @@
               {% endfor %}
             </div>
           </div>
+
+          <div class="m-3">
+            <p class="h1 text-center fw-bold">
+              执照人员专区
+            </p>
+          </div>
+
+          <hr>
+
+          <div class="col-md-3 col-12 text-center m-5">
+            <h4 class="border-2 border-bottom">执照考试</h4>
+            <div class="accordion" id="othervideos">
+              {% for vid in exam %}
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="Arr{{vid.link}}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Arr{{vid.id}}" aria-expanded="false" aria-controls="Arr{{vid.id}}">
+                    {{vid.title}}
+                  </button>
+                </h2>
+                <div id="Arr{{vid.id}}" class="accordion-collapse collapse" aria-labelledby="Arr{{vid.link}}" data-bs-parent="#othervideos">
+                  <div class="accordion-body">
+                    <p> 作家: {{vid.author}} </p>
+                    <p> 密码: {{vid.password}} </p>
+                    <a href="{{vid.link}}" class="btn btn-primary"> 看一看 </a>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
         </div>
+
+        <div class="text-center disclaimer bg-light">
+          <small>
+            This portion of the site is for informational purposes only. 
+            The content is not legal advice. The statements and 
+            opinions are the expression of the author, not LegalZoom, 
+            and have not been evaluated by LegalZoom for accuracy, 
+            completeness, or changes in the law.
+            <br>
+            Beyond Expoenential Education &copy; 2022-2023
+          </small>
+        </div>
+
       </div>
     </section>
 
