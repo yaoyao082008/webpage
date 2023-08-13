@@ -14,7 +14,7 @@ def video(request):
     tax=tax_video.objects.all()[:person.tax_video_number]
     long_term_care=long_term_care_video.objects.all()[:person.long_term_care_video_number]
     retirement= retirement_video.objects.all()[:person.retirement_video_number]
-    savings= savings_video.objects.all()[:person.savings_video_number]
+    savings= college_university_savings_video.objects.all()[:person.savings_video_number]
     life_insurance= life_insurance_video.objects.all()[:person.life_insurance_video_number]
     investment=  investment_video.objects.all()[:person.investment_video_number]
     estate_planning= estate_planning_video.objects.all()[:person.estate_planning_video_number]

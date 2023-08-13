@@ -27,7 +27,7 @@ class retirement_video(models.Model):
     def __str__(self):
         return f"link: {self.link} password: {self.password}"
 
-class savings_video(models.Model):
+class college_university_savings_video(models.Model):
 
     
     link=models.CharField(max_length=1000)
