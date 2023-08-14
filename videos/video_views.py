@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 from .models import *
 from django.apps import apps
 # Create your views here.
 
-
+@login_required
 def video(request):
     
     verified = apps.get_model('homepage', 'verifed_user')

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'videos',
     'blog',
     'ckeditor',
+    'adminsortable2',
 ]
 
 MIDDLEWARE = [

@@ -2,3 +2,4 @@ pillow
 django
 mysqlclient
 django-ckeditor
+django-admin-sortable2
