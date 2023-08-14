@@ -195,7 +195,7 @@ class exam_video(models.Model):
         ordering = ['my_order']
 
     def __str__(self):
-        return f"link: {self.link} password: {self.password} position : {self.position}"
+        return f"link: {self.link} password: {self.password}"
 
 
 
