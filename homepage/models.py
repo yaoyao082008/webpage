@@ -18,7 +18,31 @@ class verifed_user(models.Model):
     def __str__(self):
         return self.verified_email
     
-class webinar(models.Model):
+class inner_webinar(models.Model):
+
+    title=models.CharField(max_length=200)
+    description=RichTextField(blank=True,null=True)
+    date=models.DateField()
+    hour=models.CharField(max_length=200)
+    type=models.CharField(max_length=200)
+    link=models.TextField(default='https://www.youtube.com')
+
+    def __str__(self):
+        return str(self.date)
+    
+class chinese_webinar(models.Model):
+
+    title=models.CharField(max_length=200)
+    description=RichTextField(blank=True,null=True)
+    date=models.DateField()
+    hour=models.CharField(max_length=200)
+    type=models.CharField(max_length=200)
+    link=models.TextField(default='https://www.youtube.com')
+
+    def __str__(self):
+        return str(self.date)
+    
+class english_webinar(models.Model):
 
     title=models.CharField(max_length=200)
     description=RichTextField(blank=True,null=True)

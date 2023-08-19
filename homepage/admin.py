@@ -4,5 +4,7 @@ from .models import  *
 
 
 admin.site.register(verifed_user)
-admin.site.register(webinar)
+admin.site.register(inner_webinar)
+admin.site.register(chinese_webinar)
+admin.site.register(english_webinar)
 admin.site.register(agent_contact)

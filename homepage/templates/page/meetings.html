@@ -20,7 +20,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <title>公开讲座</title>
+    <title>内部会员讲座</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -133,8 +133,29 @@
             <li class="nav-item mx-3">
               <a href="{% url 'join_us' %}" class="nav-link h5"> 加入我们 </a>
             </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'meetings' %}" class="nav-link h5"> 公开讲座 </a>
+            <li class="nav-item dropdown mx-3">
+              <a
+                class="nav-link dropdown-toggle h5"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                  讲座
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                      <a class="dropdown-item" href="{% url 'ch-meetings' %}">中文公开讲座</a>
+                  </li>
+                  <li>
+                  <a class="dropdown-item" href="{% url 'eng-meetings' %}">英文公开讲座</a>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'inner-meetings' %}">内部会员讲座</a>
+                  </li>
+              </ul>
             </li>
             <li class="nav-item mx-3">
               <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
@@ -161,13 +182,8 @@
     </nav>
 
     <div class="container-lg bg-light">
-      <h1 class="p-3 text-center">公开讲座</h1>
+      <h1 class="p-3 text-center">内部会员讲座</h1>
 
-      <hr>
-
-      <h2 class="fw-bold">我们提供中英文双语讲座，讲座通知如下：</h2>
-
-      <hr>
 
       <ul>
         {% for meet in meets %}

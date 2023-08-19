@@ -36,7 +36,9 @@ urlpatterns = [
     path('overview/',views.overview,name='overview'),
     path('asset-protection/',views.asset_protection,name='asset_protection'),
     path('company-structure/',views.company_structure,name='company_structure'),
-    path('meetings/',views.meetings,name='meetings'),
+    path('inner-meetings/',views.inner_meetings,name='inner-meetings'),
+    path('eng-meetings/',views.eng_meetings,name='eng-meetings'),
+    path('ch-meetings/',views.ch_meetings,name='ch-meetings'),
     path('contacts/',views.contact,name='contacts'),
 ]
 
