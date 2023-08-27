@@ -5,19 +5,27 @@ from ckeditor.fields import RichTextField
 class verifed_user(models.Model):
     verified_email=models.EmailField()
     
-    tax_video_number=models.IntegerField(default=1)
-    long_term_care_video_number=models.IntegerField(default=1)
-    retirement_video_number=models.IntegerField(default=1)
-    savings_video_number=models.IntegerField(default=1)
-    life_insurance_video_number=models.IntegerField(default=1)
-    investment_video_number=models.IntegerField(default=1)
-    estate_planning_video_number=models.IntegerField(default=1)
-    medicare_video_number=models.IntegerField(default=1)
-    other_video_number=models.IntegerField(default=1)
+    
 
     def __str__(self):
         return self.verified_email
+    
+class everyone_video_number(models.Model):
+    Tax_Video_Number=models.IntegerField(default=1)
+    Long_Term_Care_Video_number=models.IntegerField(default=1)
+    Retirement_Video_Number=models.IntegerField(default=1)
+    Savings_Video_Number=models.IntegerField(default=1)
+    Life_Insurance_Video_Number=models.IntegerField(default=1)
+    Asset_Protection_Video_Number=models.IntegerField(default=1)
+    Estate_Planning_Video_Number=models.IntegerField(default=1)
+    Medicare_Video_Number=models.IntegerField(default=1)
+    Other_Video_Number=models.IntegerField(default=1)
+    Real_Estate_Investment_Video_Number=models.IntegerField(default=1)
+    General_Financial_Planning_Video_Number=models.IntegerField(default=1)
+    Company_Structure_Video_Number=models.IntegerField(default=1)
 
+    def __str__(self):
+        return "EVERYONES VIDEO NUMBER (do not add more)"
     
 class inner_webinar(models.Model):
 
