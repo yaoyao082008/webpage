@@ -13,17 +13,17 @@ def contact(request):
         return render(request,'page/contacts.html',context)
 
 def inner_meetings(request):
-        online_meets=inner_webinar.objects.all()
+        online_meets=inner_webinar.objects.all().order_by('-date')
         context={'meets': online_meets,}
         return render(request,'page/meetings.html',context)
 
 def eng_meetings(request):
-        online_meets=english_webinar.objects.all()
+        online_meets=english_webinar.objects.all().order_by('-date')
         context={'meets': online_meets,}
         return render(request,'page/eng_meetings.html',context)
 
 def ch_meetings(request):
-        online_meets=chinese_webinar.objects.all()
+        online_meets=chinese_webinar.objects.all().order_by('-date')
         context={'meets': online_meets,}
         return render(request,'page/ch_meetings.html',context)
 
