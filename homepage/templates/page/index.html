@@ -308,6 +308,7 @@
         </div>
       </div>
       <div class="container-lg bg-light">
+        {% if user.is_authenticated %}
         <div class="row justify-content-center">
           <div class="col-md-8 text-center text-md-start my-4">
             <img
@@ -324,6 +325,7 @@
             <iframe width="540" height="305" src="https://8ec780af.sibforms.com/serve/MUIFAEWrGySa_TbZd5dUia8Bz9gJb1MWe3kmYMqcfSlsufKMFIaII81TVLh9ACMqIp8tZlR1DH_B2g1yz3AM7yFB-ahVCmSffIn7TfX4H_0szEIjakPQL91IzfFSL_SI65A3915Y-Rfd0bNn-TEcwTRSSfvcWni4dK81j3NqQ9qrGT-ssS-AVFkG1HFM0EXNH9v8-2Vu_m-3x3BA" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
           </div>
         </div>
+        {% endif %}
         <div class="text-center disclaimer bg-light">
           <small>
             This portion of the site is for informational purposes only. 
