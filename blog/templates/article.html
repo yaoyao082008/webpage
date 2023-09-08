@@ -48,7 +48,7 @@
 
       <!--navbar links-->
       <div
-        class="collapse navbar-collapse justify-content-end align-center"
+        class="collapse navbar-collapse"
         id="main-nav"
       >
         <ul class="navbar-nav">
@@ -174,10 +174,17 @@
           </li>
           {% else %}
           <li class="nav-item mx-3">
-            <a href="{% url 'signin' %}" class="nav-link h5"> 登录 </a>
+            <a href="{% url 'signin' %}" class="nav-link h5"> 内部会员登录 </a>
           </li>
           {% endif %}
         </ul>
+
+        <div class="my-2 my-lg-0 ms-auto">
+          <button class="btn btn-outline-dark my-2 my-sm-0 form-inline">预约咨询</button>
+        </div>
+        
+
+
       </div>
     </div>
   </nav>
