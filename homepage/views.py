@@ -109,7 +109,7 @@ def signup(request):
                 username=request.POST.get('username')
 
                 try:
-                        verifed_user.objects.get(verified_email=email)
+                        verifed_user.objects.filter(verified_email=email)[0]
                         if len(User.objects.filter(username=username))>=1:
                                 context['username_taken']=True
                         if len(User.objects.filter(email=email))>=1:

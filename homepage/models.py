@@ -3,6 +3,7 @@ from ckeditor.fields import RichTextField
 # Create your models here.
 
 class verifed_user(models.Model):
+    
     verified_email=models.EmailField()
     
     
