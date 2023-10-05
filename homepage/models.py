@@ -1,3 +1,4 @@
+from collections.abc import Iterable
 from django.db import models
 from ckeditor.fields import RichTextField
 # Create your models here.
@@ -6,8 +7,11 @@ class verifed_user(models.Model):
     
     verified_email=models.EmailField()
     
-    
+    def save(self):
 
+        if not verifed_user.objects.filter(verified_email=self.verified_email):
+            return super().save()
+        
     def __str__(self):
         return self.verified_email
     
