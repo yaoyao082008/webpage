@@ -29,6 +29,11 @@ class everyone_video_number(models.Model):
     General_Financial_Planning_Video_Number=models.IntegerField(default=1)
     Company_Structure_Video_Number=models.IntegerField(default=1)
 
+    def save(self):
+
+        if len(everyone_video_number.objects.all())<1:
+            return super().save()
+
     def __str__(self):
         return "EVERYONES VIDEO NUMBER (do not add more)"
     
