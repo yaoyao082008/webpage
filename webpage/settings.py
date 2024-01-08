@@ -40,8 +40,10 @@ INSTALLED_APPS = [
     'homepage',
     'videos',
     'blog',
+    'english_videos',
     'ckeditor',
-    'adminsortable2',
+    'adminsortable2'
+    
 ]
 
 MIDDLEWARE = [

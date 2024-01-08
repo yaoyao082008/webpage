@@ -169,8 +169,25 @@
               <a href="{% url 'contacts' %}" class="nav-link h5"> 联系 </a>
             </li>
             {% if user.is_authenticated %}
-            <li class="nav-item mx-3">
-              <a href="{% url 'video' %}" class="nav-link h5"> 视频 </a>
+            <li class="nav-item dropdown mx-3">
+              <a
+                class="nav-link dropdown-toggle h5"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                  视频/Videos
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                      <a class="dropdown-item" href="{% url 'video' %}">中文视频</a>
+                  </li>
+                  <li>
+                  <a class="dropdown-item" href="{% url 'english_video' %}">English Videos</a>
+                  </li>
+              </ul>
             </li>
             
             <li class="nav-item mx-3">

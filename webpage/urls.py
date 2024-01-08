@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('homepage.urls')),
     path('',include('videos.urls')),
-    path('',include('blog.urls'))
+    path('',include('blog.urls')),
+    path('',include('english_videos.urls')),
 ]
 
