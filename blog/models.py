@@ -9,5 +9,10 @@ class post(models.Model):
     last_name=models.CharField(max_length=100)
     body=RichTextField(blank=True,null=True)
     image=models.ImageField(null=True,blank=True,upload_to='blog/pictures/' , default='blog/pictures/default.jpg')
+
+    def save(self):
+        if self.image == None:
+            self.image='blog/pictures/default.jpg'
+
     def __str__(self):
         return f"{self.title} | {self.first_name} {self.last_name}"
