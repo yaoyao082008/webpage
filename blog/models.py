@@ -8,7 +8,8 @@ class post(models.Model):
     first_name=models.CharField(max_length=100)
     last_name=models.CharField(max_length=100)
     body=RichTextField(blank=True,null=True)
-    image=models.ImageField(null=True,blank=True,upload_to='blog/pictures/' , default='blog/pictures/default.jpg')
+    image=models.ImageField(null=True,blank=False,upload_to='blog/pictures/' , default='blog/pictures/default.jpg')
+    
 
     def __str__(self):
         return f"{self.title} | {self.first_name} {self.last_name}"
