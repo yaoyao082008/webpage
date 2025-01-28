@@ -6,6 +6,11 @@ from ckeditor.fields import RichTextField
 class verifed_user(models.Model):
     
     verified_email=models.EmailField()
+
+    class Meta:
+        permissions = (
+            ("licensed_member", "Licensed Member"),
+        )
     
     def save(self):
 

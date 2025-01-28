@@ -4,9 +4,16 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth.decorators import permission_required
 from .models import *
 
 # Create your views here.
+
+# @permission_required("homepage.licensed_member")
+# def licensed_page(request):
+#         return render(request,'licensed_page/test.html')
+
+
 def contact(request):
         context={'contact_info': agent_contact.objects.all() }
 

@@ -40,6 +40,7 @@ urlpatterns = [
     path('eng-meetings/',views.eng_meetings,name='eng-meetings'),
     path('ch-meetings/',views.ch_meetings,name='ch-meetings'),
     path('contacts/',views.contact,name='contacts'),
+    # path('licensed-page/',views.licensed_page,name='licensed-page')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
