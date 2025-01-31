@@ -1,300 +1,86 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  {% load static %}
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="遗产规划, money management , Beyond Exponential Financial, BeyondFiancialEd, 金融教育与服务"
-    />
-    <meta
-      name="description"
-      content="遗产规划, 金融教育与服务"
-    />
-    <link rel="shortcut icon" type="x-icon" href="{% static 'images/logo.webp' %}">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <title>遗产规划</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <div class="container-xxl">
-        <a href="{% url 'index' %}" class="navbar-brand">
-          <img
-            class="img-fluid"
-            src="{% static 'images/logo.webp' %}"
-            alt="beyond Expoenential Financial Logo"
-          />
-        </a>
-        <!-- toggle button for mobile nav-->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#main-nav"
-          aria-controls="main-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+{% extends 'base.html' %}
 
-        <!--navbar links-->
-        <div
-          class="collapse navbar-collapse"
-          id="main-nav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item mx-3">
-              <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
-            </li>
-            
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                金融教育与服务
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'tax' %}">
-                    税务规划</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'retirement' %}"
-                    >退休计划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'asset_protection' %}"
-                    >资产保护</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'company_structure' %}"
-                    >公司架构</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'estate_planning' %}"
-                    >遗产规划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
-                    >人寿保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'long_term_care' %}"
-                    >长期护理</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'medicare' %}"
-                    >医疗保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'investment' %}"
-                    >投资风险控制</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'savings' %}"
-                    >大学助学金申请</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    target="_blank"
-                    href="https://go.oncehub.com/Beyond-Exponential-Education"
-                    >安排会议</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'join_us' %}" class="nav-link h5"> 加入我们 </a>
-            </li>
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  讲座
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'ch-meetings' %}">中文公开讲座</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'eng-meetings' %}">英文公开讲座</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" href="{% url 'inner-meetings' %}">内部会员讲座</a>
-                  </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'contacts' %}" class="nav-link h5"> 联系 </a>
-            </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  视频/Videos
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'video' %}">中文视频</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'english_video' %}">English Videos</a>
-                  </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item mx-3">
-              <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
-            </li>
-            {% else %}
-            <li class="nav-item mx-3">
-              <a href="{% url 'signin' %}" class="nav-link h5"> 内部会员登录 </a>
-            </li>
-            {% endif %}
-          </ul>
+{% load static %}
 
-          <div class="my-2 my-lg-0 ms-auto">
-            <a href="https://go.oncehub.com/Beyond-Exponential-Education" class="btn btn-outline-dark my-2 my-sm-0 form-inline">预约咨询</a>
-          </div>
-          
+{% block key %}"遗产规划, money management , Beyond Exponential Financial, BeyondFiancialEd, 金融教育与服务"{% endblock %}
+
+{% block descrp %}"遗产规划, 金融教育与服务"{% endblock %}
+
+{% block title %}遗产规划{% endblock %}
+
+{% block content %}
+
+<section>
+<div class="container-lg bg-light text-center">
+  <div class="row m-5">
+    <div class="col-md-6 align-self-center">
+      <img
+        class="img-fluid"
+        src="{% static 'images/estate_planning.webp' %}"
+        alt="college financial aid"
+      />
+    </div>
 
 
-        </div>
-      </div>
-    </nav>
-
-    <section>
-      <div class="container-lg bg-light text-center">
-        <div class="row m-5">
-          <div class="col-md-6 align-self-center">
-            <img
-              class="img-fluid"
-              src="{% static 'images/estate_planning.webp' %}"
-              alt="college financial aid"
-            />
-          </div>
-
-
-          <div class="col-md-6 text-start align-self-center">
-            <h1 class="my-3 fw-bold">遗产规划</h1>
-            <p class="h4" style="text-indent: 40px;">
-              每一个人来到世上，都是向死而生的过程，死亡是生命的一部分，就像一首乐曲的完结符一样，
-              它只是标志着时间上的终结，但我们身后事却不一定因此完结。因此遗产规划是生与死的交汇，
-              是家庭理财的重要组成部分， 是每一个成年人都需要的，它不仅仅争对比尔盖茨和巴菲特。好的遗产规划，
-              不仅可以确保有合适的人员到位，以代表我们做出医疗，财务，育儿和业务决策 
-              （无论是在我们丧失民事行为能力还是在离开之后），更可以保护资产，规划税务，
-              妥善的在多个受益人中进行公平的财产分配，避免后人不必要的纷争。
-              
-            </p>
-
-            <p class="h4" style="text-indent: 40px;">
-              好的遗产规划让我们即便去世，
-              也能运筹帷幄之中，决胜千里之外，在坟墓里也能掌控生前打下的江山。如果不规划或者规划不当，
-              一生辛劳，财富再多，可能到头来还是为他人作嫁衣裳。
-            </p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="text-center container-lg bg-light">
-
-        <div class="row justify-content-center p-3">
-          <div class="col-md-6 text-md-start text-sm-center">
-            <h1 class="my-3 fw-bold">您绝对需要遗产规划，如果: </h1>
-            <ul style="list-style-type: square;">
-              <li class="p-2 h5">您有未成年子女吗？</li>
-              <li class="p-2 h5">您是屋主吗？</li>
-              <li class="p-2 h5">您的总资产是否超过 150,000 美元（加利福尼亚州)、
-                75,000 美元 (佛罗里达州和德克萨斯州) 、22,000 美元（密歇根州）？</li>
-              <li class="p-2 h5">您是否有多段婚姻？</li>
-              <li class="p-2 h5">您家中是否有人是其他国家的公民？</li>
-              <li class="p-2 h5">您会考虑将您的资产以不同方式分配给您的孩子吗？</li>
-              <li class="p-2 h5">您的遗产是否会超出州和联邦的免税范围？ </li>
-            </ul>
-            <p class="p-2 h3 fw-bold">遗产规划不仅适用于富人。如果您对以上任何问题回答是“Yes”, 它也适合您。</p>
-          </div>
-        </div>
-
-        <div class="row justify-content-center p-3">
-          <div class="col-md-6 text-md-start text-sm-center">
-            <h1 class="my-3 fw-bold">遗产规划课程大纲样本：</h1>
-            <ul style="list-style-type: square;">
-              <li class="h5">好的遗产规划的要素</li>
-              <li class="h5">可撤销信托和不可撤销信托的区别</li>
-              <li class="h5">Spousal Lifetime Access Trust</li>
-              <li class="h5">Grantor Retained Annuity Trust</li>
-              <li class="h5">Irrevocable Life Insurance Trust</li>
-              <li class="h5">Qualified Domestic Trust</li>
-              <li class="h5">Dynasty Trust</li>
-              <li class="h5">Medicaid Asset Protection Trust</li>
-              <li class="h5">Charitable Remainder Trust</li>
-              <li class="h5">如何避免遗产税</li>
-
-            </ul>
-            <a href="https://go.oncehub.com/Beyond-Exponential-Education" class="text-center btn btn-secondary my-4">安排会议</a>
-          </div>
-        </div>
-      
-        <div class="text-center disclaimer bg-light p-2">
-          <small>
-            This portion of the site is for informational purposes only. 
-            The content is not legal advice. The statements and opinions have not been evaluated for accuracy, 
-            completeness, or changes in the law.
-            <br>
-            Beyond Expoenential Education &copy; 2025-2026
-          </small>
-        </div>
+    <div class="col-md-6 text-start align-self-center">
+      <h1 class="my-3 fw-bold">遗产规划</h1>
+      <p class="h4" style="text-indent: 40px;">
+        每一个人来到世上，都是向死而生的过程，死亡是生命的一部分，就像一首乐曲的完结符一样，
+        它只是标志着时间上的终结，但我们身后事却不一定因此完结。因此遗产规划是生与死的交汇，
+        是家庭理财的重要组成部分， 是每一个成年人都需要的，它不仅仅争对比尔盖茨和巴菲特。好的遗产规划，
+        不仅可以确保有合适的人员到位，以代表我们做出医疗，财务，育儿和业务决策 
+        （无论是在我们丧失民事行为能力还是在离开之后），更可以保护资产，规划税务，
+        妥善的在多个受益人中进行公平的财产分配，避免后人不必要的纷争。
         
-      </div>
-    </section>
+      </p>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+      <p class="h4" style="text-indent: 40px;">
+        好的遗产规划让我们即便去世，
+        也能运筹帷幄之中，决胜千里之外，在坟墓里也能掌控生前打下的江山。如果不规划或者规划不当，
+        一生辛劳，财富再多，可能到头来还是为他人作嫁衣裳。
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="text-center container-lg bg-light">
+
+  <div class="row justify-content-center p-3">
+    <div class="col-md-6 text-md-start text-sm-center">
+      <h1 class="my-3 fw-bold">您绝对需要遗产规划，如果: </h1>
+      <ul style="list-style-type: square;">
+        <li class="p-2 h5">您有未成年子女吗？</li>
+        <li class="p-2 h5">您是屋主吗？</li>
+        <li class="p-2 h5">您的总资产是否超过 150,000 美元（加利福尼亚州)、
+          75,000 美元 (佛罗里达州和德克萨斯州) 、22,000 美元（密歇根州）？</li>
+        <li class="p-2 h5">您是否有多段婚姻？</li>
+        <li class="p-2 h5">您家中是否有人是其他国家的公民？</li>
+        <li class="p-2 h5">您会考虑将您的资产以不同方式分配给您的孩子吗？</li>
+        <li class="p-2 h5">您的遗产是否会超出州和联邦的免税范围？ </li>
+      </ul>
+      <p class="p-2 h3 fw-bold">遗产规划不仅适用于富人。如果您对以上任何问题回答是“Yes”, 它也适合您。</p>
+    </div>
+  </div>
+
+  <div class="row justify-content-center p-3">
+    <div class="col-md-6 text-md-start text-sm-center">
+      <h1 class="my-3 fw-bold">遗产规划课程大纲样本：</h1>
+      <ul style="list-style-type: square;">
+        <li class="h5">好的遗产规划的要素</li>
+        <li class="h5">可撤销信托和不可撤销信托的区别</li>
+        <li class="h5">Spousal Lifetime Access Trust</li>
+        <li class="h5">Grantor Retained Annuity Trust</li>
+        <li class="h5">Irrevocable Life Insurance Trust</li>
+        <li class="h5">Qualified Domestic Trust</li>
+        <li class="h5">Dynasty Trust</li>
+        <li class="h5">Medicaid Asset Protection Trust</li>
+        <li class="h5">Charitable Remainder Trust</li>
+        <li class="h5">如何避免遗产税</li>
+
+      </ul>
+      <a href="https://go.oncehub.com/Beyond-Exponential-Education" class="text-center btn btn-secondary my-4">安排会议</a>
+    </div>
+  </div>
+
+{% endblock %}

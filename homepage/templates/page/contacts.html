@@ -1,261 +1,53 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  {% load static %}
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="金融教育与联系, money management , Beyond Exponential Financial, BeyondFiancialEd"
-    />
-    <meta
-      name="description"
-      content="金融教育联系"
-    />
-    <link rel="shortcut icon" type="x-icon" href="{% static 'images/logo.webp' %}">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <title>联系</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <div class="container-xxl">
-        <a href="{% url 'index' %}" class="navbar-brand">
-          <img
-            class="img-fluid"
-            src="{% static 'images/logo.webp' %}"
-            alt="beyond Expoenential Financial Logo"
-          />
-        </a>
-        <!-- toggle button for mobile nav-->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#main-nav"
-          aria-controls="main-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <!--navbar links-->
-        <div
-          class="collapse navbar-collapse"
-          id="main-nav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item mx-3">
-              <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
-            </li>
-            
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                金融教育与服务
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'tax' %}">
-                    税务规划</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'retirement' %}"
-                    >退休计划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'asset_protection' %}"
-                    >资产保护</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'company_structure' %}"
-                    >公司架构</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'estate_planning' %}"
-                    >遗产规划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
-                    >人寿保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'long_term_care' %}"
-                    >长期护理</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'medicare' %}"
-                    >医疗保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'investment' %}"
-                    >投资风险控制</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'savings' %}"
-                    >大学助学金申请</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    target="_blank"
-                    href="https://go.oncehub.com/Beyond-Exponential-Education"
-                    >安排会议</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'join_us' %}" class="nav-link h5"> 加入我们 </a>
-            </li>
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  讲座
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'ch-meetings' %}">中文公开讲座</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'eng-meetings' %}">英文公开讲座</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" href="{% url 'inner-meetings' %}">内部会员讲座</a>
-                  </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'contacts' %}" class="nav-link h5"> 联系 </a>
-            </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  视频/Videos
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'video' %}">中文视频</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'english_video' %}">English Videos</a>
-                  </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item mx-3">
-              <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
-            </li>
-            {% else %}
-            <li class="nav-item mx-3">
-              <a href="{% url 'signin' %}" class="nav-link h5"> 内部会员登录 </a>
-            </li>
-            {% endif %}
-          </ul>
+{% extends 'base.html' %}
 
-          <div class="my-2 my-lg-0 ms-auto">
-            <a href="https://go.oncehub.com/Beyond-Exponential-Education" class="btn btn-outline-dark my-2 my-sm-0 form-inline">预约咨询</a>
-          </div>
-          
+{% load static %}
+
+{% block key %}"金融教育与联系, money management , Beyond Exponential Financial, BeyondFiancialEd"{% endblock %}
+
+{% block descrp %}"金融教育联系"{% endblock %}
+
+{% block title %}联系{% endblock %}
+
+{% block content %}
 
 
-        </div>
+<div class="container-lg bg-light">
+  <h1 class="p-3 text-center">联系卡</h1>
+
+  <hr> 
+
+  <ul>
+
+    {% for contact in contact_info %}
+    <div class="row my-3">
+      <div class="col-md-4"></div>
+      <div class="col-md-2 text-center ">
+        <img
+          class="img-fluid rounded"
+          src={{contact.wechat_qrcode.url}}
+          alt="image of {{contact.name}} wechat qrcode"
+        />
       </div>
-    </nav>
-
-    <div class="container-lg bg-light">
-      <h1 class="p-3 text-center">联系卡</h1>
-
-      <hr> 
-
-      <ul>
-
-        {% for contact in contact_info %}
-        <div class="row my-3">
-          <div class="col-md-4"></div>
-          <div class="col-md-2 text-center ">
-            <img
-              class="img-fluid rounded"
-              src={{contact.wechat_qrcode.url}}
-              alt="image of {{contact.name}} wechat qrcode"
-            />
-          </div>
-          <div class="col-md-6">
-            <p class="h3 fw-bold my-3">
-              {{contact.name}}
-            </p>
-            <p class="h5">
-                电话号码: {{contact.phone_number}}
-                <br>
-                邮件: {{contact.email}}
-            </p>
-          </div>
-        </div>
-        <hr>
-
-        {% endfor %}
-
-        
-
-      </ul>
-
-      <div class="text-center disclaimer bg-light">
-        <small>
-            This portion of the site is for informational purposes ONLY. 
-            The content is not legal advice. The statements and opinions have not been evaluated for accuracy, 
-            completeness, or changes in the law.
-          <br>
-          Beyond Expoenential Education &copy; 2025-2026
-        </small>
+      <div class="col-md-6">
+        <p class="h3 fw-bold my-3">
+          {{contact.name}}
+        </p>
+        <p class="h5">
+            电话号码: {{contact.phone_number}}
+            <br>
+            邮件: {{contact.email}}
+        </p>
       </div>
     </div>
+    <hr>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+    {% endfor %}
+
+    
+
+  </ul>
+
+  
+</div>
+{% endblock %}

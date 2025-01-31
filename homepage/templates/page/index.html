@@ -1,385 +1,156 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  {% load static %}
+{% extends 'base.html' %}
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="Finance, money management , Beyond Exponential Financial, BeyondFiancialEd"
-    />
-    <meta
-      name="description"
-      content="Welcome to Beyond Exponential Financial"
-    />
-    <title>Beyond Exponential Education</title>
-    <link rel="shortcut icon" type="x-icon" href="{% static 'images/logo.webp' %}">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  </head>
+{% load static %}
 
-  <body class="homepage">
-    <!--nav bar-->
+{% block key %}"Finance, money management , Beyond Exponential Financial, BeyondFiancialEd"{% endblock %}
+
+{% block descrp %}"Welcome to Beyond Exponential Financial"{% endblock %}
+
+{% block title %} Homepage {% endblock %}
 
 
-    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-      <div class="container-xxl">
-        <a href="{% url 'index' %}" class="navbar-brand">
+
+{% block content %}
+  <!--intro and about-->
+<section id="intro">
+  <div class="container-lg bg-light">
+    <div class="row justify-content-center">
+      <div class="row-md-5 text-center">
+        <img
+          class="img-fluid"
+          src="{% static 'images/financial_help.webp' %}"
+          alt="image of the newyork skyline"
+        />
+      </div>
+      <div class="col-md-6 text-center text-md-start" id="About">
+        <h1>
+          <div class="display-6 text-center">通往未来财务的成功之路</div>
+        </h1>
+        <p class="lead my-4 text-muted text-center">
+          Beyond-Exponential Financial Group 由一群接受过高等教育, 爱学习, 爱分享，爱思考的精英组成。我们集团致力于普及包括税法，投资，资产保护，风险控制，大学助学金申请在内的相关金融知识。集金融教育， 金融服务和财富积累战略为一体，帮助家庭建立完善安全的财务系统。<br>
+          我们的理念是：授人以鱼不如授人以渔
+          <br>我们的使命是：为中产阶级财商觉醒而奋斗
+          <br>我们的价值是：助力家庭寻找诗和远方
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-lg bg-light">
+    <div class="row justify-content-center">
+      <div class="col-md-4 text-center">
+        <div>
           <img
-            class="img-fluid"
-            src="{% static 'images/logo.webp' %}"
-            alt="beyond Expoenential Financial Logo"
+            src="{% static 'images/Work_Space.webp' %}"
+            alt="workspace"
+            class="img-fluid rounded-circle"
           />
-        </a>
-        <!-- toggle button for mobile nav-->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#main-nav"
-          aria-controls="main-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!--navbar links-->
-        <div
-          class="collapse navbar-collapse"
-          id="main-nav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item mx-3">
-              <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
-            </li>
-            
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                金融教育与服务
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'tax' %}">
-                    税务规划</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'retirement' %}"
-                    >退休计划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'asset_protection' %}"
-                    >资产保护</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'company_structure' %}"
-                    >公司架构</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'estate_planning' %}"
-                    >遗产规划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
-                    >人寿保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'long_term_care' %}"
-                    >长期护理</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'medicare' %}"
-                    >医疗保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'investment' %}"
-                    >投资风险控制</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'savings' %}"
-                    >大学助学金申请</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    target="_blank"
-                    href="https://go.oncehub.com/Beyond-Exponential-Education"
-                    >安排会议</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'join_us' %}" class="nav-link h5"> 加入我们 </a>
-            </li>
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  讲座
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'ch-meetings' %}">中文公开讲座</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'eng-meetings' %}">英文公开讲座</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" href="{% url 'inner-meetings' %}">内部会员讲座</a>
-                  </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'contacts' %}" class="nav-link h5"> 联系 </a>
-            </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  视频/Videos
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'video' %}">中文视频</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'english_video' %}">English Videos</a>
-                  </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item mx-3">
-              <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
-            </li>
-            {% else %}
-            <li class="nav-item mx-3">
-              <a href="{% url 'signin' %}" class="nav-link h5"> 内部会员登录 </a>
-            </li>
-            {% endif %}
-          </ul>
-
-          <div class="my-2 my-lg-0 ms-auto">
-            <a href="https://go.oncehub.com/Beyond-Exponential-Education" class="btn btn-outline-dark my-2 my-sm-0 form-inline">预约咨询</a>
+        </div>
+        <div>
+          <h4>财商教育</h4>
+          <p class="text-center lead my-4 text-muted">
+            我们提供以下财商教育服务：
+          </p>
+          <div class="justify-content-center">
+            <ul class="text-center" style="list-style-position: inside;">
+              <li class="h5 text-muted">周末公益讲座（对外开放）</li>
+              <li class="h5 text-muted">内部会员讲座（对内开放）</li>
+              <li class="h5 text-muted">会员个体辅导（对内开放）</li>
+            </ul>
           </div>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div>
+          <img
+            src="{% static 'images/Financial_Report.webp' %}"
+            alt="Finance Picture"
+            class="img-fluid rounded-circle"
+          />
+        </div>
+        <div>
+          <h4>金融服务</h4>
+          <p class="text-center lead my-4 text-muted">
+            我们提供以下财务咨询服务，包括：
+          </p>
+          <div class="justify-content-center">
+            <ul class="text-center" style="list-style-position: inside;">
+              <li class="h5 text-muted">税务规划</li>
+              <li class="h5 text-muted">退休规划</li>
+              <li class="h5 text-muted">遗产规划</li>
+              <li class="h5 text-muted">资产保护</li>
+              <li class="h5 text-muted">保险年金</li>
+              <li class="h5 text-muted">长期护理</li>
+              <li class="h5 text-muted">医疗保险</li>
+              <li class="h5 text-muted">投资风险控制</li>
+              <li class="h5 text-muted">大学助学金申请</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div>
+          <img
+            src="{% static 'images/London_Abstract.webp' %}"
+            alt="London Abstract"
+            class="img-fluid rounded-circle"
+          />
+        </div>
+        <div>
+          <h4>企业家平台</h4>
+          <p class="text-start lead my-4 text-muted" style="text-indent: 30px;">
+            我们有情怀有担当，我们不仅独善其身，我们更希望兼济天下！
+            我们为辛勤的中产阶级完美财务而奋斗！我们招贤纳士，我们广聚英才，
+            我们帮助他人同时成就自己。  
+          </p>
+          <p class="text-start lead my-4 text-muted" style="text-indent: 30px;">
+            如果您对金融服务业感兴趣，如果您遭遇中年危机职业瓶颈，
+            如果您有经天纬地之才，不甘心平庸一生，请加入我们的平台，让我们一起来创业！ 
+          </p>
           
-
-
         </div>
       </div>
-    </nav>
+    </div>
+  </div>
 
-    <!--intro and about-->
-    <section id="intro">
-      <div class="container-lg bg-light">
-        <div class="row justify-content-center">
-          <div class="row-md-5 text-center">
-            <img
-              class="img-fluid"
-              src="{% static 'images/financial_help.webp' %}"
-              alt="image of the newyork skyline"
-            />
-          </div>
-          <div class="col-md-6 text-center text-md-start" id="About">
-            <h1>
-              <div class="display-6 text-center">通往未来财务的成功之路</div>
-            </h1>
-            <p class="lead my-4 text-muted text-center">
-              Beyond-Exponential Financial Group 由一群接受过高等教育, 爱学习, 爱分享，爱思考的精英组成。我们集团致力于普及包括税法，投资，资产保护，风险控制，大学助学金申请在内的相关金融知识。集金融教育， 金融服务和财富积累战略为一体，帮助家庭建立完善安全的财务系统。<br>
-              我们的理念是：授人以鱼不如授人以渔
-              <br>我们的使命是：为中产阶级财商觉醒而奋斗
-              <br>我们的价值是：助力家庭寻找诗和远方
-            </p>
-          </div>
-        </div>
+  <div class="container-lg bg-light">
+    <div class="row justify-content-center">
+      <div class="col-9 my-4">
+        <img
+          class="img-fluid"
+          src="{% static 'images/office.webp' %}"
+          alt="office"
+        />
       </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-9 my-4">
+        <p class="my-4 text-center lead text-muted">
+          我们集金融教育与金融服务于一体，提供全方位，多角度的金融理财咨询。
+          天下没有完美的方案，但是有完美的方案组合。我们在财务上帮助您不仅“知其然”更“知其所以然”，
+          剩下的事情就交给您自己做决定啦！
+        </p>
 
-      <div class="container-lg bg-light">
-        <div class="row justify-content-center">
-          <div class="col-md-4 text-center">
-            <div>
-              <img
-                src="{% static 'images/Work_Space.webp' %}"
-                alt="workspace"
-                class="img-fluid rounded-circle"
-              />
-            </div>
-            <div>
-              <h4>财商教育</h4>
-              <p class="text-center lead my-4 text-muted">
-                我们提供以下财商教育服务：
-              </p>
-              <div class="justify-content-center">
-                <ul class="text-center" style="list-style-position: inside;">
-                  <li class="h5 text-muted">周末公益讲座（对外开放）</li>
-                  <li class="h5 text-muted">内部会员讲座（对内开放）</li>
-                  <li class="h5 text-muted">会员个体辅导（对内开放）</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div>
-              <img
-                src="{% static 'images/Financial_Report.webp' %}"
-                alt="Finance Picture"
-                class="img-fluid rounded-circle"
-              />
-            </div>
-            <div>
-              <h4>金融服务</h4>
-              <p class="text-center lead my-4 text-muted">
-                我们提供以下财务咨询服务，包括：
-              </p>
-              <div class="justify-content-center">
-                <ul class="text-center" style="list-style-position: inside;">
-                  <li class="h5 text-muted">税务规划</li>
-                  <li class="h5 text-muted">退休规划</li>
-                  <li class="h5 text-muted">遗产规划</li>
-                  <li class="h5 text-muted">资产保护</li>
-                  <li class="h5 text-muted">保险年金</li>
-                  <li class="h5 text-muted">长期护理</li>
-                  <li class="h5 text-muted">医疗保险</li>
-                  <li class="h5 text-muted">投资风险控制</li>
-                  <li class="h5 text-muted">大学助学金申请</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 text-center">
-            <div>
-              <img
-                src="{% static 'images/London_Abstract.webp' %}"
-                alt="London Abstract"
-                class="img-fluid rounded-circle"
-              />
-            </div>
-            <div>
-              <h4>企业家平台</h4>
-              <p class="text-start lead my-4 text-muted" style="text-indent: 30px;">
-                我们有情怀有担当，我们不仅独善其身，我们更希望兼济天下！
-                我们为辛勤的中产阶级完美财务而奋斗！我们招贤纳士，我们广聚英才，
-                我们帮助他人同时成就自己。  
-              </p>
-              <p class="text-start lead my-4 text-muted" style="text-indent: 30px;">
-                如果您对金融服务业感兴趣，如果您遭遇中年危机职业瓶颈，
-                如果您有经天纬地之才，不甘心平庸一生，请加入我们的平台，让我们一起来创业！ 
-              </p>
-              
-            </div>
-          </div>
-        </div>
       </div>
-
-      <div class="container-lg bg-light">
-        <div class="row justify-content-center">
-          <div class="col-9 my-4">
-            <img
-              class="img-fluid"
-              src="{% static 'images/office.webp' %}"
-              alt="office"
-            />
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-9 my-4">
-            <p class="my-4 text-center lead text-muted">
-              我们集金融教育与金融服务于一体，提供全方位，多角度的金融理财咨询。
-              天下没有完美的方案，但是有完美的方案组合。我们在财务上帮助您不仅“知其然”更“知其所以然”，
-              剩下的事情就交给您自己做决定啦！
-            </p>
-
-          </div>
-        </div>
+    </div>
+  </div>
+  <div class="container-lg bg-light">
+    {% if user.is_authenticated %}
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center text-md-start my-4">
+        <img
+          class="img-fluid"
+          src="{% static 'images/laptop.webp' %}"
+          alt="laptop"
+        />
       </div>
-      <div class="container-lg bg-light">
-        {% if user.is_authenticated %}
-        <div class="row justify-content-center">
-          <div class="col-md-8 text-center text-md-start my-4">
-            <img
-              class="img-fluid"
-              src="{% static 'images/laptop.webp' %}"
-              alt="laptop"
-            />
-          </div>
-          <div class="col-md-4 text-center text-md-start my-4">
-            <p class="h3 my-6 text-center font-weight-bold">订阅</p>
-            <p class="h4 text-center font-weight-bold mb-10">
-              订阅我们的时事通讯以接收新闻和更新。
-            </p>
-            <iframe width="540" height="305" src="https://8ec780af.sibforms.com/serve/MUIFAEWrGySa_TbZd5dUia8Bz9gJb1MWe3kmYMqcfSlsufKMFIaII81TVLh9ACMqIp8tZlR1DH_B2g1yz3AM7yFB-ahVCmSffIn7TfX4H_0szEIjakPQL91IzfFSL_SI65A3915Y-Rfd0bNn-TEcwTRSSfvcWni4dK81j3NqQ9qrGT-ssS-AVFkG1HFM0EXNH9v8-2Vu_m-3x3BA" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
-          </div>
-        </div>
-        {% endif %}
-        <div class="text-center disclaimer bg-light">
-          <small>
-            This portion of the site is for informational purposes only. 
-            The content is not legal advice. The statements and opinions have not been evaluated for accuracy, 
-            completeness, or changes in the law.
-            <br>
-            Beyond Expoenential Education &copy; 2025-2026
-          </small>
-
-          <!-- <div id="google_translate_element" class="text-center"></div>
-
-          <script type="text/javascript">
-          function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'ch'}, 'google_translate_element');
-          }
-          </script>
-
-          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
-
-        </div>
+      <div class="col-md-4 text-center text-md-start my-4">
+        <p class="h3 my-6 text-center font-weight-bold">订阅</p>
+        <p class="h4 text-center font-weight-bold mb-10">
+          订阅我们的时事通讯以接收新闻和更新。
+        </p>
+        <iframe width="540" height="305" src="https://8ec780af.sibforms.com/serve/MUIFAEWrGySa_TbZd5dUia8Bz9gJb1MWe3kmYMqcfSlsufKMFIaII81TVLh9ACMqIp8tZlR1DH_B2g1yz3AM7yFB-ahVCmSffIn7TfX4H_0szEIjakPQL91IzfFSL_SI65A3915Y-Rfd0bNn-TEcwTRSSfvcWni4dK81j3NqQ9qrGT-ssS-AVFkG1HFM0EXNH9v8-2Vu_m-3x3BA" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
       </div>
-      
-    </section>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+    </div>
+    {% endif %}
+{% endblock %}

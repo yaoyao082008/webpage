@@ -1,289 +1,82 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  {% load static %}
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-    name="keywords"
-    content="退休计划, money management , Beyond Exponential Financial, BeyondFiancialEd, 金融教育与服务"
-    />
-    <meta
-      name="description"
-      content="退休计划, 金融教育与服务"
-    />
-    <link rel="shortcut icon" type="x-icon" href="{% static 'images/logo.webp' %}">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <title>退休计划</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <div class="container-xxl">
-        <a href="{% url 'index' %}" class="navbar-brand">
-          <img
-            class="img-fluid"
-            src="{% static 'images/logo.webp' %}"
-            alt="beyond Expoenential Financial Logo"
-          />
-        </a>
-        <!-- toggle button for mobile nav-->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#main-nav"
-          aria-controls="main-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+{% extends 'base.html' %}
 
-        <!--navbar links-->
-        <div
-          class="collapse navbar-collapse"
-          id="main-nav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item mx-3">
-              <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
-            </li>
-            
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                金融教育与服务
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'tax' %}">
-                    税务规划</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'retirement' %}"
-                    >退休计划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'asset_protection' %}"
-                    >资产保护</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'company_structure' %}"
-                    >公司架构</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'estate_planning' %}"
-                    >遗产规划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
-                    >人寿保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'long_term_care' %}"
-                    >长期护理</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'medicare' %}"
-                    >医疗保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'investment' %}"
-                    >投资风险控制</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'savings' %}"
-                    >大学助学金申请</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    target="_blank"
-                    href="https://go.oncehub.com/Beyond-Exponential-Education"
-                    >安排会议</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'join_us' %}" class="nav-link h5"> 加入我们 </a>
-            </li>
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  讲座
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'ch-meetings' %}">中文公开讲座</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'eng-meetings' %}">英文公开讲座</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" href="{% url 'inner-meetings' %}">内部会员讲座</a>
-                  </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'contacts' %}" class="nav-link h5"> 联系 </a>
-            </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  视频/Videos
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'video' %}">中文视频</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'english_video' %}">English Videos</a>
-                  </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item mx-3">
-              <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
-            </li>
-            {% else %}
-            <li class="nav-item mx-3">
-              <a href="{% url 'signin' %}" class="nav-link h5"> 内部会员登录 </a>
-            </li>
-            {% endif %}
-          </ul>
+{% load static %}
 
-          <div class="my-2 my-lg-0 ms-auto">
-            <a href="https://go.oncehub.com/Beyond-Exponential-Education" class="btn btn-outline-dark my-2 my-sm-0 form-inline">预约咨询</a>
-          </div>
-          
+{% block key %}"退休计划, money management , Beyond Exponential Financial, BeyondFiancialEd, 金融教育与服务"{% endblock %}
+
+{% block descrp %}"退休计划, 金融教育与服务"{% endblock %}
+
+{% block title %}退休计划{% endblock %}
+
+{% block content %}
 
 
-        </div>
-      </div>
-    </nav>
-
-    <section>
-      <div class="container-lg bg-light text-center">
-        <div class="row m-5">
-          <div class="col-md-6 align-self-center">
-            <img
-              class="img-fluid"
-              src="{% static 'images/retirement.webp' %}"
-              alt="college financial aid"
-            />
-          </div>
 
 
-          <div class="col-md-6 text-start align-self-center">
-
-            <h1 class=" h2 fw-bold p-2">
-              退休规划有以下4+1个目标：
-            </h1>
-            <img src="{% static "images/4plus1.png" %} " alt="retirement plan" class="img-fluid">
-            <p class="h5 p-2">
-              然而，这五个目标很容易被 4 个挑战“HIIT”, 它们分别是:
-            </p>
-            <ul style="list-style-type: square;">
-              <li>H (Health care cost)：包括医疗费用和长期护理费用</li>
-              <li>I (inflation): 通货膨胀影响我们的购买力</li>
-              <li>I (investment): 投资的成败决定退休的质量</li>
-              <li>T (tax): 税务可能降低我们的资产使用的效率</li>
-            </ul>
-            <p class="h5 p-2">
-              如果四大挑战成为您退休生活的致命HIIT，您该怎么办？
-            </p>
-          </div>
-        </div>
+<section>
+  <div class="container-lg bg-light text-center">
+    <div class="row m-5">
+      <div class="col-md-6 align-self-center">
+        <img
+          class="img-fluid"
+          src="{% static 'images/retirement.webp' %}"
+          alt="college financial aid"
+        />
       </div>
 
-      <div class="text-center container-lg bg-light">
-        <div class="row justify-content-center p-3">
-          <div class="col-md-6 text-md-start text-sm-center">
-            <img src="{% static "images/retirement_plan.png" %} " alt="retirement plan" class="img-fluid">
-            <p class="h5 mt-2">
-              我如何建立一个安全的退休金计划来实现退休的五个目标吗？
-              对我来说太晚了吗？
-              为了增加我的资产，我是否必须节衣缩食，吃胡萝卜？
-              我需要成为金融高手吗？
-            </p>
-          </div>
-        </div>
-        <div class="row justify-content-center p-3">
-          <div class="col-md-6 text-md-start text-sm-center">
-            <h1 class="my-3 fw-bold">退休规划课程大纲样本</h1>
-            <ul style="list-style-type: square;">
-              <li class="h5">401(k)真的省税吗？</li>
-              <li class="h5">我该存Roth还是Traditional IRA?</li>
-              <li class="h5">我的退休账号的投资选择有哪些？</li>
-              <li class="h5">我的退休账号的费用有哪些?</li>
-              <li class="h5">如何衡量我的退休账号的表现?</li>
-              <li class="h5">如何做完备的退休规划</li>
-              <li class="h5">我的退休规划会被HIIT吗?</li>
-            </ul>
-            <a href="https://go.oncehub.com/Beyond-Exponential-Education" class="text-center btn btn-secondary my-4">安排会议</a>
-          </div>
-        </div>
 
-        <div class="text-center disclaimer bg-light p-2">
-          <small>
-            This portion of the site is for informational purposes only. 
-            The content is not legal advice. The statements and opinions have not been evaluated for accuracy, 
-            completeness, or changes in the law.
-            <br>
-            Beyond Expoenential Education &copy; 2025-2026
-          </small>
-        </div>
-        
+      <div class="col-md-6 text-start align-self-center">
+
+        <h1 class=" h2 fw-bold p-2">
+          退休规划有以下4+1个目标：
+        </h1>
+        <img src="{% static "images/4plus1.png" %} " alt="retirement plan" class="img-fluid">
+        <p class="h5 p-2">
+          然而，这五个目标很容易被 4 个挑战“HIIT”, 它们分别是:
+        </p>
+        <ul style="list-style-type: square;">
+          <li>H (Health care cost)：包括医疗费用和长期护理费用</li>
+          <li>I (inflation): 通货膨胀影响我们的购买力</li>
+          <li>I (investment): 投资的成败决定退休的质量</li>
+          <li>T (tax): 税务可能降低我们的资产使用的效率</li>
+        </ul>
+        <p class="h5 p-2">
+          如果四大挑战成为您退休生活的致命HIIT，您该怎么办？
+        </p>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+  <div class="text-center container-lg bg-light">
+    <div class="row justify-content-center p-3">
+      <div class="col-md-6 text-md-start text-sm-center">
+        <img src="{% static "images/retirement_plan.png" %} " alt="retirement plan" class="img-fluid">
+        <p class="h5 mt-2">
+          我如何建立一个安全的退休金计划来实现退休的五个目标吗？
+          对我来说太晚了吗？
+          为了增加我的资产，我是否必须节衣缩食，吃胡萝卜？
+          我需要成为金融高手吗？
+        </p>
+      </div>
+    </div>
+    <div class="row justify-content-center p-3">
+      <div class="col-md-6 text-md-start text-sm-center">
+        <h1 class="my-3 fw-bold">退休规划课程大纲样本</h1>
+        <ul style="list-style-type: square;">
+          <li class="h5">401(k)真的省税吗？</li>
+          <li class="h5">我该存Roth还是Traditional IRA?</li>
+          <li class="h5">我的退休账号的投资选择有哪些？</li>
+          <li class="h5">我的退休账号的费用有哪些?</li>
+          <li class="h5">如何衡量我的退休账号的表现?</li>
+          <li class="h5">如何做完备的退休规划</li>
+          <li class="h5">我的退休规划会被HIIT吗?</li>
+        </ul>
+        <a href="https://go.oncehub.com/Beyond-Exponential-Education" class="text-center btn btn-secondary my-4">安排会议</a>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+
+{% endblock %}

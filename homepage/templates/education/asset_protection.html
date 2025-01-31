@@ -1,275 +1,63 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  {% load static %}
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="资产保护, money management , Beyond Exponential Financial, BeyondFiancialEd, 金融教育与服务"
-    />
-    <meta
-      name="description"
-      content="资产保护, 金融教育与服务"
-    />
-    <link rel="shortcut icon" type="x-icon" href="{% static 'images/logo.webp' %}">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <title>资产保护</title>
-  </head>
-  
-  <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <div class="container-xxl">
-        <a href="{% url 'index' %}" class="navbar-brand">
-          <img
-            class="img-fluid"
-            src="{% static 'images/logo.webp' %}"
-            alt="beyond Expoenential Financial Logo"
-          />
-        </a>
-        <!-- toggle button for mobile nav-->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#main-nav"
-          aria-controls="main-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+{% extends 'base.html' %}
 
-        <!--navbar links-->
-        <div
-          class="collapse navbar-collapse"
-          id="main-nav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item mx-3">
-              <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
-            </li>
-            
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                金融教育与服务
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'tax' %}">
-                    税务规划</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'retirement' %}"
-                    >退休计划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'asset_protection' %}"
-                    >资产保护</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'company_structure' %}"
-                    >公司架构</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'estate_planning' %}"
-                    >遗产规划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
-                    >人寿保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'long_term_care' %}"
-                    >长期护理</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'medicare' %}"
-                    >医疗保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'investment' %}"
-                    >投资风险控制</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'savings' %}"
-                    >大学助学金申请</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    target="_blank"
-                    href="https://go.oncehub.com/Beyond-Exponential-Education"
-                    >安排会议</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'join_us' %}" class="nav-link h5"> 加入我们 </a>
-            </li>
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  讲座
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'ch-meetings' %}">中文公开讲座</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'eng-meetings' %}">英文公开讲座</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" href="{% url 'inner-meetings' %}">内部会员讲座</a>
-                  </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'contacts' %}" class="nav-link h5"> 联系 </a>
-            </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  视频/Videos
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'video' %}">中文视频</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'english_video' %}">English Videos</a>
-                  </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item mx-3">
-              <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
-            </li>
-            {% else %}
-            <li class="nav-item mx-3">
-              <a href="{% url 'signin' %}" class="nav-link h5"> 内部会员登录 </a>
-            </li>
-            {% endif %}
-          </ul>
-
-          <div class="my-2 my-lg-0 ms-auto">
-            <a href="https://go.oncehub.com/Beyond-Exponential-Education" class="btn btn-outline-dark my-2 my-sm-0 form-inline">预约咨询</a>
-          </div>
-          
-        </div>
-      </div>
-    </nav>
-
-    <section>
-      <div class="container-lg bg-light text-center">
-        <div class="row m-5">
-          <div class="col-md-6 align-self-center">
-            <img
-              class="img-fluid"
-              src="{% static 'images/asset_protection.jpg' %}"
-              alt="college financial aid"
-            />
-          </div>
+{% load static %}
 
 
-          <div class="col-md-6 text-start align-self-center">
-            <h1 class="my-3 fw-bold">资产保护</h1>
-            <p class="h5 my-2" style="text-indent: 40px;">
-              在美国是一个滥用诉讼的国度，为什么呢？因为为了保证穷人也有申述的权利，
-              不会因为经济原因雇不起律师，因此这些伤害诉讼律师一般都是免费，只有打赢官司，
-              拿到赔款以后才 收钱，这样保证穷人也不会因为没有钱打不起官司。
-            </p>
-            <p class="h5 my-2" style="text-indent:40px;">
-              律师接到案子以后会怎么做？他们会首先调查被告人的资产，
-              倘若资产都是未被保护的资产，比如房产，现金，股票账号，
-              律师们非常乐意接手这个案子。倘若发现被告人的钱在保险，
-              年金或者退休金里，即使赢了官司，也不见得能拿走这些钱，
-              律师就不愿意接受这个案子了。我们该如何的防患于未然，
-              将潜在碰瓷者消灭在萌芽状态？我们该如何进行有效的资产保护呢？
-            </p>
-          </div>
-        </div>
-      </div>
+{% block key %}"资产保护, money management , Beyond Exponential Financial, BeyondFiancialEd, 金融教育与服务"{% endblock %}
+
+{% block descrp %} 资产保护, 金融教育与服务 {% endblock %}
+
+{%block title%} 资产保护 {%endblock%}
 
 
-      <div class="text-center container-lg bg-light">
+{% block content %}
+<section>
+<div class="container-lg bg-light text-center">
+  <div class="row m-5">
+    <div class="col-md-6 align-self-center">
+      <img
+        class="img-fluid"
+        src="{% static 'images/asset_protection.jpg' %}"
+        alt="college financial aid"
+      />
+    </div>
 
-        <div class="row justify-content-center p-3">
-          <div class="col-md-6 text-md-start text-sm-center">
-            <h1 class="my-3 fw-bold">资产保护课程大纲：</h1>
-            <ul style="list-style-type: square;">
-              <li class="p-2 h5">谁是资产的掠夺者？</li>
-              <li class="p-2 h5">不同退休账号的资产保护有何不同？</li>
-              <li class="p-2 h5">如何利用公司架构做资产保护？</li>
-              <li class="p-2 h5">如何利用保险年金做资产保护？</li>
-              <li class="p-2 h5">如何利用不可撤销信托做资产保护</li>
-              <li class="p-2 h5">如何进行婚姻的资产保护？</li>
-            </ul>
-            <a href="https://go.oncehub.com/Beyond-Exponential-Education" class="text-center btn btn-secondary my-4">安排会议</a>
-          </div>
-        </div>
 
-        <div class="text-center disclaimer bg-light p-2">
-          <small>
-            This portion of the site is for informational purposes only. 
-            The content is not legal advice. The statements and opinions have not been evaluated for accuracy, 
-            completeness, or changes in the law.
-            <br>
-            Beyond Expoenential Education &copy; 2025-2026
-          </small>
-        </div>
+    <div class="col-md-6 text-start align-self-center">
+      <h1 class="my-3 fw-bold">资产保护</h1>
+      <p class="h5 my-2" style="text-indent: 40px;">
+        在美国是一个滥用诉讼的国度，为什么呢？因为为了保证穷人也有申述的权利，
+        不会因为经济原因雇不起律师，因此这些伤害诉讼律师一般都是免费，只有打赢官司，
+        拿到赔款以后才 收钱，这样保证穷人也不会因为没有钱打不起官司。
+      </p>
+      <p class="h5 my-2" style="text-indent:40px;">
+        律师接到案子以后会怎么做？他们会首先调查被告人的资产，
+        倘若资产都是未被保护的资产，比如房产，现金，股票账号，
+        律师们非常乐意接手这个案子。倘若发现被告人的钱在保险，
+        年金或者退休金里，即使赢了官司，也不见得能拿走这些钱，
+        律师就不愿意接受这个案子了。我们该如何的防患于未然，
+        将潜在碰瓷者消灭在萌芽状态？我们该如何进行有效的资产保护呢？
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="text-center container-lg bg-light">
+
+  <div class="row justify-content-center p-3">
+    <div class="col-md-6 text-md-start text-sm-center">
+      <h1 class="my-3 fw-bold">资产保护课程大纲：</h1>
+      <ul style="list-style-type: square;">
+        <li class="p-2 h5">谁是资产的掠夺者？</li>
+        <li class="p-2 h5">不同退休账号的资产保护有何不同？</li>
+        <li class="p-2 h5">如何利用公司架构做资产保护？</li>
+        <li class="p-2 h5">如何利用保险年金做资产保护？</li>
+        <li class="p-2 h5">如何利用不可撤销信托做资产保护</li>
+        <li class="p-2 h5">如何进行婚姻的资产保护？</li>
+      </ul>
+      <a href="https://go.oncehub.com/Beyond-Exponential-Education" class="text-center btn btn-secondary my-4">安排会议</a>
+    </div>
+  </div>
+{% endblock %}
         
-      </div>
-    </section>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>

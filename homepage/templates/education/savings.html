@@ -1,308 +1,97 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  {% load static %}
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-    name="keywords"
-    content="大学助学金申请, money management , Beyond Exponential Financial, BeyondFiancialEd, 金融教育与服务"
-    />
-    <meta
-      name="description"
-      content="大学助学金申请, 金融教育与服务"
-    />
-    <link rel="shortcut icon" type="x-icon" href="{% static 'images/logo.webp' %}">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <title>大学助学金申请</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <div class="container-xxl">
-        <a href="{% url 'index' %}" class="navbar-brand">
-          <img
-            class="img-fluid"
-            src="{% static 'images/logo.webp' %}"
-            alt="beyond Expoenential Financial Logo"
-          />
-        </a>
-        <!-- toggle button for mobile nav-->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#main-nav"
-          aria-controls="main-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+{% extends 'base.html' %}
 
-        <!--navbar links-->
-        <div
-          class="collapse navbar-collapse"
-          id="main-nav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item mx-3">
-              <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
-            </li>
-            
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                金融教育与服务
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'tax' %}">
-                    税务规划</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'retirement' %}"
-                    >退休计划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'asset_protection' %}"
-                    >资产保护</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'company_structure' %}"
-                    >公司架构</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'estate_planning' %}"
-                    >遗产规划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
-                    >人寿保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'long_term_care' %}"
-                    >长期护理</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'medicare' %}"
-                    >医疗保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'investment' %}"
-                    >投资风险控制</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'savings' %}"
-                    >大学助学金申请</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    target="_blank"
-                    href="https://go.oncehub.com/Beyond-Exponential-Education"
-                    >安排会议</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'join_us' %}" class="nav-link h5"> 加入我们 </a>
-            </li>
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  讲座
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'ch-meetings' %}">中文公开讲座</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'eng-meetings' %}">英文公开讲座</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" href="{% url 'inner-meetings' %}">内部会员讲座</a>
-                  </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'contacts' %}" class="nav-link h5"> 联系 </a>
-            </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  视频/Videos
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'video' %}">中文视频</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'english_video' %}">English Videos</a>
-                  </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item mx-3">
-              <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
-            </li>
-            {% else %}
-            <li class="nav-item mx-3">
-              <a href="{% url 'signin' %}" class="nav-link h5"> 内部会员登录 </a>
-            </li>
-            {% endif %}
-          </ul>
+{% load static %}
 
-          <div class="my-2 my-lg-0 ms-auto">
-            <a href="https://go.oncehub.com/Beyond-Exponential-Education" class="btn btn-outline-dark my-2 my-sm-0 form-inline">预约咨询</a>
-          </div>
-          
+{% block key %}"大学助学金申请, money management , Beyond Exponential Financial, BeyondFiancialEd, 金融教育与服务"{% endblock %}
+
+{% block descrp %}"大学助学金申请, 金融教育与服务"{% endblock %}
+
+{% block title %}大学助学金申请{% endblock %}
+
+{% block content %}
 
 
-        </div>
-      </div>
-    </nav>
 
-    <section>
-      <div class="container-lg bg-light text-center">
-        <div class="row m-5">
-          <div class="col-md-5 align-self-center">
-            <img
-              class="img-fluid"
-              src="{% static 'images/financial_aid.webp' %}"
-              alt="college financial aid"
-            />
-          </div>
-
-          <div class="col-md-1"></div>
-
-          <div class="col-md-6 text-start align-self-center">
-            <h1 class="my-3 fw-bold">大学助学金申请</h1>
-            <p class="h5 p-2" style="text-indent: 40px;">
-              中国家庭是最重视教育的群体, 在孩子很小的时候, 
-              我们便开始为孩子大学教育基金做准备, 有人买房子, 
-              有人存529, 有人投股票基金, 为的是能负担养儿育女中最昂贵的支出—大学学费. 
-              殊不知，我们可能画蛇添足,本可以申请得到的大学助学金却因为我们不合理的 
-              资产配置而化为乌有。
-            </p>
-            <p class="h5 p-2" style="text-indent: 40px;">
-              孩子太小, 准备大学助学金申请太早吗? 2) 收入太高, 
-              肯定拿不到助学金吗? 3) 工资很低, 肯定可以拿到助学金吗? 4) 私立大学肯定比公立大学花费高吗? 
-              5) 申请助学金, 会影响大学录取吗? 6) 第一年申请不到, 之后也拿不到吗?
-            </p>
-          </div>
-        </div>
+<section>
+  <div class="container-lg bg-light text-center">
+    <div class="row m-5">
+      <div class="col-md-5 align-self-center">
+        <img
+          class="img-fluid"
+          src="{% static 'images/financial_aid.webp' %}"
+          alt="college financial aid"
+        />
       </div>
 
-      <div class="text-center container-lg bg-light">
+      <div class="col-md-1"></div>
 
-        <div class="row justify-content-center p-3">
-          <div class="col-md-7 text-md-start text-sm-center">
-            <h1 class="my-3 fw-bold ">529 可能会损害您获得助学金的机会</h1>
-            <p class="h5" style="text-indent: 40px;">
-              您知道吗，529可能不适合您的家庭情况！ 为什么? 529 损害了您获得基于需求的助学金的机会！
-              很简单的逻辑是这样的:
-              比如说，整体学费加上各类学杂费成本是100,000,您如果可以提供100,000(这叫expected family contribution),
-              那么您就不会得到任何need-based financial aid。如果您的家庭只能提供 20,000,
-              那么您的孩子将获得 80,000 need/based financial aid 529 的问题在于它增加了预期的家庭贡献额。
-            </p>
-          </div>
-        </div>
-
-
-        <div class="row justify-content-center p-3">
-          <div class="col-md-7 text-md-start text-sm-center">
-            <h1 class="my-3 fw-bold">如何筹划孩子的大学学费?</h1>
-            <p class="h5" style="text-indent: 40px;">
-              那么，您如何准备孩子的大学学费呢？准备学费的常用工具有哪些？
-              如果您的家庭收入和资产太高而没有资格获得助学金，
-              您如何申请基于绩效的奖学金呢？ FAFSA 和 CSS 中常被忽视的问题是什么？
-            </p>
-          </div>
-        </div>
-
-        <div class="row justify-content-center p-3">
-          <div class="col-md-7 text-md-start text-sm-center">
-            <h1 class="my-3 fw-bold">大学助学金申请的课程大纲：</h1>
-            <ul style="list-style-type: square;">
-              <li class="h5">如何规划大学助学金申请？</li>
-              <li class="h5">FAFSA表与CSS表的填写</li>
-              <li class="h5">筹备大学学费的方式有哪些？</li>
-              <li class="h5">大学助学金申请公式</li>
-              <li class="h5">出租房的考量：地产该放公司名下还是个人名下? </li>
-              <li class="h5">公司报亏损有助于助学金申请吗？</li>
-              <li class="h5">多拿mortgage可以助力助学金吗? </li>
-              <li class="h5">第11年级有什么注意事项? </li>
-              <li class="h5">CSS学校与FAFSA学校都是如何估算家庭自付额? </li>
-              <li class="h5">如何根据自家的情况查询每个学校的家庭自付额？</li>
-              <li class="h5">学校与学校之间有什么不同？ </li>
-              <li class="h5">如何降低基准年的收入？</li>
-              <li class="h5">填写FAFSA表和CSS表的注意事项</li>
-            </ul>
-            <a href="https://go.oncehub.com/Beyond-Exponential-Education" class="text-center btn btn-secondary my-4">安排会议</a>
-          </div>
-        </div>
-        
-        
-
-        <div class="text-center disclaimer bg-light p-2">
-          <small>
-            This portion of the site is for informational purposes only. 
-            The content is not legal advice. The statements and opinions have not been evaluated for accuracy, 
-            completeness, or changes in the law.
-            <br>
-            Beyond Expoenential Education &copy; 2025-2026
-          </small>
-        </div>
-        
+      <div class="col-md-6 text-start align-self-center">
+        <h1 class="my-3 fw-bold">大学助学金申请</h1>
+        <p class="h5 p-2" style="text-indent: 40px;">
+          中国家庭是最重视教育的群体, 在孩子很小的时候, 
+          我们便开始为孩子大学教育基金做准备, 有人买房子, 
+          有人存529, 有人投股票基金, 为的是能负担养儿育女中最昂贵的支出—大学学费. 
+          殊不知，我们可能画蛇添足,本可以申请得到的大学助学金却因为我们不合理的 
+          资产配置而化为乌有。
+        </p>
+        <p class="h5 p-2" style="text-indent: 40px;">
+          孩子太小, 准备大学助学金申请太早吗? 2) 收入太高, 
+          肯定拿不到助学金吗? 3) 工资很低, 肯定可以拿到助学金吗? 4) 私立大学肯定比公立大学花费高吗? 
+          5) 申请助学金, 会影响大学录取吗? 6) 第一年申请不到, 之后也拿不到吗?
+        </p>
       </div>
-    </section>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+    </div>
+  </div>
+
+  <div class="text-center container-lg bg-light">
+
+    <div class="row justify-content-center p-3">
+      <div class="col-md-7 text-md-start text-sm-center">
+        <h1 class="my-3 fw-bold ">529 可能会损害您获得助学金的机会</h1>
+        <p class="h5" style="text-indent: 40px;">
+          您知道吗，529可能不适合您的家庭情况！ 为什么? 529 损害了您获得基于需求的助学金的机会！
+          很简单的逻辑是这样的:
+          比如说，整体学费加上各类学杂费成本是100,000,您如果可以提供100,000(这叫expected family contribution),
+          那么您就不会得到任何need-based financial aid。如果您的家庭只能提供 20,000,
+          那么您的孩子将获得 80,000 need/based financial aid 529 的问题在于它增加了预期的家庭贡献额。
+        </p>
+      </div>
+    </div>
+
+
+    <div class="row justify-content-center p-3">
+      <div class="col-md-7 text-md-start text-sm-center">
+        <h1 class="my-3 fw-bold">如何筹划孩子的大学学费?</h1>
+        <p class="h5" style="text-indent: 40px;">
+          那么，您如何准备孩子的大学学费呢？准备学费的常用工具有哪些？
+          如果您的家庭收入和资产太高而没有资格获得助学金，
+          您如何申请基于绩效的奖学金呢？ FAFSA 和 CSS 中常被忽视的问题是什么？
+        </p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center p-3">
+      <div class="col-md-7 text-md-start text-sm-center">
+        <h1 class="my-3 fw-bold">大学助学金申请的课程大纲：</h1>
+        <ul style="list-style-type: square;">
+          <li class="h5">如何规划大学助学金申请？</li>
+          <li class="h5">FAFSA表与CSS表的填写</li>
+          <li class="h5">筹备大学学费的方式有哪些？</li>
+          <li class="h5">大学助学金申请公式</li>
+          <li class="h5">出租房的考量：地产该放公司名下还是个人名下? </li>
+          <li class="h5">公司报亏损有助于助学金申请吗？</li>
+          <li class="h5">多拿mortgage可以助力助学金吗? </li>
+          <li class="h5">第11年级有什么注意事项? </li>
+          <li class="h5">CSS学校与FAFSA学校都是如何估算家庭自付额? </li>
+          <li class="h5">如何根据自家的情况查询每个学校的家庭自付额？</li>
+          <li class="h5">学校与学校之间有什么不同？ </li>
+          <li class="h5">如何降低基准年的收入？</li>
+          <li class="h5">填写FAFSA表和CSS表的注意事项</li>
+        </ul>
+        <a href="https://go.oncehub.com/Beyond-Exponential-Education" class="text-center btn btn-secondary my-4">安排会议</a>
+      </div>
+    </div>
+    
+  </div>
+</section>
+{% endblock %}

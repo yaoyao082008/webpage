@@ -1,335 +1,121 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  {% load static %}
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-    name="keywords"
-    content="金融教育概貌, money management , Beyond Exponential Financial, BeyondFiancialEd, 金融教育与服务"
-    />
-    <meta
-      name="description"
-      content="金融教育概貌, 金融教育与服务"
-    />
-    <link rel="shortcut icon" type="x-icon" href="{% static 'images/logo.webp' %}">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <title>金融教育概貌</title>
-  </head>
-  <body style="padding-top: 105px;">
-    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-      <div class="container-xxl">
-        <a href="{% url 'index' %}" class="navbar-brand">
-          <img
-            class="img-fluid"
-            src="{% static 'images/logo.webp' %}"
-            alt="beyond Expoenential Financial Logo"
-          />
-        </a>
-        <!-- toggle button for mobile nav-->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#main-nav"
-          aria-controls="main-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+{% extends 'base.html' %}
 
-        <!--navbar links-->
-        <div
-          class="collapse navbar-collapse"
-          id="main-nav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item mx-3">
-              <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
-            </li>
-            
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                金融教育与服务
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'tax' %}">
-                    税务规划</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'retirement' %}"
-                    >退休计划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'asset_protection' %}"
-                    >资产保护</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'company_structure' %}"
-                    >公司架构</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'estate_planning' %}"
-                    >遗产规划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
-                    >人寿保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'long_term_care' %}"
-                    >长期护理</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'medicare' %}"
-                    >医疗保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'investment' %}"
-                    >投资风险控制</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'savings' %}"
-                    >大学助学金申请</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    target="_blank"
-                    href="https://go.oncehub.com/Beyond-Exponential-Education"
-                    >安排会议</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'join_us' %}" class="nav-link h5"> 加入我们 </a>
-            </li>
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  讲座
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'ch-meetings' %}">中文公开讲座</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'eng-meetings' %}">英文公开讲座</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" href="{% url 'inner-meetings' %}">内部会员讲座</a>
-                  </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'contacts' %}" class="nav-link h5"> 联系 </a>
-            </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  视频/Videos
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'video' %}">中文视频</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'english_video' %}">English Videos</a>
-                  </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item mx-3">
-              <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
-            </li>
-            {% else %}
-            <li class="nav-item mx-3">
-              <a href="{% url 'signin' %}" class="nav-link h5"> 内部会员登录 </a>
-            </li>
-            {% endif %}
-          </ul>
+{% load static %}
 
-          <div class="my-2 my-lg-0 ms-auto">
-            <a href="https://go.oncehub.com/Beyond-Exponential-Education" class="btn btn-outline-dark my-2 my-sm-0 form-inline">预约咨询</a>
-          </div>
-          
+{% block key %}"金融教育概貌, money management , Beyond Exponential Financial, BeyondFiancialEd, 金融教育与服务"{% endblock %}
+
+{% block descrp %}"金融教育概貌, 金融教育与服务"{% endblock %}
+
+{% block title %}金融教育概貌{% endblock %}
+
+{% block content %}
+
+<section>
+  <div class="container-lg">
 
 
-        </div>
+    <div class="text-center p-3 my-3">
+      <div class="p-3 text-center"> <a href="{% static 'pdfs/sampletext.pdf' %}" target="_blank" class=" btn btn-dark"><p class="h1">课程大纲</p></a></div>
+      <h1 class="p-2 fw-bold"
+        >我们为什么需要财商教育: 
+      </h1>
+      
+      <div class="p-3">
+
+        <p class="h4 p-2" style="text-indent: 40px;">
+          我们不知道的知识有两种,可以细分两类,
+          一类是known unknow, 你知道这是你不知道的, 这类知识欠缺造成的杀伤力没有那么大, 
+          因为我们可以有的放矢的去google,去请教,很快就会有solution.
+        </p>
+
+        <p class="h4 p-2" style="text-indent: 40px;">
+          另一种是unkown unkown, 也就是知识盲区, 是指自己视力所应见而不见的知识, 
+          具体说来是指应知须知，与我们生息息相关但我们又不见得知道的知识. 你都不知道这是你不知道的知识, 
+          也就无从下手搜索, 盲区知识常常伤人于无形. 由于盲然无知吃亏了也浑然不觉.
+        </p>
+
+        <p class="h4 p-2" style="text-indent: 40px;">
+          在理财领域，不懂这类知识既影响你赚钱，又影响你省钱。有时候赚钱能力不够十分强大，
+          但把赚来的钱用好省好，也是一种能力。这也是我们社会为什么急需要财商教育的原因。
+        </p>
+
       </div>
-    </nav>
+    </div>
 
-    <section>
-      <div class="container-lg">
+    
 
+    <div class="p-3 bg-light my-5">
+      <p class="h1 fw-bold text-center p-2">为什么富人更富，穷人更穷？</p>
+      <p class="h3 text-center p-2">
+        富人有富人的思维方式，穷人有穷人的思维习惯 
+        <br>
+        富人热爱学习，总在寻找自身的不足，人生不设限，总寻求突破自己的思维上线。
+        <br>
+        穷人固步自封，自我设限，多虑多疑，疏于学习，怠于思考。
+      </p>
+    </div>
 
-        <div class="text-center p-3 my-3">
-          <div class="p-3 text-center"> <a href="{% static 'pdfs/sampletext.pdf' %}" target="_blank" class=" btn btn-dark"><p class="h1">课程大纲</p></a></div>
-          <h1 class="p-2 fw-bold"
-            >我们为什么需要财商教育: 
-          </h1>
-          
-          <div class="p-3">
-
-            <p class="h4 p-2" style="text-indent: 40px;">
-              我们不知道的知识有两种,可以细分两类,
-              一类是known unknow, 你知道这是你不知道的, 这类知识欠缺造成的杀伤力没有那么大, 
-              因为我们可以有的放矢的去google,去请教,很快就会有solution.
-            </p>
-
-            <p class="h4 p-2" style="text-indent: 40px;">
-              另一种是unkown unkown, 也就是知识盲区, 是指自己视力所应见而不见的知识, 
-              具体说来是指应知须知，与我们生息息相关但我们又不见得知道的知识. 你都不知道这是你不知道的知识, 
-              也就无从下手搜索, 盲区知识常常伤人于无形. 由于盲然无知吃亏了也浑然不觉.
-            </p>
-
-            <p class="h4 p-2" style="text-indent: 40px;">
-              在理财领域，不懂这类知识既影响你赚钱，又影响你省钱。有时候赚钱能力不够十分强大，
-              但把赚来的钱用好省好，也是一种能力。这也是我们社会为什么急需要财商教育的原因。
-            </p>
-
-          </div>
-        </div>
-
-        
-
-        <div class="p-3 bg-light my-5">
-          <p class="h1 fw-bold text-center p-2">为什么富人更富，穷人更穷？</p>
-          <p class="h3 text-center p-2">
-            富人有富人的思维方式，穷人有穷人的思维习惯 
-            <br>
-            富人热爱学习，总在寻找自身的不足，人生不设限，总寻求突破自己的思维上线。
-            <br>
-            穷人固步自封，自我设限，多虑多疑，疏于学习，怠于思考。
-          </p>
-        </div>
-
-        <div class="p-3">
-          <p class="h1 fw-bold text-center p-2">我雇有专业人士，为什么还要学习财商知识？</p>
-          <p class="h3 text-center p-2" style="text-indent: 40px;">
-            诚然，专业的事情该交给专业的人士来打理，但试想一下，
-            谁最关心我们自己的财政？一定是自己，如果自己都不关心，怎么指望别人比自己还上心？
-            况且雇专业人士也是有讲究的，你怎么知道你雇的专业人士水平到位？即使她水平到位，你该如何和她打配合？
-            你知道该如何问正确的问题，传达你的精神？而且不同的专业人士有不同的分工，比如会计师报税，
-            律师负责起草信托文件，投资经理负责投资，他们就好像一个交响乐队的不同的乐手，他们如果自顾自的演奏，
-            一定不能成为美妙的交响乐，那么谁又是这场交响乐的总指挥呢？那就是我们自己了。
-          </p>
-          <p class="h3 text-center p-2" style="text-indent: 40px;">
-            我们了解美国这个大系统运作的方方面面，坐镇中军，全盘控局，协调好不同的专业人士，
-            做好家庭理财交响乐的总指挥。凡事亲历亲为太复杂，只指望专业人士当刷手掌柜又未免太简单，
-            只有自己学习，加上专业人士的加持，那便是穿越了复杂的简单。
-          </p>
-        </div>
+    <div class="p-3">
+      <p class="h1 fw-bold text-center p-2">我雇有专业人士，为什么还要学习财商知识？</p>
+      <p class="h3 text-center p-2" style="text-indent: 40px;">
+        诚然，专业的事情该交给专业的人士来打理，但试想一下，
+        谁最关心我们自己的财政？一定是自己，如果自己都不关心，怎么指望别人比自己还上心？
+        况且雇专业人士也是有讲究的，你怎么知道你雇的专业人士水平到位？即使她水平到位，你该如何和她打配合？
+        你知道该如何问正确的问题，传达你的精神？而且不同的专业人士有不同的分工，比如会计师报税，
+        律师负责起草信托文件，投资经理负责投资，他们就好像一个交响乐队的不同的乐手，他们如果自顾自的演奏，
+        一定不能成为美妙的交响乐，那么谁又是这场交响乐的总指挥呢？那就是我们自己了。
+      </p>
+      <p class="h3 text-center p-2" style="text-indent: 40px;">
+        我们了解美国这个大系统运作的方方面面，坐镇中军，全盘控局，协调好不同的专业人士，
+        做好家庭理财交响乐的总指挥。凡事亲历亲为太复杂，只指望专业人士当刷手掌柜又未免太简单，
+        只有自己学习，加上专业人士的加持，那便是穿越了复杂的简单。
+      </p>
+    </div>
 
 
-        <div class="p-3  bg-light my-5">
-          <p class="h1 fw-bold p-2 text-center">
-            重要不紧急的事情
-          </p>
-          <p class="h3 text-center p-2 text-center" style="text-indent: 40px;">
-            时间“四象限”法是Stephen Covey提出的时间管理的理论。
-            如果把要做的事情按照紧急、不紧急、重要、不重要的排列组合分成四个象限, 
-            这四个象限的划分有利于我们对时间深刻的认识。
-          </p>
-          <p class="h3 text-center p-2" style="text-indent: 40px;">
-            紧急又重要的事情，我们心甘情愿的花时间；紧急不重要的事情，
-            我们不得不花时间；不重要不紧急的事情，我们经常浪费时间；
-            然而对于重要不紧急的事情，我们习惯性的拖延时间。
-            可是当我们把重要不紧急的事情变成重要又紧急的事情的时候，殊不知，滚滚长江东逝水，浪花淘尽时机了。
-          </p>
-          <p class="h3 text-center p-2" style="text-indent: 40px;">
-            财务规划就是这样的重要不紧急的事情。
-            君不见，多少70岁的老人慌忙忙的做Roth Conversion； 
-            君不见，多少人在报税季节遍寻省税方案；君不见，多少人生前辛苦一场，生后却为人做了嫁衣裳......
-          </p>
-          <p class="h3 text-center p-2" style="text-indent: 40px;">
-            能否把功夫花在重要不紧急的事情上是拉开人与人之间差距的重要原因， 
-            让我们未雨绸缪，防患于未然，在重要不紧急的事情上下功夫，不管风吹浪打，
-            我自闲庭信步！让我们管理好时间，在重要不紧急的事情上下功夫，这才能治愈好现世的慌慌张张。
-          </p>
-          <div class="text-center">
-            <img src="{% static 'images/prioity_level.png' %}" alt="financial_steps" class="img-fluid">
-          </div>
-          
-        </div>
-
-        <div class="p-3 my-5">
-          <p class="h3 text-center p-2" style="text-indent: 40px;">
-            人生财务自由和人生的哲学追求一样，追求目标：自由，自主，自在。实现一定的财务自由，
-            可以让我们在精神上很大程度的得到解放。我们的财商知识科普教育将助力您建造自由财务的金字塔，
-            助力您寻找属于您的诗和远方: 
-          </p>
-          <img src="{% static 'images/financial_steps.webp' %}" alt="financial_steps" class="img-fluid">
-        </div>
-
-        <div class="text-center disclaimer bg-light">
-          <small>
-            This portion of the site is for informational purposes only. 
-            The content is not legal advice. The statements and opinions have not been evaluated for accuracy, 
-            completeness, or changes in the law.
-            <br>
-            Beyond Expoenential Education &copy; 2025-2026
-          </small>
-        </div>
-
-        
-        <!--<div class="text-center">
-            <p class="h1 fst-italic fw-bold">未来在你手中 .</p>
-          </div>-->
+    <div class="p-3  bg-light my-5">
+      <p class="h1 fw-bold p-2 text-center">
+        重要不紧急的事情
+      </p>
+      <p class="h3 text-center p-2 text-center" style="text-indent: 40px;">
+        时间“四象限”法是Stephen Covey提出的时间管理的理论。
+        如果把要做的事情按照紧急、不紧急、重要、不重要的排列组合分成四个象限, 
+        这四个象限的划分有利于我们对时间深刻的认识。
+      </p>
+      <p class="h3 text-center p-2" style="text-indent: 40px;">
+        紧急又重要的事情，我们心甘情愿的花时间；紧急不重要的事情，
+        我们不得不花时间；不重要不紧急的事情，我们经常浪费时间；
+        然而对于重要不紧急的事情，我们习惯性的拖延时间。
+        可是当我们把重要不紧急的事情变成重要又紧急的事情的时候，殊不知，滚滚长江东逝水，浪花淘尽时机了。
+      </p>
+      <p class="h3 text-center p-2" style="text-indent: 40px;">
+        财务规划就是这样的重要不紧急的事情。
+        君不见，多少70岁的老人慌忙忙的做Roth Conversion； 
+        君不见，多少人在报税季节遍寻省税方案；君不见，多少人生前辛苦一场，生后却为人做了嫁衣裳......
+      </p>
+      <p class="h3 text-center p-2" style="text-indent: 40px;">
+        能否把功夫花在重要不紧急的事情上是拉开人与人之间差距的重要原因， 
+        让我们未雨绸缪，防患于未然，在重要不紧急的事情上下功夫，不管风吹浪打，
+        我自闲庭信步！让我们管理好时间，在重要不紧急的事情上下功夫，这才能治愈好现世的慌慌张张。
+      </p>
+      <div class="text-center">
+        <img src="{% static 'images/prioity_level.png' %}" alt="financial_steps" class="img-fluid">
       </div>
       
-    </section>
+    </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+    <div class="p-3 my-5">
+      <p class="h3 text-center p-2" style="text-indent: 40px;">
+        人生财务自由和人生的哲学追求一样，追求目标：自由，自主，自在。实现一定的财务自由，
+        可以让我们在精神上很大程度的得到解放。我们的财商知识科普教育将助力您建造自由财务的金字塔，
+        助力您寻找属于您的诗和远方: 
+      </p>
+      <img src="{% static 'images/financial_steps.webp' %}" alt="financial_steps" class="img-fluid">
+    </div>
+
+  </div>
+  
+</section>
+
+{% endblock %}
+
