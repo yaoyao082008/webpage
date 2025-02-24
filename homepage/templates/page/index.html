@@ -14,24 +14,49 @@
   <!--intro and about-->
 <section id="intro">
   <div class="container-lg bg-light">
+	    <div class="maintxt text-center">
+			<br><br><br><br><br><br><br>
+			<p class="display-6 text-center">通往财务成功之路</p>
+			<p class="text-info h3 mt-2">
+			  Beyond-Exponential Financial Group
+			</p>
+			<p class="h5 lead my-lg-0" style="line-height:31px">
+			  由一群接受过高等教育, 爱学习, 爱分享， 爱思考的精英组成。<br>
+			  我们致力于普及包括税法, 投资, 资产保护, 风险控制, 大学助学金申请在内的相关金融知识。<br>
+			  集金融教育, 金融服务和财富积累战略为一体, 帮助家庭建立完善安全的财务系统。
+			  <br><br>
+			</p>
+            <div class="my-2 my-lg-0 ms-auto text-center">
+              <a href="{% url 'contacts' %}" class="btn btn-primary btn-lg">联系我们</a>
+            </div><br><br>
+		</div>
+  </div>
+
+  <div class="container-lg bg-light">
     <div class="row justify-content-center">
-      <div class="row-md-5 text-center">
-        <img
-          class="img-fluid"
-          src="{% static 'images/financial_help.webp' %}"
-          alt="image of the newyork skyline"
-        />
+      <div class="col-md-4 text-center">
+        <div>
+          <h4><br>我们的理念</h4>
+          <p class="text-center lead my-4 text-muted">
+            授人以鱼不如授人以渔<br><br>
+          </p>
+        </div>
       </div>
-      <div class="col-md-6 text-center text-md-start" id="About">
-        <h1>
-          <div class="display-6 text-center">通往未来财务的成功之路</div>
-        </h1>
-        <p class="lead my-4 text-muted text-center">
-          Beyond-Exponential Financial Group 由一群接受过高等教育, 爱学习, 爱分享，爱思考的精英组成。我们集团致力于普及包括税法，投资，资产保护，风险控制，大学助学金申请在内的相关金融知识。集金融教育， 金融服务和财富积累战略为一体，帮助家庭建立完善安全的财务系统。<br>
-          我们的理念是：授人以鱼不如授人以渔
-          <br>我们的使命是：为中产阶级财商觉醒而奋斗
-          <br>我们的价值是：助力家庭寻找诗和远方
-        </p>
+      <div class="col-md-4 text-center">
+        <div>
+          <h4><br>我们的使命</h4>
+          <p class="text-center lead my-4 text-muted">
+            为中产阶级财商觉醒而奋斗<br><br>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div>
+          <h4><br>我们的价值</h4>
+          <p class="text-center lead my-4 text-muted">
+            助力家庭寻找诗和远方<br><br>
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -47,15 +72,18 @@
           />
         </div>
         <div>
-          <h4>财商教育</h4>
+          <h4><br>财商教育</h4>
           <p class="text-center lead my-4 text-muted">
             我们提供以下财商教育服务：
           </p>
-          <div class="justify-content-center">
-            <ul class="text-center" style="list-style-position: inside;">
+          <div class="justify-content-center" style="margin-left:30px;">
+            <ul class="text-start" style="list-style-position: inside;">
+              <li class="h5 text-muted">首次咨询免费（对外开放）</li>
               <li class="h5 text-muted">周末公益讲座（对外开放）</li>
+              <li class="h5 text-muted">午间小课堂 &nbsp;&nbsp;（对外开放）</li>
               <li class="h5 text-muted">内部会员讲座（对内开放）</li>
               <li class="h5 text-muted">会员个体辅导（对内开放）</li>
+			  <li class="h5 text-muted">新会员小灶课（对内开放）</li>
             </ul>
           </div>
         </div>
@@ -69,23 +97,34 @@
           />
         </div>
         <div>
-          <h4>金融服务</h4>
+          <h4><br>金融服务</h4>
           <p class="text-center lead my-4 text-muted">
-            我们提供以下财务咨询服务，包括：
+            我们提供以下财务咨询服务：
           </p>
-          <div class="justify-content-center">
-            <ul class="text-center" style="list-style-position: inside;">
-              <li class="h5 text-muted">税务规划</li>
-              <li class="h5 text-muted">退休规划</li>
-              <li class="h5 text-muted">遗产规划</li>
-              <li class="h5 text-muted">资产保护</li>
-              <li class="h5 text-muted">保险年金</li>
-              <li class="h5 text-muted">长期护理</li>
-              <li class="h5 text-muted">医疗保险</li>
-              <li class="h5 text-muted">投资风险控制</li>
-              <li class="h5 text-muted">大学助学金申请</li>
-            </ul>
-          </div>
+			<div class="row justify-content-center">
+			  <div class="col-md-6 text-center">
+				  <div class="justify-content-center" style="margin-left:6px;">
+					<ul class="text-start" style="list-style-position: inside;">
+					  <li class="h5 text-muted">税务规划</li>
+					  <li class="h5 text-muted">退休规划</li>
+					  <li class="h5 text-muted">遗产规划</li>
+					  <li class="h5 text-muted">资产保护</li>
+				      <li class="h5 text-muted">投资风险控制</li>
+					</ul>
+				  </div>
+			  </div>
+			  <div class="col-md-6 text-center">
+				  <div class="justify-content-center">
+					<ul class="text-start" style="list-style-position: inside;">
+					  <li class="h5 text-muted">公司架构</li>
+					  <li class="h5 text-muted">保险年金</li>
+					  <li class="h5 text-muted">长期护理</li>
+					  <li class="h5 text-muted">医疗保险</li>
+					  <li class="h5 text-muted">大学助学金</li>
+					</ul>
+				  </div>
+			  </div>
+            </div>
         </div>
       </div>
       <div class="col-md-4 text-center">
@@ -97,15 +136,13 @@
           />
         </div>
         <div>
-          <h4>企业家平台</h4>
-          <p class="text-start lead my-4 text-muted" style="text-indent: 30px;">
-            我们有情怀有担当，我们不仅独善其身，我们更希望兼济天下！
-            我们为辛勤的中产阶级完美财务而奋斗！我们招贤纳士，我们广聚英才，
-            我们帮助他人同时成就自己。  
-          </p>
-          <p class="text-start lead my-4 text-muted" style="text-indent: 30px;">
-            如果您对金融服务业感兴趣，如果您遭遇中年危机职业瓶颈，
-            如果您有经天纬地之才，不甘心平庸一生，请加入我们的平台，让我们一起来创业！ 
+          <h4><br>企业家社区</h4>
+          <p class="text-center lead my-4 text-muted">
+            我们有情怀有担当，不仅独善其身，<br>更希望兼济天下！
+            我们为辛勤的中产<br>阶级完美财务而奋斗！我们招贤纳士<br>广聚英才，
+            帮助他人同时成就自己。<br>
+            如果您对金融服务业感兴趣，如果您<br>遭遇中年危机职业瓶颈，
+            如果您有经<br>天纬地之才，不甘心平庸一生，欢迎<br>加入我们的平台，一起交流创业！ 
           </p>
           
         </div>
@@ -126,8 +163,8 @@
     <div class="row justify-content-center">
       <div class="col-9 my-4">
         <p class="my-4 text-center lead text-muted">
-          我们集金融教育与金融服务于一体，提供全方位，多角度的金融理财咨询。
-          天下没有完美的方案，但是有完美的方案组合。我们在财务上帮助您不仅“知其然”更“知其所以然”，
+          我们集金融教育与金融服务于一体，提供全方位，多角度的金融理财咨询。<br>
+          天下没有完美的方案，但是有完美的方案组合。我们在财务上帮助您不仅“知其然”更“知其所以然”，<br>
           剩下的事情就交给您自己做决定啦！
         </p>
 
