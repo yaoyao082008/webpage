@@ -24,14 +24,11 @@
     />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <style>
-.maintxt {
-    background-image: url({% static 'images/financial_help.png' %});
-    background-size: cover;
-    padding-left: 10%; 
-    padding-right: 10%; 
-	padding-top:20%;
-    color: white;
-}
+    
+    
+    {%block style%}{% endblock %}
+
+
     </style>
   </head>
 
@@ -44,8 +41,8 @@
         <a href="{% url 'index' %}" class="navbar-brand">
           <img
             class="img-fluid"
-            width="100"
-            height="100"
+            width="80"
+            height="80"
             src="{% static 'images/logo.jpg' %}"
             alt="beyond Expoenential Financial Logo"
           />

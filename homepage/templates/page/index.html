@@ -8,7 +8,18 @@
 
 {% block title %} Homepage {% endblock %}
 
+{%block style%}
 
+.maintxt {
+  background-image: url({% static 'images/financial_help.png' %});
+  background-size: cover;
+  padding-left: 10%; 
+  padding-right: 10%; 
+  padding-top:20%;
+  color: white;
+}
+
+{% endblock %}
 
 {% block content %}
   <!--intro and about-->
