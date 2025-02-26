@@ -2,3 +2,4 @@ webpage/settings.py
 *.pyc
 media/contact/pictures/
 media/blog/pictures/
+.env
