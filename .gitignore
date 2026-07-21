@@ -3,3 +3,4 @@ webpage/settings.py
 media/contact/pictures/
 media/blog/pictures/
 .env
+venv

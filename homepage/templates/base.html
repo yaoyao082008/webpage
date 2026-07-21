@@ -1,248 +1,147 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="zh-CN">
-  
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content={% block key %}{% endblock %}
-    />
-    <meta
-      name="description"
-      content={% block descrp %}{% endblock %}
-    />
-    <title>{% block title%}{% endblock %}</title>
-    <link rel="shortcut icon" type="x-icon" href="{% static 'images/logo.jpg' %}">
-    <link
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BE三富教育专家团--家族财税全规划教育。以三富战略、九维规划、百年优稳为核心，为华人家庭提供系统化财商教育与家族财税规划知识。" />
+  <title>{%block title%} {%endblock%}</title>
+  <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <style>
-    
-    
-    {%block style%}{% endblock %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
 
+  <!-- MODULE 01 / HEADER
+       WordPress：可作为 Header Template Part
+       Wix：可作为全站固定页眉
+       独立站：保留此模块即可直接使用 -->
+  <header class="be-header" data-module="header">
+    <div class="be-brand-line" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="be-container be-header__inner">
+      <a class="be-brand" href="{% url 'index' %}" aria-label="BE三富教育专家团首页">
+        <img class="be-brand__logo" src="{% static 'images/logo-mark.png' %}" alt="BE三富教育专家团标志" />
+        <span class="be-brand__text">
+          <strong>BE三富教育专家团</strong>
+          <small>家族财税全规划教育</small>
+        </span>
+      </a>
 
-    </style>
-  </head>
+      <nav class="be-nav" id="primary-nav" aria-label="主导航">
+        <a href="#about">关于我们</a>
 
-  <body class="container">
-    <!--nav bar-->
-
-
-    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-      <div class="container-xxl">
-        <a href="{% url 'index' %}" class="navbar-brand">
-          <img
-            class="img-fluid"
-            width="80"
-            height="80"
-            src="{% static 'images/logo.jpg' %}"
-            alt="beyond Expoenential Financial Logo"
-          />
-        </a>
-        <!-- toggle button for mobile nav-->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#main-nav"
-          aria-controls="main-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!--navbar links-->
-        <div
-          class="collapse navbar-collapse"
-          id="main-nav"
-        >
-          <ul class="navbar-nav">
-            
-            <li class="nav-item mx-3">
-              <a href="{% url 'index' %}" class="nav-link h5"> 关于我们 </a>
-            </li>
-            
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                金融教育与服务
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="{% url 'overview' %}">概貌</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'tax' %}">
-                    税务规划</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'retirement' %}"
-                    >退休计划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'asset_protection' %}"
-                    >资产保护</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'company_structure' %}"
-                    >公司架构</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'estate_planning' %}"
-                    >遗产规划</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'life_insurance' %}"
-                    >人寿保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'long_term_care' %}"
-                    >长期护理</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'medicare' %}"
-                    >医疗保险</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'investment' %}"
-                    >投资风险控制</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'savings' %}"
-                    >大学助学金申请</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    target="_blank"
-                    href="https://oncehub.com/beyondExponentialEducation"
-                    >安排会议</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'join_us' %}" class="nav-link h5"> 会员福利 </a>
-            </li>
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  讲座
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'ch-meetings' %}">中文公开讲座</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'eng-meetings' %}">英文公开讲座</a>
-                  </li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <a class="dropdown-item" href="{% url 'inner-meetings' %}">内部会员讲座</a>
-                  </li>
-              </ul>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'blogs' %}" class="nav-link h5"> 博客 </a>
-            </li>
-            <li class="nav-item mx-3">
-              <a href="{% url 'contacts' %}" class="nav-link h5"> 联系 </a>
-            </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item dropdown mx-3">
-              <a
-                class="nav-link dropdown-toggle h5"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                  视频/Videos
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                      <a class="dropdown-item" href="{% url 'video' %}">中文视频</a>
-                  </li>
-                  <li>
-                  <a class="dropdown-item" href="{% url 'english_video' %}">English Videos</a>
-                  </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item mx-3">
-              <a href="{% url 'signout' %}" class="nav-link h5"> 登出 </a>
-            </li>
-            {% else %}
-            <li class="nav-item mx-3">
-              <a href="{% url 'signin' %}" class="nav-link h5"> 内部会员登录 </a>
-            </li>
-            {% endif %}
-          </ul>
-
-          <div class="my-2 my-lg-0 ms-auto">
-            <a href="https://oncehub.com/beyondExponentialEducation" class="btn btn-primary btn-lg my-2 my-sm-0 form-inline">免费咨询</a>
+        <div class="be-nav__dropdown">
+          <a href="#education" class="be-nav__dropdown-toggle">金融教育与服务</a>
+          <div class="be-nav__dropdown-menu">
+            <a href="{% url 'overview' %}">概貌</a>
+            <a href="{% url 'tax' %}">税务规划</a>
+            <a href="{% url 'retirement' %}">退休计划</a>
+            <a href="{% url 'asset_protection' %}">资产保护</a>
+            <a href="{% url 'company_structure' %}">公司架构</a>
+            <a href="{% url 'estate_planning' %}">遗产规划</a>
+            <a href="{% url 'life_insurance' %}">人寿保险</a>
+            <a href="{% url 'long_term_care' %}">长期护理</a>
+            <a href="{% url 'medicare' %}">医疗保险</a>
+            <a href="{% url 'investment' %}">投资风险控制</a>
+            <a href="{% url 'savings' %}">大学助学金申请</a>
+            <a href="oncehub.com/beyondexponentialeducation">安排会议</a>
           </div>
-          
-
-
         </div>
-      </div>
-    </nav>
-    <!--end nav-->
 
-    {%block content%}
+        <a href="{% url 'join_us' %}">会员福利</a>
 
-    {% endblock %}
+        <div class="be-nav__dropdown">
+          <a href="#education" class="be-nav__dropdown-toggle">讲座</a>
+          <div class="be-nav__dropdown-menu">
+            <a href="{% url 'ch-meetings' %}">中文公开讲座</a>
+            <a href="{% url 'eng-meetings' %}">英文公开讲座</a>
+            <a href="{% url 'inner-meetings' %}">内部会员讲座</a>
+          </div>
+        </div>
 
+        <a href="{% url 'blogs' %}">博客</a>
+        <a href="{% url 'blogs' %}">联系</a>
 
-    <!--footer-->
-    <div class="text-center disclaimer bg-light">
-        <small>
-          This portion of the site is for informational purposes only. 
-          The content is not legal advice. <br>
-		  The statements and opinions have not been evaluated for accuracy, 
-          completeness, or changes in the law.
-          <br>
-          Beyond Expoenential Education &copy; 2025-2026
-        </small>
+        {% if user.is_authenticated %}
 
+        <div class="be-nav__dropdown">
+          <a href="#education" class="be-nav__dropdown-toggle">视频/Videos</a>
+          <div class="be-nav__dropdown-menu">
+            <a href="{% url 'video' %}">中文视频</a>
+            <a href="{% url 'english_video' %}">English Video</a>
+          </div>
+        </div>
+
+        <a href="{% url 'signout' %}">登出</a>
+
+        {% else %}
+
+        <a href="{% url 'signin' %}">内部会员登录</a>
+
+        {% endif %}
+      </nav>
+
+      <a class="be-header__cta" href="#consult">免费咨询</a>
+      <button class="be-menu-button" type="button" aria-label="打开菜单" aria-controls="primary-nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"
-    ></script>
+  </header>
+
+
+  {%block body%}{% endblock %}
+
+
+  <footer class="be-footer" data-module="footer">
+    <div class="be-container be-footer__grid">
+      <div class="be-footer__brand">
+        <img src="{% static 'images/logo-mark.png' %}" alt="" />
+        <div><strong>BE三富教育专家团</strong><span>家族财税全规划教育</span></div>
+      </div>
+      <div class="be-footer__links">
+        <a href="#about">关于我们</a>
+        <a href="#education">教育与服务</a>
+        <a href="#sanfu">三富理念</a>
+        <a href="#contact">联系我们</a>
+      </div>
+    </div>
+    <div class="be-container be-footer__legal">
+      <p>本网站内容仅供教育与一般信息参考，不构成法律、税务、投资、保险或其他专业建议。具体事项应结合个人情况咨询相应专业人士。</p>
+      <p>© 2025–2026 BE三富教育专家团. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.be-menu-button');
+    const nav = document.querySelector('.be-nav');
+    if (menuButton && nav) {
+      menuButton.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('is-open');
+        menuButton.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+    document.querySelectorAll('form').forEach((form) => {
+      form.addEventListener('submit', (event) => event.preventDefault());
+    });
+    document.querySelectorAll('.be-nav__dropdown-toggle').forEach((toggle) => {
+      toggle.addEventListener('click', (event) => {
+        if (window.innerWidth <= 900) {
+          event.preventDefault();
+          toggle.closest('.be-nav__dropdown').classList.toggle('is-open');
+        }
+      });
+    });
+  </script>
+
+  <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"
+  ></script>
 </body>
 </html>
