@@ -12,11 +12,11 @@
   <section class="be-hero" id="home" data-module="hero">
     <div class="be-hero__shade" aria-hidden="true"></div>
     <div class="be-container be-hero__content">
-      <h1>Beyond Exponential Financial </h1>
+      <h1 class="pb-3">Beyond Exponential Financial </h1>
       <p class="be-hero__brand-name">BE三富教育专家团--家族财税全教育</p>
       <p class="be-hero__slogan">三富战略 · 九维规划 · 百年优稳</p>
       <p class="be-hero__summary">
-        由一群接受过高等教育、爱学习、爱分享、爱思考的精英组成。我们致力于普及包括税法、 <br> 投资、资产保护、风险控制、大学助学金申请在内的相关金融知识，帮助家庭建立系统、清晰、可执行的财务认知。
+        由一群接受过高等教育、爱学习、爱分享、爱思考的精英组成。我们致力于普及包括税法 投资、 <br> 资产保护、风险控制、大学助学金申请在内的相关金融知识，帮助家庭建立系统、清晰、可执行的财务认知。
       </p>
     </div>
   </section>
@@ -162,6 +162,8 @@
 
   <!-- MODULE 08 / SUBSCRIBE + CONSULT
        表单为前端模块；WordPress/Wix 上线时可连接表单插件、邮件平台或 CRM -->
+
+  {% if user.is_authenticated %}
   <section class="be-section be-contact" id="contact" data-module="contact-actions">
     <div class="be-container be-contact__grid be-contact__grid--single">
       <article class="be-subscribe">
@@ -180,6 +182,8 @@
 
     </div>
   </section>
+
+  {% endif %}
 
 </main>
 

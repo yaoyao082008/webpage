@@ -60,7 +60,7 @@ h1, h2, h3, h4, p { margin-top: 0; }
 .be-header__inner { min-height: 70px; display: flex; align-items: center; gap: 18px; }
 .be-brand { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
 .be-brand__logo {
-  height: 52px;      /* fits comfortably inside the 70px header */
+  height: 80px;      /* fits comfortably inside the 70px header */
   width: auto;        /* preserves the logo's actual aspect ratio */
   max-width: 100%;
   object-fit: contain;
@@ -71,7 +71,7 @@ h1, h2, h3, h4, p { margin-top: 0; }
 .be-brand__text small { margin-top: 4px; color: var(--be-gold-800); font-size: 10px; letter-spacing: .05em; } */
 .be-nav {
   display: flex; align-items: center; justify-content: flex-end; gap: 15px;
-  margin-left: auto; flex: 1 1 auto; color: #4e596c; font-size: 15px; font-weight: 500; white-space: nowrap;
+  margin-left: auto; flex: 1 1 auto; color: #4e596c; font-size: 17px; font-weight: 500; white-space: nowrap;
 }
 .be-nav a { position: relative; padding: 24px 0 22px; }
 .be-nav a::after {
@@ -122,20 +122,20 @@ h1, h2, h3, h4, p { margin-top: 0; }
 }
 .be-hero h1 {
   margin-bottom: 5px; font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
-  font-size: clamp(34px, 4vw, 52px); font-weight: 300; line-height: 1.2;
+  font-size: clamp(34px, 4vw, 60px); font-weight: 300; line-height: 1.2;
   text-shadow: 0 3px 14px rgba(0, 0, 0, .35);
 }
 .be-hero__brand-name {
-  margin-bottom: 8px; color: #4fc8ff; font-size: clamp(15px, 1.7vw, 20px);
+  margin-bottom: 8px; color: #4fc8ff; font-size: clamp(15px, 1.7vw, 25px);
   font-weight: 500; text-shadow: 0 2px 9px rgba(0, 0, 0, .35);
 }
 .be-hero__slogan {
-  margin: 0 auto 9px; color: #ffe6a9; font-size: 17px; font-weight: 400; letter-spacing: .07em;
+  margin: 0 auto 9px; color: #ffe6a9; font-size: 20px; font-weight: 400; letter-spacing: .07em;
   text-shadow: 0 2px 8px rgba(0, 0, 0, .42);
 }
 .be-hero__summary {
   max-width: 850px; margin: 0 auto 15px; color: rgba(255,255,255,.96);
-  font-size: 14px; line-height: 1.8; text-shadow: 0 2px 8px rgba(0,0,0,.4);
+  font-size: 17px; line-height: 1.8; text-shadow: 0 2px 8px rgba(0,0,0,.4);
 }
 .be-button {
   display: inline-flex; align-items: center; justify-content: center; min-height: 40px;
