@@ -3,3 +3,4 @@ django
 mysqlclient
 django-ckeditor
 django-admin-sortable2
+sib_api_v3_sdk
