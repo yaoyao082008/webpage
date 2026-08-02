@@ -166,14 +166,16 @@
   {% if user.is_authenticated %}
   <section class="be-section be-contact" id="contact" data-module="contact-actions">
     <div class="be-container be-contact__grid be-contact__grid--single">
+
       <article class="be-subscribe">
         <div class="be-subscribe__icon" aria-hidden="true">✉</div>
         <div>
           <h2>订阅我们的财税智慧资讯</h2>
           <p>获取财商教育、税务知识与活动信息，帮助您与家人一起持续学习、稳步成长。</p>
-          <form class="be-inline-form" action="#" method="post">
+          <form class="be-inline-form" action="{% url 'newsletter_signup' %}" method="post">
+            {% csrf_token %}
             <label class="sr-only" for="subscribe-email">电子邮箱</label>
-            <input id="subscribe-email" name="email" type="email" placeholder="请输入您的邮箱地址" />
+            <input id="subscribe-email" name="email" type="email" placeholder="请输入您的邮箱地址" required />
             <button type="submit">订阅</button>
           </form>
           <div class="be-subscribe__benefits"><span>✓ 专业内容</span><span>✓ 定期更新</span><span>✓ 免费订阅</span></div>

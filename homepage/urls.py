@@ -40,6 +40,7 @@ urlpatterns = [
     path('eng-meetings/',views.eng_meetings,name='eng-meetings'),
     path('ch-meetings/',views.ch_meetings,name='ch-meetings'),
     path('contacts/',views.contact,name='contacts'),
+    path('newsletter_signup/',views.newsletter_signup,name='newsletter_signup'),
     # path('licensed-page/',views.licensed_page,name='licensed-page')
 ]
 

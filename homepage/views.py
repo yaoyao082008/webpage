@@ -5,7 +5,10 @@ from django.contrib import messages
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import permission_required
+from django.conf import settings
 from .models import *
+import sib_api_v3_sdk
+from sib_api_v3_sdk.rest import ApiException
 
 # Create your views here.
 
@@ -18,6 +21,34 @@ def contact(request):
         context={'contact_info': agent_contact.objects.all() }
 
         return render(request,'page/contacts.html',context)
+
+def newsletter_signup(request):
+    if request.method == "POST":
+        email = request.POST.get("email")
+
+        if email:
+            configuration = sib_api_v3_sdk.Configuration()
+            configuration.api_key['api-key'] = settings.BREVO_API_KEY
+
+            api_instance = sib_api_v3_sdk.ContactsApi(
+                sib_api_v3_sdk.ApiClient(configuration)
+            )
+
+            create_contact = sib_api_v3_sdk.CreateContact(
+                email=email,
+                list_ids=[settings.BREVO_LIST_ID],
+                update_enabled=True,
+            )
+
+            try:
+                api_instance.create_contact(create_contact)
+            except ApiException as e:
+                print(f"Brevo API error: {e}")
+
+            return redirect("/")
+
+    return redirect("/")
+
 
 def inner_meetings(request):
         online_meets=inner_webinar.objects.all().order_by('-date')

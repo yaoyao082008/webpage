@@ -123,9 +123,6 @@
         menuButton.setAttribute('aria-expanded', String(isOpen));
       });
     }
-    document.querySelectorAll('form').forEach((form) => {
-      form.addEventListener('submit', (event) => event.preventDefault());
-    });
     document.querySelectorAll('.be-nav__dropdown-toggle').forEach((toggle) => {
       toggle.addEventListener('click', (event) => {
         if (window.innerWidth <= 900) {
